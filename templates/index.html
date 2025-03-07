@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI视频生成</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .preview-image {
+            max-width: 300px;
+            max-height: 300px;
+            margin: 10px 0;
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        .loading {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="mb-4">AI视频生成</h2>
+        <form id="generateForm">
+            <div class="row">
+                <div class="col-md-6">
+                    <!-- 首帧图片 -->
+                    <div class="form-group">
+                        <label for="image">首帧图片：</label>
+                        <input type="file" class="form-control" id="image" name="image" accept="image/*" required>
+                        <img id="imagePreview" class="preview-image" style="display: none;">
+                    </div>
+                    
+                    <!-- 尾帧图片（可选） -->
+                    <div class="form-group">
+                        <label for="image_tail">尾帧图片（可选）：</label>
+                        <input type="file" class="form-control" id="image_tail" name="image_tail" accept="image/*">
+                        <img id="imageTailPreview" class="preview-image" style="display: none;">
+                    </div>
+
+                    <!-- 提示词 -->
+                    <div class="form-group">
+                        <label for="prompt">提示词：</label>
+                        <input type="text" class="form-control" id="prompt" name="prompt" placeholder="描述你想要的视频效果">
+                    </div>
+
+                    <!-- 负向提示词 -->
+                    <div class="form-group">
+                        <label for="negative_prompt">负向提示词（可选）：</label>
+                        <input type="text" class="form-control" id="negative_prompt" name="negative_prompt" placeholder="描述你不想要的效果">
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <!-- 模型选择 -->
+                    <div class="form-group">
+                        <label for="model_name">模型版本：</label>
+                        <select class="form-control" id="model_name" name="model_name">
+                            <option value="kling-v1">Kling V1（默认）</option>
+                            <option value="kling-v1-5">Kling V1.5</option>
+                            <option value="kling-v1-6">Kling V1.6</option>
+                        </select>
+                    </div>
+
+                    <!-- 生成模式 -->
+                    <div class="form-group">
+                        <label for="mode">生成模式：</label>
+                        <select class="form-control" id="mode" name="mode">
+                            <option value="std">标准模式（性价比高）</option>
+                            <option value="pro">专家模式（高品质）</option>
+                        </select>
+                    </div>
+
+                    <!-- 视频时长 -->
+                    <div class="form-group">
+                        <label for="duration">视频时长：</label>
+                        <select class="form-control" id="duration" name="duration">
+                            <option value="5">5秒</option>
+                            <option value="10">10秒</option>
+                        </select>
+                        <small class="text-muted">注：使用尾帧控制时只支持5秒视频</small>
+                    </div>
+
+                    <!-- 生成自由度 -->
+                    <div class="form-group">
+                        <label for="cfg_scale">生成自由度：</label>
+                        <input type="range" class="form-range" id="cfg_scale" name="cfg_scale" 
+                               min="0" max="1" step="0.1" value="0.5">
+                        <small class="text-muted">值越大，与提示词相关性越强（0-1之间）</small>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-4">
+                <button type="submit" class="btn btn-primary" id="submitBtn">生成视频</button>
+                <a href="/tasks" class="btn btn-secondary ms-2">查看历史任务</a>
+                <a href="/images" class="btn btn-info ms-2">图片生成</a> 
+            </div>
+
+            <div class="loading mt-3">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <span class="ms-2">正在提交任务，请稍候...</span>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // 图片预览功能和验证
+        function validateImage(file) {
+            // 检查文件格式
+            const validTypes = ['image/jpeg', 'image/jpg', 'image/png'];
+            if (!validTypes.includes(file.type)) {
+                alert('只支持 JPG/JPEG/PNG 格式的图片');
+                return false;
+            }
+            
+            // 检查文件大小（10MB）
+            if (file.size > 10 * 1024 * 1024) {
+                alert('图片大小不能超过10MB');
+                return false;
+            }
+            
+            return true;
+        }
+
+        function validateImageDimensions(img) {
+            // 检查分辨率和宽高比
+            const width = img.width;
+            const height = img.height;
+            
+            if (width < 300 || height < 300) {
+                alert('图片分辨率不能小于300*300px');
+                return false;
+            }
+            
+            const ratio = width / height;
+            if (ratio < 0.4 || ratio > 2.5) {
+                alert('图片宽高比必须在1:2.5到2.5:1之间');
+                return false;
+            }
+            
+            return true;
+        }
+
+        function processImage(file, previewId, callback) {
+            if (!validateImage(file)) {
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const img = new Image();
+                img.onload = function() {
+                    if (!validateImageDimensions(img)) {
+                        return;
+                    }
+                    
+                    // 显示预览
+                    $(previewId).attr('src', e.target.result).show();
+                    
+                    // 提取Base64字符串（移除前缀）
+                    const base64String = e.target.result.split(',')[1];
+                    if (callback) callback(base64String);
+                };
+                img.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+
+        // 存储Base64字符串
+        let imageBase64 = '';
+        let imageTailBase64 = '';
+
+        $('#image').change(function() {
+            if (this.files && this.files[0]) {
+                processImage(this.files[0], '#imagePreview', function(base64) {
+                    imageBase64 = base64;
+                });
+            }
+        });
+
+        $('#image_tail').change(function() {
+            if (this.files && this.files[0]) {
+                processImage(this.files[0], '#imageTailPreview', function(base64) {
+                    imageTailBase64 = base64;
+                });
+            }
+        });
+
+        // 表单提交
+        $('#generateForm').on('submit', function(e) {
+            e.preventDefault();
+            
+            if (!imageBase64) {
+                alert('请选择首帧图片');
+                return;
+            }
+
+            $('.loading').show();
+            $('#submitBtn').prop('disabled', true);
+
+            const formData = {
+                image: imageBase64,
+                image_tail: imageTailBase64 || '',
+                prompt: $('#prompt').val(),
+                negative_prompt: $('#negative_prompt').val(),
+                model_name: $('#model_name').val(),
+                mode: $('#mode').val(),
+                duration: $('#duration').val(),
+                cfg_scale: $('#cfg_scale').val()
+            };
+
+            $.ajax({
+                url: '/generate',
+                type: 'POST',
+                data: JSON.stringify(formData),
+                contentType: 'application/json',
+                success: function(response) {
+                    if (response.success) {
+                        window.location.href = '/tasks';
+                    } else {
+                        alert('提交失败：' + response.message);
+                    }
+                },
+                error: function(xhr, status, error) {
+                    alert('提交失败：' + error);
+                },
+                complete: function() {
+                    $('.loading').hide();
+                    $('#submitBtn').prop('disabled', false);
+                }
+            });
+        });
+
+        // 处理URL参数
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/,'\\[').replace(/[\]]/,'\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
+
+        // 页面加载时处理URL参数
+        $(document).ready(function() {
+            const imageUrl = getUrlParameter('image');
+            const prompt = getUrlParameter('prompt');
+
+            if (imageUrl) {
+                // 从URL加载图片
+                fetch(imageUrl)
+                    .then(response => response.blob())
+                    .then(blob => {
+                        const file = new File([blob], 'image.png', { type: 'image/png' });
+                        // 创建一个新的DataTransfer对象
+                        const dataTransfer = new DataTransfer();
+                        dataTransfer.items.add(file);
+                        // 设置文件到文件输入框
+                        const fileInput = document.getElementById('image');
+                        fileInput.files = dataTransfer.files;
+                        // 触发change事件以更新预览
+                        const event = new Event('change');
+                        fileInput.dispatchEvent(event);
+                    })
+                    .catch(error => console.error('加载图片失败:', error));
+            }
+
+            if (prompt) {
+                $('#prompt').val(prompt);
+            }
+        });
+        // 监听尾帧图片和时长的联动
+        $('#image_tail, #duration').change(function() {
+            if ($('#image_tail').val() && $('#duration').val() !== '5') {
+                alert('使用尾帧控制时只支持5秒视频，已自动调整为5秒');
+                $('#duration').val('5');
+            }
+        });
+    </script>
+</body>
+</html>

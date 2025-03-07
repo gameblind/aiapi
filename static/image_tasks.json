@@ -1,0 +1,1192 @@
+[
+  {
+    "task_id": "CjgFpGfGyJQAAAAAADAX8g",
+    "external_task_id": "custom_1741135624",
+    "prompt": "五颜六色的岩浆从火山口流下，",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "16:9"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/8525618121/image/CjgFpGfGyJQAAAAAADAX8g-0_raw_image_0.png",
+        "local_url": "/static/images/CjgFpGfGyJQAAAAAADAX8g_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "ChE67GfGyVcAAAAAADDBbw",
+    "external_task_id": "local_1741138345",
+    "prompt": "本地导入图片",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "unknown",
+      "n": 1,
+      "aspect_ratio": "unknown"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "",
+        "local_url": "/static/images/ChE67GfGyVcAAAAAADDBbw_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "Cji6lmfGy64AAAAAABQdZA",
+    "external_task_id": "local_1741138345",
+    "prompt": "本地导入图片",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "unknown",
+      "n": 1,
+      "aspect_ratio": "unknown"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "",
+        "local_url": "/static/images/Cji6lmfGy64AAAAAABQdZA_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "ChAkX2fGy3kAAAAAABesaQ",
+    "external_task_id": "local_1741138345",
+    "prompt": "本地导入图片",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "unknown",
+      "n": 1,
+      "aspect_ratio": "unknown"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "",
+        "local_url": "/static/images/ChAkX2fGy3kAAAAAABesaQ_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjgFpGfGyJQAAAAAADKJfg",
+    "external_task_id": "custom_1741138426",
+    "prompt": "微观世界的万花镜空间",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "9:16"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/6343092556/image/CjgFpGfGyJQAAAAAADKJfg-0_raw_image_0.png",
+        "local_url": "/static/images/CjgFpGfGyJQAAAAAADKJfg_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "Cji6lmfGy64AAAAAADIQig",
+    "external_task_id": "custom_1741138740",
+    "prompt": "器宇轩昂的公鸡，在下蛋，同时手上在织毛衣",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "1:1"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/1499944505/image/Cji6lmfGy64AAAAAADIQig-0_raw_image_0.png",
+        "local_url": "/static/images/Cji6lmfGy64AAAAAADIQig_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjmgV2fGxuEAAAAAADOC1w",
+    "external_task_id": "custom_1741139013",
+    "prompt": "水墨风格的山水画",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "16:9"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/1932275759/image/CjmgV2fGxuEAAAAAADOC1w-0_raw_image_0.png",
+        "local_url": "/static/images/CjmgV2fGxuEAAAAAADOC1w_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjipUWfGyPMAAAAAADMn5g",
+    "external_task_id": "custom_1741139168",
+    "prompt": "水墨画",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "16:9"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/1932275759/image/CjipUWfGyPMAAAAAADMn5g-0_raw_image_0.png",
+        "local_url": "/static/images/CjipUWfGyPMAAAAAADMn5g_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "Cji6lmfGy64AAAAAADKD5w",
+    "external_task_id": "custom_1741139221",
+    "prompt": "水墨画 时尚模特",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "9:16"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/6215469460/image/Cji6lmfGy64AAAAAADKD5w-0_raw_image_0.png",
+        "local_url": "/static/images/Cji6lmfGy64AAAAAADKD5w_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjipUWfGyPMAAAAAADOAPA",
+    "external_task_id": "custom_1741139546",
+    "prompt": "现代风格的别墅",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "1:1"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/6343092556/image/CjipUWfGyPMAAAAAADOAPA-0_raw_image_0.png",
+        "local_url": "/static/images/CjipUWfGyPMAAAAAADOAPA_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjgFpGfGyJQAAAAAADwNow",
+    "external_task_id": "custom_1741147955",
+    "prompt": "中式风格，独栋别墅",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "3:4"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/4127863017/image/CjgFpGfGyJQAAAAAADwNow-0_raw_image_0.png",
+        "local_url": "/static/images/CjgFpGfGyJQAAAAAADwNow_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjJmYGfGydYAAAAAAD2Qyg",
+    "external_task_id": "custom_1741150021",
+    "prompt": "波比风格的海报",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "16:9"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/8525618121/image/CjJmYGfGydYAAAAAAD2Qyg-0_raw_image_0.png",
+        "local_url": "/static/images/CjJmYGfGydYAAAAAAD2Qyg_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "ChE67GfGyVcAAAAAAD23Gw",
+    "external_task_id": "custom_1741150050",
+    "prompt": "令人震惊的风景",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "16:9"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/4092983486/image/ChE67GfGyVcAAAAAAD23Gw-0_raw_image_0.png",
+        "local_url": "/static/images/ChE67GfGyVcAAAAAAD23Gw_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjipUWfGyPMAAAAAAD7MCw",
+    "external_task_id": "custom_1741151064",
+    "prompt": "水墨风格",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.5,
+      "n": 1
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/1499944505/image/CjipUWfGyPMAAAAAAD7MCw-0_raw_image_0.png",
+        "local_url": "/static/images/CjipUWfGyPMAAAAAAD7MCw_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjgFpGfGyJQAAAAAAD7zaA",
+    "external_task_id": "custom_1741151151",
+    "prompt": "改成赛博朋克风格",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.75,
+      "n": 1
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/6343092556/image/CjgFpGfGyJQAAAAAAD7zaA-0_raw_image_0.png",
+        "local_url": "/static/images/CjgFpGfGyJQAAAAAAD7zaA_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "Cji6lmfGy64AAAAAAD63WQ",
+    "external_task_id": "custom_1741151758",
+    "prompt": "水墨风",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.75,
+      "n": 1
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/4092983486/image/Cji6lmfGy64AAAAAAD63WQ-0_raw_image_0.png",
+        "local_url": "/static/images/Cji6lmfGy64AAAAAAD63WQ_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "ChCUFWfGxxgAAAAAAEDnMA",
+    "external_task_id": "custom_1741152915",
+    "prompt": "小狗",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.8,
+      "n": 1
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/0177388329/image/ChCUFWfGxxgAAAAAAEDnMA-0_raw_image_0.png",
+        "local_url": "/static/images/ChCUFWfGxxgAAAAAAEDnMA_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "ChAkX2fGy3kAAAAAAD_sVQ",
+    "external_task_id": "custom_1741152999",
+    "prompt": "定焦人像摄影",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.8,
+      "n": 1
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/4127863017/image/ChAkX2fGy3kAAAAAAD_sVQ-0_raw_image_0.png",
+        "local_url": "/static/images/ChAkX2fGy3kAAAAAAD_sVQ_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjmgV2fGxuEAAAAAAEFb4Q",
+    "external_task_id": "custom_1741153337",
+    "prompt": "中式风格与现代风格结合的二层别墅",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.8,
+      "n": 1
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/1823924357/image/CjmgV2fGxuEAAAAAAEFb4Q-0_raw_image_0.png",
+        "local_url": "/static/images/CjmgV2fGxuEAAAAAAEFb4Q_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "Cji6lmfGy64AAAAAAECOog",
+    "external_task_id": "custom_1741153736",
+    "prompt": "密密麻麻的小球",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.5,
+      "n": 1
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/1627674287/image/Cji6lmfGy64AAAAAAECOog-0_raw_image_0.png",
+        "local_url": "/static/images/Cji6lmfGy64AAAAAAECOog_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "ChAkX2fGy3kAAAAAAEJoJg",
+    "external_task_id": "custom_1741155555",
+    "prompt": "穿着白色低胸紧身衣的性感女星",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.5,
+      "n": 1
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/8525618121/image/ChAkX2fGy3kAAAAAAEJoJg-0_raw_image_0.png",
+        "local_url": "/static/images/ChAkX2fGy3kAAAAAAEJoJg_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjmgV2fGxuEAAAAAAEd9Tw",
+    "external_task_id": "custom_1741159031",
+    "prompt": "巨大的老鼠",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.5,
+      "n": 1
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/1861268914/image/CjmgV2fGxuEAAAAAAEd9Tw-0_raw_image_0.png",
+        "local_url": "/static/images/CjmgV2fGxuEAAAAAAEd9Tw_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "ChAkX2fGy3kAAAAAAEbBHg",
+    "external_task_id": "custom_1741159363",
+    "prompt": "Female japanese heavy metal guitarist playing guitar on stage, long flowing hair, earrings, dark eyeshadow red lips, earrings, long necklaces, cleavage, skintight lycra with clothing cutouts, flying V gibson guitar with black and orange flame livery, sexy aura, silhouetted light hitting one side of her, inksketch",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "9:16"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/4127863017/image/ChAkX2fGy3kAAAAAAEbBHg-0_raw_image_0.png",
+        "local_url": "/static/images/ChAkX2fGy3kAAAAAAEbBHg_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjmgV2fGxuEAAAAAAEfuug",
+    "external_task_id": "custom_1741159409",
+    "prompt": "水墨画风格的女吉他手",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.55,
+      "n": 1
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/1932275759/image/CjmgV2fGxuEAAAAAAEfuug-0_raw_image_0.png",
+        "local_url": "/static/images/CjmgV2fGxuEAAAAAAEfuug_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "ChAkX2fGy3kAAAAAAEb7dg",
+    "external_task_id": "custom_1741159552",
+    "prompt": "中国水墨画风格的女吉他手肖像画",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.35,
+      "n": 1
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/1932275759/image/ChAkX2fGy3kAAAAAAEb7dg-0_raw_image_0.png",
+        "local_url": "/static/images/ChAkX2fGy3kAAAAAAEb7dg_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "Cji6lmfGy64AAAAAAH8HJw",
+    "external_task_id": "custom_1741212428",
+    "prompt": "女妖穿着白色丝绸贴身衣服，皮肤雪白，亚洲人五官，头上长满细细的白色小蛇，",
+    "negative_prompt": "头发",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "9:16"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/8534613866/image/Cji6lmfGy64AAAAAAH8HJw-0_raw_image_0.png",
+        "local_url": "/static/images/Cji6lmfGy64AAAAAAH8HJw_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjmgV2fGxuEAAAAAAIUjRA",
+    "external_task_id": "custom_1741219383",
+    "prompt": "一个亚洲面孔的美女",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.65,
+      "n": 1
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/1861268914/image/CjmgV2fGxuEAAAAAAIUjRA-0_raw_image_0.png",
+        "local_url": "/static/images/CjmgV2fGxuEAAAAAAIUjRA_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjmgV2fGxuEAAAAAAIVOsQ",
+    "external_task_id": "custom_1741219626",
+    "prompt": "score_9, score_8_up, score_7_up,  1girl, black hair, spacesuit, shiny skin, cleavage, wet skin, huge breasts, eye contact, hair over one eye, light smile, astronaut, in international space station, tilted angle, moody lighting, flouting, suggestive pose, window, professional lighting, science fiction, perfect quality, high quality, photorealistic, sitting BREAK orange and blue hue, (abstract:0.2)  <lora:Expressive_H-000001:0.8>, expressiveH   <lora:Fant5yP0ny:0.9> <lora:Pony_DetailV1.0:0.9>",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "9:16"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/4538927598/image/CjmgV2fGxuEAAAAAAIVOsQ-0_raw_image_0.png",
+        "local_url": "/static/images/CjmgV2fGxuEAAAAAAIVOsQ_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "Cji6lmfGy64AAAAAAIQo0Q",
+    "external_task_id": "custom_1741219757",
+    "prompt": "1girl, blonde hair, long hair, black leggings, textured leggings, ass, outdoors, bent over,",
+    "negative_prompt": "",
+    "status": "deleted",
+    "status_msg": "图片已删除",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "9:16"
+    },
+    "images": []
+  },
+  {
+    "task_id": "CjmgV2fGxuEAAAAAAIVrMw",
+    "external_task_id": "custom_1741219781",
+    "prompt": "from below, tomboy, sexy mechanic, short shorts, overalls, midriff, abs, huge breasts, sideboob, dirty, grinning, scars, complex machinery, machines, pipes, valves, 1girl, delicate and smooth skin, blush, perfect body, thighs, glossy lips, dutch angle, cyberpunk, perfect quality, high quality, photorealistic, dynamic pose BREAK orange and blue hue, (abstract:0.2), at night, fire particles, ",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "9:16"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/1932275759/image/CjmgV2fGxuEAAAAAAIVrMw-0_raw_image_0.png",
+        "local_url": "/static/images/CjmgV2fGxuEAAAAAAIVrMw_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjgFpGfGyJQAAAAAAIUQCQ",
+    "external_task_id": "custom_1741219830",
+    "prompt": "Extreme realistic depiction of a Wet Beauty Under Night Rain, in upper body shot, curvaceous glamorous body, hair hair over one eye,  extremely wet, realistic wet skin texture, realistic wet clothing heavy rain, realistic fabric texture, casual shirt crop top, adjusting her wet hair, head tilted slightly down.\r\n",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "9:16"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/1861268914/image/CjgFpGfGyJQAAAAAAIUQCQ-0_raw_image_0.png",
+        "local_url": "/static/images/CjgFpGfGyJQAAAAAAIUQCQ_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjipUWfGyPMAAAAAAIUChw",
+    "external_task_id": "custom_1741219912",
+    "prompt": "好身材的中国女孩",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.6,
+      "n": 1
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/4538927598/image/CjipUWfGyPMAAAAAAIUChw-0_raw_image_0.png",
+        "local_url": "/static/images/CjipUWfGyPMAAAAAAIUChw_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjmgV2fGxuEAAAAAAIZaNg",
+    "external_task_id": "custom_1741221092",
+    "prompt": "令人惊叹的海天奇景",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "16:9"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/6247668263/image/CjmgV2fGxuEAAAAAAIZaNg-0_raw_image_0.png",
+        "local_url": "/static/images/CjmgV2fGxuEAAAAAAIZaNg_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "Cji6lmfGy64AAAAAAIWc6g",
+    "external_task_id": "custom_1741221770",
+    "prompt": "A bustling marketplace comes alive with figures engaged in animated transactions, as a vendor gestures toward a vibrant display of fruits and vegetables. Surrounding him, diverse characters adorned in traditional robes barter enthusiastically, with baskets overflowing with produce. The sun casts warm light over the cobblestone ground, while colorful banners flutter gently, creating an atmosphere rich with commerce and community spirit.",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "16:9"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/8534613866/image/Cji6lmfGy64AAAAAAIWc6g-0_raw_image_0.png",
+        "local_url": "/static/images/Cji6lmfGy64AAAAAAIWc6g_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "ChE67GfGyVcAAAAAAH-n",
+    "external_task_id": "local_1741222321",
+    "prompt": "本地导入图片",
+    "negative_prompt": "",
+    "status": "deleted",
+    "status_msg": "图片已删除",
+    "parameters": {
+      "model_name": "unknown",
+      "n": 1,
+      "aspect_ratio": "unknown"
+    },
+    "images": []
+  },
+  {
+    "task_id": "ChE67GfGyVcAAAAAAH",
+    "external_task_id": "local_1741222746",
+    "prompt": "本地导入图片",
+    "negative_prompt": "",
+    "status": "deleted",
+    "status_msg": "图片已删除",
+    "parameters": {
+      "model_name": "unknown",
+      "n": 1,
+      "aspect_ratio": "unknown"
+    },
+    "images": []
+  },
+  {
+    "task_id": "ChCUFWfGxxgAAAAAAIBbjw",
+    "external_task_id": "local_1741222910",
+    "prompt": "本地导入图片",
+    "negative_prompt": "",
+    "status": "deleted",
+    "status_msg": "图片已删除",
+    "parameters": {
+      "model_name": "unknown",
+      "n": 1,
+      "aspect_ratio": "unknown"
+    },
+    "images": []
+  },
+  {
+    "task_id": "Cji6lmfGy64AAAAAAJC1pA",
+    "external_task_id": "custom_1741233837",
+    "prompt": "妖娆的女妖",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.5,
+      "n": 1
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/6247668263/image/Cji6lmfGy64AAAAAAJC1pA-0_raw_image_0.png",
+        "local_url": "/static/images/Cji6lmfGy64AAAAAAJC1pA_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "Cji6lmfGy64AAAAAAJGYfw",
+    "external_task_id": "custom_1741234826",
+    "prompt": "喷出火焰的恶龙",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.5,
+      "n": 1
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/8525618121/image/Cji6lmfGy64AAAAAAJGYfw-0_raw_image_0.png",
+        "local_url": "/static/images/Cji6lmfGy64AAAAAAJGYfw_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjmgV2fGxuEAAAAAAJcvwA",
+    "external_task_id": "custom_1741239699",
+    "prompt": "龙族摇滚明星",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.5,
+      "n": 1
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/4092983486/image/CjmgV2fGxuEAAAAAAJcvwA-0_raw_image_0.png",
+        "local_url": "/static/images/CjmgV2fGxuEAAAAAAJcvwA_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjmgV2fGxuEAAAAAAJdhdw",
+    "external_task_id": "custom_1741239911",
+    "prompt": "精致的苏州园林",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "9:16"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/6215469460/image/CjmgV2fGxuEAAAAAAJdhdw-0_raw_image_0.png",
+        "local_url": "/static/images/CjmgV2fGxuEAAAAAAJdhdw_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "Cji6lmfGy64AAAAAAJeRDw",
+    "external_task_id": "custom_1741241452",
+    "prompt": "唐装美少女在中式园林中漫步",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "9:16"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/7820730969/image/Cji6lmfGy64AAAAAAJeRDw-0_raw_image_0.png",
+        "local_url": "/static/images/Cji6lmfGy64AAAAAAJeRDw_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "ChAkX2fGy3kAAAAAAJfQjA",
+    "external_task_id": "custom_1741241637",
+    "prompt": "建筑手绘插画",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "3:4"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/9731841086/image/ChAkX2fGy3kAAAAAAJfQjA-0_raw_image_0.png",
+        "local_url": "/static/images/ChAkX2fGy3kAAAAAAJfQjA_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "ChE67GfGyVcAAAAAAJhsRA",
+    "external_task_id": "custom_1741241766",
+    "prompt": "赛博朋克风个的涂鸦",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "3:4"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/5271820290/image/ChE67GfGyVcAAAAAAJhsRA-0_raw_image_0.png",
+        "local_url": "/static/images/ChE67GfGyVcAAAAAAJhsRA_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "Cji6lmfGy64AAAAAAJvJ5Q",
+    "external_task_id": "custom_1741245705",
+    "prompt": "一只大红狗",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "1:1"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/1861268914/image/Cji6lmfGy64AAAAAAJvJ5Q-0_raw_image_0.png",
+        "local_url": "/static/images/Cji6lmfGy64AAAAAAJvJ5Q_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjgFpGfGyJQAAAAAAETYvg",
+    "external_task_id": "local_1741254050",
+    "prompt": "本地导入图片",
+    "negative_prompt": "",
+    "status": "deleted",
+    "status_msg": "图片已删除",
+    "parameters": {
+      "model_name": "unknown",
+      "n": 1,
+      "aspect_ratio": "unknown"
+    },
+    "images": []
+  },
+  {
+    "task_id": "CjikcmfJXNkAAAAAAAYy2A",
+    "external_task_id": "custom_1741256076",
+    "prompt": "linquivera,  Ink illustration, (anime:0.5), brown tones, aged black red paper, inkpunk, moonlight,surreal, a ghost standing on a boat in swampy wetlands, (at a distance), Will-o'-the-wisp, moonlit, lonely, solitude, windy, tall trees,",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "9:16"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/4127863017/image/CjikcmfJXNkAAAAAAAYy2A-0_raw_image_0.png",
+        "local_url": "/static/images/CjikcmfJXNkAAAAAAAYy2A_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "ChGYqWfJXY4AAAAAAAbwnQ",
+    "external_task_id": "custom_1741257129",
+    "prompt": "孤舟蓑笠翁",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.5,
+      "n": 1
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/1627674287/image/ChGYqWfJXY4AAAAAAAbwnQ-0_raw_image_0.png",
+        "local_url": "/static/images/ChGYqWfJXY4AAAAAAAbwnQ_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": ".DS",
+    "external_task_id": "local_1741257310",
+    "prompt": "本地导入图片",
+    "negative_prompt": "",
+    "status": "deleted",
+    "status_msg": "图片已删除",
+    "parameters": {
+      "model_name": "unknown",
+      "n": 1,
+      "aspect_ratio": "unknown"
+    },
+    "images": []
+  },
+  {
+    "task_id": "Cl6WKGfJWzUAAAAAAAfQZA",
+    "external_task_id": "custom_1741257388",
+    "prompt": "Silhouette Art, magnificent. female water elemental, long blue hair, bangs, pulsing with water and blue electrical energy",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "16:9"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/7820730969/image/Cl6WKGfJWzUAAAAAAAfQZA-0_raw_image_0.png",
+        "local_url": "/static/images/Cl6WKGfJWzUAAAAAAAfQZA_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjJmkGfJXPUAAAAAAAgYBw",
+    "external_task_id": "custom_1741258209",
+    "prompt": "Silhouette Art, magnificent. female water elemental, long blue hair, bangs, pulsing with water and blue electrical energy",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "9:16"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/6750019753/image/CjJmkGfJXPUAAAAAAAgYBw-0_raw_image_0.png",
+        "local_url": "/static/images/CjJmkGfJXPUAAAAAAAgYBw_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "ChGYqWfJXY4AAAAAAApv7Q",
+    "external_task_id": "custom_1741261102",
+    "prompt": "女蜘蛛侠穿着红色金属质感经典战袍",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.5,
+      "n": 1
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/8525618121/image/ChGYqWfJXY4AAAAAAApv7Q-0_raw_image_0.png",
+        "local_url": "/static/images/ChGYqWfJXY4AAAAAAApv7Q_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjikcmfJXNkAAAAAABSS5w",
+    "external_task_id": "custom_1741271663",
+    "prompt": "大象",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.5,
+      "n": 1
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/6215469460/image/CjikcmfJXNkAAAAAABSS5w-0_raw_image_0.png",
+        "local_url": "/static/images/CjikcmfJXNkAAAAAABSS5w_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjikcmfJXNkAAAAAABS1lA",
+    "external_task_id": "custom_1741271751",
+    "prompt": "女剑客",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.5,
+      "n": 1
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/1627674287/image/CjikcmfJXNkAAAAAABS1lA-0_raw_image_0.png",
+        "local_url": "/static/images/CjikcmfJXNkAAAAAABS1lA_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "ChGYqWfJXY4AAAAAABSKqg",
+    "external_task_id": "custom_1741271855",
+    "prompt": "masterpiece, best quality <lora:sd_xl_dpo_lora_v1-128dim:1>\r\n1girl,Detailed complex chaotic seascape red burning light mysterious silhouette of phoenix,fung-hwang,UV-reactive, red light art concept by Waterhouse, Carne Griffiths, Minjae Lee, Ana Paula Hoppe, Stylized florescent art, Intricate, Complex contrast, HDR,OverallDetail, mineral color painting",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "9:16"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/8534613866/image/ChGYqWfJXY4AAAAAABSKqg-0_raw_image_0.png",
+        "local_url": "/static/images/ChGYqWfJXY4AAAAAABSKqg_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjilGmfJXYIAAAAAADgaRQ",
+    "external_task_id": "custom_1741319693",
+    "prompt": "一台笔记本电脑屏幕，屏幕前有一双手在打字， 屏幕上是一个唐装美女的肖像照，美女的手放在脸旁。",
+    "negative_prompt": "",
+    "status": "deleted",
+    "status_msg": "图片已删除",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "9:16"
+    },
+    "images": []
+  },
+  {
+    "task_id": "ChGYqWfJXY4AAAAAADgq3g",
+    "external_task_id": "custom_1741319747",
+    "prompt": "一台笔记本电脑屏幕，屏幕前有一双手在打字， 屏幕里面显示到是一个唐装美女的肖像照片",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "9:16"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/0177388329/image/ChGYqWfJXY4AAAAAADgq3g-0_raw_image_0.png",
+        "local_url": "/static/images/ChGYqWfJXY4AAAAAADgq3g_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "ChGYqWfJXY4AAAAAADhBiw",
+    "external_task_id": "custom_1741319857",
+    "prompt": "一台笔记本电脑屏幕，屏幕前有一双手在打字， 屏幕中是一个唐装美女的肖像照",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "9:16"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/4538927598/image/ChGYqWfJXY4AAAAAADhBiw-0_raw_image_0.png",
+        "local_url": "/static/images/ChGYqWfJXY4AAAAAADhBiw_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjJmkGfJXPUAAAAAADqxDg",
+    "external_task_id": "custom_1741322735",
+    "prompt": "一台笔记本电脑屏幕，屏幕前有一双手在打字， 屏幕里面显示到是一个唐装美女右手伸出的肖像照片",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "9:16"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/4092983486/image/CjJmkGfJXPUAAAAAADqxDg-0_raw_image_0.png",
+        "local_url": "/static/images/CjJmkGfJXPUAAAAAADqxDg_0.png",
+        "downloaded": true
+      }
+    ]
+  }
+]

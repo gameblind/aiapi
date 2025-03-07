@@ -1,0 +1,60 @@
+# 敏感信息和配置文件
+config.ini
+*.env
+.env
+secrets.json
+api_keys.py
+credentials.json
+
+# Python相关
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# 包目录
+packages/
+
+# 临时文件
+=2.0
+=3.0.2
+*.tar
+*.gz
+*.zip
+
+# 备份文件
+backups/
+*copy*.json
+
+# 系统文件
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# 日志文件
+*.log
+logs/
+
+# 媒体文件（根据需要调整）
+# static/videos/
+# static/images/

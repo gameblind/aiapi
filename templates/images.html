@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI图像生成</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container-fluid {
+            padding: 0;
+        }
+        .sidebar {
+            width: 300px;
+            height: 100vh;
+            position: fixed;
+            left: -300px;
+            top: 0;
+            background-color: #fff;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            transition: left 0.3s ease;
+            z-index: 1000;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        .sidebar.active {
+            left: 0;
+        }
+        .sidebar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .close-sidebar {
+            cursor: pointer;
+            font-size: 20px;
+        }
+        .main-content {
+            transition: margin-left 0.3s ease;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .main-content.sidebar-active {
+            margin-left: 300px;
+        }
+        .image-grid {
+            column-count: 4;
+            column-gap: 24px;
+            padding: 24px;
+            max-width: 1920px;
+            margin: 0 auto;
+            width: calc(100% - 48px);
+        }
+        .image-card {
+            break-inside: avoid;
+            margin-bottom: 24px;
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+            background-color: #fff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .image-card .card-overlay {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            left: auto;
+            bottom: auto;
+            background-color: transparent;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+            opacity: 1;
+        }
+
+        .image-card .card-overlay .btn-icon {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            border: none;
+            padding: 6px;
+            margin: 4px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+        .image-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+        }
+        .image-card img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            display: block;
+            cursor: pointer;
+        }
+        .floating-create-btn {
+            position: fixed;
+            top: 1rem;
+            left: 1rem;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #0d6efd;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        .floating-create-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-control, .form-select {
+            border-radius: 8px;
+            border: 1px solid #ced4da;
+            padding: 0.75rem 1rem;
+            transition: all 0.3s ease;
+        }
+        .form-control:focus, .form-select:focus {
+            border-color: #0d6efd;
+            box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+        }
+        textarea.form-control {
+            min-height: 120px;
+        }
+        .form-range {
+            height: 1.5rem;
+            padding: 0;
+        }
+        .form-range::-webkit-slider-thumb {
+            background: #0d6efd;
+            transition: all 0.3s ease;
+        }
+        .form-range::-webkit-slider-thumb:hover {
+            transform: scale(1.2);
+        }
+        .btn-primary {
+            padding: 0.75rem 1.5rem;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(13, 110, 253, 0.25);
+        }
+        .preview-image {
+            max-width: 100%;
+            max-height: 200px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        .loading {
+            display: none;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .tab-content {
+            padding-top: 20px;
+        }
+        .nav-tabs {
+            border-bottom: 1px solid #dee2e6;
+        }
+        .nav-tabs .nav-link {
+            margin-bottom: -1px;
+            border: 1px solid transparent;
+            border-top-left-radius: 0.25rem;
+            border-top-right-radius: 0.25rem;
+        }
+        .nav-tabs .nav-link.active {
+            color: #495057;
+            background-color: #fff;
+            border-color: #dee2e6 #dee2e6 #fff;
+        }
+        .modal-body {
+            background-color: #000;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .modal-body img {
+            max-width: 100%;
+            max-height: 80vh;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            display: block;
+            margin: 0 auto;
+        }
+
+        #modalPrompt {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 1rem;
+            text-align: left;
+            font-size: 1rem;
+            line-height: 1.5;
+            margin: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .image-card img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            display: block;
+            cursor: pointer;
+        }
+        .loading-placeholder {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 200px;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+            color: #6c757d;
+        }
+        
+        .loading-placeholder p {
+            margin-top: 10px;
+        }
+        
+        .loading-card {
+            border: 1px solid #dee2e6;
+        }
+    </style>
+</head>
+<body>
+    <!-- 侧边栏（编辑状态） -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h4>图像生成</h4>
+            <span class="close-sidebar" id="closeSidebar">&times;</span>
+        </div>
+
+        <ul class="nav nav-tabs" id="generationTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="text2img-tab" data-bs-toggle="tab" data-bs-target="#text2img" type="button" role="tab">文生图</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="img2img-tab" data-bs-toggle="tab" data-bs-target="#img2img" type="button" role="tab">图生图</button>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="generationTabsContent">
+            <!-- 文生图表单 -->
+            <div class="tab-pane fade show active" id="text2img" role="tabpanel">
+                <form id="text2imgForm">
+                    <!-- 提示词 -->
+                    <div class="form-group">
+                        <label for="t2i_prompt">提示词：</label>
+                        <textarea class="form-control" id="t2i_prompt" name="prompt" rows="3" placeholder="描述你想要的图像效果"></textarea>
+                    </div>
+
+                    <!-- 负向提示词 -->
+                    <div class="form-group">
+                        <label for="t2i_negative_prompt">负向提示词（可选）：</label>
+                        <textarea class="form-control" id="t2i_negative_prompt" name="negative_prompt" rows="2" placeholder="描述你不想要的效果"></textarea>
+                    </div>
+
+                    <!-- 模型选择 -->
+                    <div class="form-group">
+                        <label for="t2i_model">模型版本：</label>
+                        <select class="form-control" id="t2i_model" name="model">
+                            <option value="kling-v1"> kling-v1</option>
+                        </select>
+                    </div>
+
+                    <!-- 图像纵横比 -->
+                    <div class="form-group">
+                        <label for="t2i_aspect_ratio">图像纵横比：</label>
+                        <select class="form-control" id="t2i_aspect_ratio" name="aspect_ratio">
+                            <option value="16:9">16:9</option>
+                            <option value="9:16">9:16</option>
+                            <option value="1:1">1:1</option>
+                            <option value="4:3">4:3</option>
+                            <option value="3:4">3:4</option>
+                            <option value="3:2">3:2</option>
+                            <option value="2:3">2:3</option>
+                        </select>
+                    </div>
+
+                    <!-- 生成数量 -->
+                    <div class="form-group">
+                        <label for="t2i_num">生成数量：</label>
+                        <select class="form-control" id="t2i_num" name="n">
+                            <option value="1">1张</option>
+                            <option value="2">2张</option>
+                            <option value="3">3张</option>
+                            <option value="4">4张</option>
+                            <option value="5">5张</option>
+                            <option value="6">6张</option>
+                            <option value="7">7张</option>
+                            <option value="8">8张</option>
+                            <option value="9">9张</option>
+                        </select>
+                    </div>
+
+                    <!-- 生成自由度 -->
+                    <div class="form-group">
+                        <label for="t2i_cfg_scale">生成自由度：</label>
+                        <input type="range" class="form-range" id="t2i_cfg_scale" name="cfg_scale" min="1" max="20" step="0.5" value="7.5">
+                        <div class="d-flex justify-content-between">
+                            <small>更忠于提示词</small>
+                            <small id="t2i_cfg_value">7.5</small>
+                            <small>更有创意</small>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100 mt-3">生成图像</button>
+                </form>
+            </div>
+
+            <!-- 图生图表单 -->
+            <div class="tab-pane fade" id="img2img" role="tabpanel">
+                <form id="img2imgForm">
+                    <!-- 上传图片 -->
+                    <div class="form-group">
+                        <label for="i2i_image">上传图片：</label>
+                        <input type="file" class="form-control" id="i2i_image" name="image" accept="image/*" required>
+                        <img id="i2i_preview" class="preview-image" style="display: none;">
+                        <small class="form-text text-muted">支持jpg/jpeg/png格式，文件大小不超过10MB，分辨率不小于300*300px</small>
+                    </div>
+                    
+                    <!-- 提示词 -->
+                    <div class="form-group">
+                        <label for="i2i_prompt">提示词：</label>
+                        <textarea class="form-control" id="i2i_prompt" name="prompt" rows="3" placeholder="描述你想要的图像效果" maxlength="500"></textarea>
+                        <small class="form-text text-muted">不超过500个字符</small>
+                    </div>
+                    
+                    <!-- 模型选择 -->
+                    <div class="form-group">
+                        <label for="i2i_model">模型版本：</label>
+                        <select class="form-control" id="i2i_model" name="model">
+                            <option value="kling-v1">kling-v1</option>
+                        </select>
+                    </div>
+                    
+                    <!-- 生成数量 -->
+                    <div class="form-group">
+                        <label for="i2i_num">生成数量：</label>
+                        <select class="form-control" id="i2i_num" name="n">
+                            <option value="1">1张</option>
+                            <option value="2">2张</option>
+                            <option value="3">3张</option>
+                            <option value="4">4张</option>
+                            <option value="5">5张</option>
+                            <option value="6">6张</option>
+                            <option value="7">7张</option>
+                            <option value="8">8张</option>
+                            <option value="9">9张</option>
+                        </select>
+                    </div>
+
+                    <!-- 图像纵横比 -->
+                    <div class="form-group">
+                        <label for="i2i_aspect_ratio">图像纵横比：</label>
+                        <select class="form-control" id="i2i_aspect_ratio" name="aspect_ratio">
+                            <option value="16:9">16:9</option>
+                            <option value="9:16">9:16</option>
+                            <option value="1:1">1:1</option>
+                            <option value="4:3">4:3</option>
+                            <option value="3:4">3:4</option>
+                            <option value="3:2">3:2</option>
+                            <option value="2:3">2:3</option>
+                        </select>
+                    </div>
+
+                    <!-- 图像相似度 -->
+                    <div class="form-group">
+                        <label for="i2i_strength">变化程度：</label>
+                        <input type="range" class="form-range" id="i2i_strength" name="strength" min="0" max="1" step="0.05" value="0.75">
+                        <div class="d-flex justify-content-between">
+                            <small>更接近原图</small>
+                            <small id="i2i_strength_value">0.75</small>
+                            <small>更多变化</small>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100 mt-3">生成图像</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="loading mt-3">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <p class="mt-2">正在生成图像，请稍候...</p>
+        </div>
+    </div>
+
+    <!-- 主内容区（展示状态） -->
+    <div class="main-content" id="mainContent">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2>AI图像生成</h2>
+                <div>
+                    <a href="/" class="btn btn-outline-secondary me-2">视频生成</a>
+                    <a href="/tasks" class="btn btn-outline-secondary me-2">历史任务</a>
+                    <button onclick="toggleTheme()" class="btn btn-outline-secondary" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                        <span>切换主题</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="image-grid" id="imageGrid">
+            <!-- 浮动创建按钮 -->
+            <div class="floating-create-btn" id="createNewImage">
+                <i class="fas fa-plus fa-lg"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 图片预览模态框 -->
+    <div class="modal fade" id="imagePreviewModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">图片预览</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img id="modalImage" src="" alt="预览图片">
+                    <div id="modalPrompt" class="prompt-text"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" id="deleteImage">删除图片</button>
+                    <button type="button" class="btn btn-primary" id="useForVideo">用于生成视频</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+                </div>
+                <div class="loading-overlay" style="display: none;">
+                    <div class="spinner-border text-light" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 添加回到顶部按钮 -->
+    <div id="backToTop" title="回到顶部">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --primary-hover: #45a049;
+            --secondary-color: #2196F3;
+            --secondary-hover: #1976D2;
+            --danger-color: #f44336;
+            --danger-hover: #d32f2f;
+            --background-color: #f8f9fa;
+            --card-background: #fff;
+            --text-primary: #333;
+            --text-secondary: #666;
+            --text-light: #fff;
+            --border-color: #ddd;
+        }
+
+        :root.dark-theme {
+            --primary-color: #45a049;
+            --primary-hover: #388e3c;
+            --secondary-color: #1976D2;
+            --secondary-hover: #1565C0;
+            --danger-color: #d32f2f;
+            --danger-hover: #c62828;
+            --background-color: #121212;
+            --card-background: #1e1e1e;
+            --text-primary: #e0e0e0;
+            --text-secondary: #9e9e9e;
+            --text-light: #fff;
+            --border-color: #333;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-primary);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .image-card {
+            background-color: var(--card-background);
+            border-color: var(--border-color);
+        }
+
+        #backToTop {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color, #4CAF50);
+            color: var(--text-light, white);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+            z-index: 1000;
+        }
+
+        #backToTop:hover {
+            background-color: var(--primary-hover, #45a049);
+            transform: translateY(0) scale(1.1);
+        }
+
+        #backToTop.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* 暗黑模式变量 */
+        :root {
+            --primary-color: #4CAF50;
+            --primary-hover: #45a049;
+            --secondary-color: #2196F3;
+            --secondary-hover: #1976D2;
+            --danger-color: #f44336;
+            --danger-hover: #d32f2f;
+            --background-color: #f8f9fa;
+            --card-background: #fff;
+            --text-primary: #333;
+            --text-secondary: #666;
+            --text-light: #fff;
+            --border-color: #ddd;
+            --warning-background: #fff3cd;
+            --warning-text: #856404;
+            --success-background: #d4edda;
+            --success-text: #155724;
+            --info-background: #cce5ff;
+            --info-text: #004085;
+            --error-background: #f8d7da;
+            --error-text: #721c24;
+        }
+
+        :root.dark-theme {
+            --primary-color: #45a049;
+            --primary-hover: #388e3c;
+            --secondary-color: #1976D2;
+            --secondary-hover: #1565C0;
+            --danger-color: #d32f2f;
+            --danger-hover: #c62828;
+            --background-color: #121212;
+            --card-background: #1e1e1e;
+            --text-primary: #e0e0e0;
+            --text-secondary: #9e9e9e;
+            --text-light: #fff;
+            --border-color: #333;
+            --warning-background: #332d1a;
+            --warning-text: #ffd54f;
+            --success-background: #1b3320;
+            --success-text: #81c784;
+            --info-background: #1a2632;
+            --info-text: #64b5f6;
+            --error-background: #321c1d;
+            --error-text: #ef5350;
+        }
+
+        /* 添加平滑过渡效果 */
+        body, .button, .status {
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+    </style>
+    <script>
+        $('#imagePreviewModal').on('show.bs.modal', function() {
+            // 获取所有图片
+            allImages = $('#imageGrid img:not(#i2i_preview)').toArray();
+            // 找到当前图片的索引
+            const currentSrc = $('#modalImage').attr('src');
+            currentImageIndex = allImages.findIndex(img => img.src === currentSrc);
+        });
+
+        $(document).on('keydown', function(e) {
+            if ($('#imagePreviewModal').hasClass('show')) {
+                if (e.key === 'ArrowLeft') {
+                    // 上一张图片
+                    if (currentImageIndex > 0) {
+                        updateModalImage(currentImageIndex - 1);
+                    }
+                } else if (e.key === 'ArrowRight') {
+                    // 下一张图片
+                    if (currentImageIndex < allImages.length - 1) {
+                        updateModalImage(currentImageIndex + 1);
+                    }
+                }
+            }
+        });
+
+        // 侧边栏控制
+        document.getElementById('createNewImage').addEventListener('click', function() {
+            document.getElementById('sidebar').classList.add('active');
+            document.getElementById('mainContent').classList.add('sidebar-active');
+        });
+
+        document.getElementById('closeSidebar').addEventListener('click', function() {
+            document.getElementById('sidebar').classList.remove('active');
+            document.getElementById('mainContent').classList.remove('sidebar-active');
+        });
+        
+        // 模态框中"用于生成视频"按钮点击事件
+        document.getElementById('useForVideo').addEventListener('click', function() {
+            const imageUrl = document.getElementById('modalImage').src;
+            window.location.href = `/index.html?image=${encodeURIComponent(imageUrl)}`;
+        });
+
+        // 删除图片按钮点击事件
+        document.getElementById('deleteImage').addEventListener('click', function() {
+            if (confirm('确定要删除这张图片吗？')) {
+                const imageUrl = document.getElementById('modalImage').src;
+                const loadingOverlay = document.querySelector('.loading-overlay');
+                loadingOverlay.style.display = 'flex';
+
+                fetch('/generate_image/delete', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ image_url: imageUrl })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        // 关闭模态框并刷新页面
+                        const modal = bootstrap.Modal.getInstance(document.getElementById('imagePreviewModal'));
+                        modal.hide();
+                        location.reload();
+                    } else {
+                        alert('删除失败：' + data.message);
+                    }
+                })
+                .catch(error => {
+                    alert('删除失败：' + error);
+                })
+                .finally(() => {
+                    loadingOverlay.style.display = 'none';
+                });
+            }
+        });
+
+        // 图片预览功能
+        function previewImage(input, previewId) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    $(previewId).attr('src', e.target.result).show();
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        $('#i2i_image').change(function() {
+            previewImage(this, '#i2i_preview');
+        });
+
+        // 滑块值显示
+        $('#t2i_cfg_scale').on('input', function() {
+            $('#t2i_cfg_value').text($(this).val());
+        });
+
+        $('#i2i_strength').on('input', function() {
+            $('#i2i_strength_value').text($(this).val());
+        });
+
+        // 表单提交处理
+        // 表单提交处理
+        $('#text2imgForm').on('submit', function(e) {
+        e.preventDefault();
+        submitForm(new FormData(this), '/generate_image/text2img');
+        });
+        
+        $('#img2imgForm').on('submit', function(e) {
+        e.preventDefault();
+        submitForm(new FormData(this), '/generate_image/img2img');
+        });
+        
+        // 每30秒自动更新任务状态
+        setInterval(() => {
+            $.ajax({
+                url: '/generate_image/batch_update',
+                method: 'POST',
+                success: function(response) {
+                    if (response.success) {
+                        // 重新加载图片墙
+                        loadImageData();
+                    }
+                }
+            });
+        }, 30000);
+        
+        // 加载图片数据 - 优化版本，实现增量更新和懒加载
+        let loadedImageUrls = new Set();
+        let observer;
+
+        function createImageCard(imageData) {
+            const card = $('<div>').addClass('image-card');
+            const img = $('<img>')
+                .attr('data-src', imageData.local_url)
+                .attr('data-prompt', imageData.prompt || '')
+                .addClass('lazy-load');
+            card.append(img);
+            return card;
+        }
+
+        function setupIntersectionObserver() {
+            observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        if (img.dataset.src) {
+                            img.src = img.dataset.src;
+                            img.removeAttribute('data-src');
+                            // 确保图片加载完成后绑定点击事件
+                            img.onload = function() {
+                                img.addEventListener('click', function() {
+                                    $('#modalImage').attr('src', this.src);
+                                    $('#modalPrompt').text($(this).data('prompt'));
+                                    const modal = $('#imagePreviewModal');
+                                    if (!modal.data('initialized')) {
+                                        modal.on('hidden.bs.modal', function() {
+                                            $('#modalImage').attr('src', '');
+                                            $('#modalPrompt').text('');
+                                        });
+                                        modal.data('initialized', true);
+                                    }
+                                    modal.modal('show');
+                                });
+                            };
+                            observer.unobserve(img);
+                        }
+                    }
+                });
+            }, {
+                root: null,
+                rootMargin: '50px',
+                threshold: 0.1
+            });
+        }
+
+        function loadImageData() {
+            console.log('开始加载图片数据...');
+            // 在加载数据之前，确保占位卡片在最前面
+            const placeholderCard = $('#createNewImage');
+            if (placeholderCard.length > 0) {
+                placeholderCard.detach();
+                $('#imageGrid').prepend(placeholderCard);
+            } else {
+                $('#imageGrid').prepend(createPlaceholderCard());
+            }
+
+            $.ajax({
+                url: '/generate_image/list',
+                method: 'GET',
+                success: function(response) {
+                    if (response.success) {
+                        console.log(`成功获取${response.data.length}个任务数据`);
+                        
+                        // 处理所有任务
+                        response.data.forEach(task => {
+                            // 查找是否有对应的加载中占位卡片
+                            const loadingCard = $(`.loading-card[data-task-id="${task.task_id}"]`);
+                            
+                            // 如果任务成功完成且有图片
+                            if (task.status === 'succeed' && task.images && task.images.length > 0) {
+                                // 如果存在加载中占位卡片，则替换它
+                                if (loadingCard.length > 0) {
+                                    // 处理所有图片
+                                    task.images.forEach(image => {
+                                        if (image.local_url && !loadedImageUrls.has(image.local_url)) {
+                                            loadedImageUrls.add(image.local_url);
+                                            const card = setupImageCard(image.local_url, task.prompt, true);
+                                            loadingCard.replaceWith(card);
+                                        }
+                                    });
+                                } 
+                                // 否则检查是否为新图片，添加到图片墙
+                                else {
+                                    task.images.forEach(image => {
+                                        if (image.local_url && !loadedImageUrls.has(image.local_url)) {
+                                            loadedImageUrls.add(image.local_url);
+                                            const card = setupImageCard(image.local_url, task.prompt, true);
+                                            $('#imageGrid').prepend(card); // 新图片添加到开头
+                                        }
+                                    });
+                                }
+                            }
+                            // 如果任务失败，移除加载中占位卡片
+                            else if (task.status === 'failed' && loadingCard.length > 0) {
+                                loadingCard.remove();
+                            }
+                        });
+                    } else {
+                        console.error('加载图片失败:', response.message);
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error('请求失败:', error);
+                }
+            });
+        }
+
+        function submitForm(formData, url) {
+            $('.loading').show();
+            $('button[type="submit"]').prop('disabled', true);
+
+            $.ajax({
+                url: url,
+                type: 'POST',
+                data: formData,
+                processData: false,
+                contentType: false,
+                success: function(response) {
+                    if (response.success) {
+                        // 创建加载中的占位卡片
+                        const loadingCard = $('<div class="image-card loading-card">');
+                        const loadingImg = $('<div class="loading-placeholder">');
+                        loadingImg.append('<i class="fas fa-spinner fa-spin fa-2x"></i>');
+                        loadingImg.append('<p>生成中...</p>');
+                        loadingCard.append(loadingImg);
+                        loadingCard.attr('data-task-id', response.data.task_id);
+                        
+                        // 将加载中的卡片添加到图片墙的开头
+                        $('#imageGrid').prepend(loadingCard);
+                        
+                        // 关闭侧边栏
+                        $('#sidebar').removeClass('active');
+                        $('#mainContent').removeClass('sidebar-active');
+                    } else {
+                        alert('提交失败：' + response.message);
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error('请求失败:', xhr.responseText);
+                    alert('提交失败：' + (xhr.responseJSON ? xhr.responseJSON.message : error));
+                },
+                complete: function() {
+                    $('.loading').hide();
+                    $('button[type="submit"]').prop('disabled', false);
+                }
+            });
+        }
+
+        // 图片墙交互
+        function setupImageCard(imageUrl, prompt, lazyLoad = true) {
+            const card = $('<div>').addClass('image-card');
+            const img = $('<img>')
+                .attr(lazyLoad ? 'data-src' : 'src', imageUrl)
+                .attr('alt', prompt || '生成的图片')
+                .addClass('card-img')
+                .on('click', function(e) {
+                    e.stopPropagation();
+                    $('#modalImage').attr('src', imageUrl);
+                    $('#modalPrompt').text(prompt || '');
+                    const modal = $('#imagePreviewModal');
+                    if (!modal.data('initialized')) {
+                        modal.on('hidden.bs.modal', function() {
+                            $('#modalImage').attr('src', '');
+                            $('#modalPrompt').text('');
+                        });
+                        modal.data('initialized', true);
+                    }
+                    modal.modal('show');
+                });
+            const overlay = $('<div>').addClass('card-overlay')
+                .append($('<button>').html('<i class="fas fa-video"></i>').addClass('btn-icon btn-video').attr('title', '生成视频').click(function() {
+                    window.location.href = `/index.html?image=${encodeURIComponent(imageUrl)}&prompt=${encodeURIComponent(prompt)}`;
+                }))
+                .append($('<button>').html('<i class="fas fa-images"></i>').addClass('btn-icon btn-img2img').attr('title', '图生图').click(async function() {
+                    const response = await fetch(imageUrl);
+                    const blob = await response.blob();
+                    const file = new File([blob], 'image.png', { type: 'image/png' });
+                    
+                    // 创建一个新的 FileList 对象
+                    const dataTransfer = new DataTransfer();
+                    dataTransfer.items.add(file);
+                    
+                    // 设置文件输入框的文件
+                    const fileInput = $('#i2i_image')[0];
+                    fileInput.files = dataTransfer.files;
+                    
+                    // 触发 change 事件以更新预览
+                    $(fileInput).trigger('change');
+                    
+                    $('#img2img-tab').tab('show');
+                    $('#sidebar').addClass('active');
+                    $('#mainContent').addClass('sidebar-active');
+                }));
+        
+            card.append(img).append(overlay);
+        
+            if (lazyLoad && observer) {
+                observer.observe(img[0]);
+            }
+        
+            return card;
+        }
+
+        // 初始化懒加载观察器
+        setupIntersectionObserver();
+
+        // 初始化工具提示并加载图片数据
+        $(function () {
+            $('[data-bs-toggle="tooltip"]').tooltip();
+            
+            // 确保占位卡片在最前面 - 页面加载时就处理
+            const placeholderCard = $('#createNewImage');
+            if (placeholderCard.length > 0) {
+                placeholderCard.detach();
+                $('#imageGrid').prepend(placeholderCard);
+            }
+            
+            loadImageData();
+        });
+        // 每30秒自动更新任务状态
+        setInterval(() => {
+            $.ajax({
+                url: '/generate_image/batch_update',
+                method: 'POST',
+                success: function(response) {
+                    if (response.success) {
+                        // 重新加载图片墙
+                        loadImageData();
+                    }
+                }
+            });
+        }, 30000);
+    </script>
+</body>
+<script>
+    function toggleTheme() {
+        const root = document.documentElement;
+        const themeToggle = document.getElementById('themeToggle');
+        const icon = themeToggle.querySelector('i');
+        const text = themeToggle.querySelector('span');
+
+        if (root.classList.contains('dark-theme')) {
+            root.classList.remove('dark-theme');
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon');
+            text.textContent = '切换暗色';
+            localStorage.setItem('theme', 'light');
+        } else {
+            root.classList.add('dark-theme');
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+            text.textContent = '切换亮色';
+            localStorage.setItem('theme', 'dark');
+        }
+    }
+
+    // 初始化主题
+    function initTheme() {
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        const root = document.documentElement;
+        const themeToggle = document.getElementById('themeToggle');
+        const icon = themeToggle.querySelector('i');
+        const text = themeToggle.querySelector('span');
+
+        if (savedTheme === 'dark') {
+            root.classList.add('dark-theme');
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+            text.textContent = '切换亮色';
+        }
+    }
+    document.addEventListener('DOMContentLoaded', initTheme);
+</script>
+<script>
+    // 初始化主题
+    initTheme();
+    
+    // 初始化回到顶部按钮
+    const backToTop = document.getElementById('backToTop');
+    if (backToTop) {
+        // 监听滚动事件
+        window.addEventListener('scroll', () => {
+            // 当页面滚动超过300px时显示按钮
+            backToTop.classList.toggle('visible', window.scrollY > 300);
+        });
+        
+        // 点击事件处理
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+</script>
+</body>
+</html>
