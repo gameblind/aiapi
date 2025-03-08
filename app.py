@@ -2,7 +2,6 @@ from flask import Flask, render_template, request, jsonify, redirect, url_for, s
 import requests
 import json
 import os
-import base64
 import time
 from datetime import datetime, timedelta
 from dotenv import load_dotenv
@@ -23,16 +22,40 @@ load_dotenv()
 API_BASE_URL = os.getenv('API_BASE_URL')
 API_KEY = os.getenv('API_KEY')
 
+# 文件存储路径
+TASKS_FILE = 'static/video_tasks_history.json'
+IMAGE_TASKS_FILE = 'static/image_tasks.json'
+VIDEOS_DIR = 'static/videos'
+IMAGES_DIR = 'static/images'
+STATIC_DIR = 'static'
+
+# 初始化应用所需的目录和文件
+def ensure_app_files():
+    """确保应用所需的目录和文件都存在"""
+    # 确保目录存在
+    for directory in [STATIC_DIR, VIDEOS_DIR, IMAGES_DIR]:
+        if not os.path.exists(directory):
+            os.makedirs(directory)
+            print(f"[INFO] 创建目录: {directory}")
+    
+    # 确保任务文件存在
+    for file_path, default_content in [
+        (TASKS_FILE, []),
+        (IMAGE_TASKS_FILE, [])
+    ]:
+        if not os.path.exists(file_path):
+            with open(file_path, 'w', encoding='utf-8') as f:
+                json.dump(default_content, f, ensure_ascii=False, indent=2)
+            print(f"[INFO] 创建文件: {file_path}")
+
+# 应用启动时初始化文件
+ensure_app_files()
+
 # 注册Blueprint并添加调试日志
 print("[DEBUG] 开始注册Blueprint...")
 # 修改为与前端匹配的URL前缀
 app.register_blueprint(image_bp, url_prefix='/generate_image')
 print("[DEBUG] Blueprint注册完成，url_prefix='/generate_image'")
-# 文件存储路径
-TASKS_FILE = 'video_tasks_history.json'
-VIDEOS_DIR = 'static/videos'
-if not os.path.exists(VIDEOS_DIR):
-    os.makedirs(VIDEOS_DIR)
 
 def load_tasks():
     """加载任务历史记录"""
@@ -294,23 +317,157 @@ def all_tasks():
 @app.route('/images')
 def images():
     """图片墙页面"""
-    return render_template('images.html')  # 确保 images.html 在 templates 目录
+    return render_template('images.html')
 
+@app.route('/videos')
+def videos():
+    """视频墙页面"""
+    return render_template('videos.html')
+
+@app.route('/api/videos')
+def api_videos():
+    """获取视频列表API"""
+    tasks = load_tasks()
+    videos_list = []
+    
+    # 创建一个集合来存储已经处理过的视频文件名
+    processed_videos = set()
+    
+    # 从任务记录中获取视频
+    for task in tasks:
+        if task.get('status') == 'succeed' and task.get('videos'):
+            for video in task.get('videos', []):
+                if video.get('local_url'):
+                    local_url = video.get('local_url')
+                    video_filename = os.path.basename(local_url)
+                    processed_videos.add(video_filename)
+                    
+                    videos_list.append({
+                        'task_id': task.get('task_id'),
+                        'video_id': video.get('id'),
+                        'url': local_url,
+                        'created_at': task.get('created_at'),
+                        'prompt': task.get('prompt')
+                    })
+    
+    # 检查本地视频文件夹中是否有未在JSON中记录的视频
+    if os.path.exists(VIDEOS_DIR):
+        for filename in os.listdir(VIDEOS_DIR):
+            if filename.endswith('.mp4') and filename not in processed_videos:
+                # 提取任务ID作为视频ID的一部分
+                task_id = filename.split('.')[0].split('_')[0]
+                
+                # 添加到视频列表中
+                videos_list.append({
+                    'task_id': task_id,
+                    'video_id': 'local_' + task_id,
+                    'url': f"/static/videos/{filename}",
+                    'created_at': None,  # 没有创建时间信息
+                    'prompt': f"本地视频: {filename}"  # 使用文件名作为提示
+                })
+    
+    # 反转列表顺序，使最新的视频排在前面
+    videos_list.reverse()
+    
+    return jsonify({
+        'success': True,
+        'data': videos_list
+    })
+
+@app.route('/api/video_detail/<task_id>/<video_id>')
+def api_video_detail(task_id, video_id):
+    """获取视频详情API"""
+    tasks = load_tasks()
+    
+    # 检查是否为本地视频（视频ID以'local_'开头）
+    if video_id.startswith('local_'):
+        # 构建本地视频的详情信息
+        video_filename = f"{task_id}.mp4"
+        video_path = os.path.join(VIDEOS_DIR, video_filename)
+        
+        if os.path.exists(video_path):
+            return jsonify({
+                'success': True,
+                'data': {
+                    'task_id': task_id,
+                    'video_id': video_id,
+                    'url': f"/static/videos/{video_filename}",
+                    'created_at': None,  # 本地视频没有创建时间
+                    'prompt': f"本地视频: {video_filename}",
+                    'status': 'succeed',
+                    'model_name': '未知',
+                    'duration': '未知',
+                    'expiration_date': None
+                }
+            })
+    
+    # 常规视频处理逻辑
+    for task in tasks:
+        if task.get('task_id') == task_id:
+            for video in task.get('videos', []):
+                if video.get('id') == video_id:
+                    return jsonify({
+                        'success': True,
+                        'data': {
+                            'task_id': task.get('task_id'),
+                            'video_id': video.get('id'),
+                            'url': video.get('local_url'),
+                            'created_at': task.get('created_at'),
+                            'prompt': task.get('prompt'),
+                            'status': task.get('status'),
+                            'model_name': task.get('parameters', {}).get('model_name'),
+                            'duration': video.get('duration'),
+                            'expiration_date': task.get('expiration_date')
+                        }
+                    })
+    
+    return jsonify({
+        'success': False,
+        'message': '未找到视频'
+    })
+
+@app.route('/api/task_status/<task_id>')
+def api_task_status(task_id):
+    """获取任务状态API"""
+    tasks = load_tasks()
+    
+    for task in tasks:
+        if task.get('task_id') == task_id:
+            return jsonify({
+                'success': True,
+                'data': task
+            })
+    
+    # 如果在本地找不到任务，尝试从API查询
+    status_data = check_task_status(task_id)
+    if status_data.get('code') == 0:
+        return jsonify({
+            'success': True,
+            'data': status_data.get('data', {})
+        })
+    
+    return jsonify({
+        'success': False,
+        'message': '未找到任务'
+    })  # 确保 images.html 在 templates 目录
+
+# 添加图生视频的API调用路由
 @app.route('/generate', methods=['POST'])
 def generate_video():
+    """处理图生视频请求"""
     try:
-        print("\n[DEBUG] ==================== 开始处理视频生成请求 ====================")
+        print("\n[DEBUG] ==================== 开始处理图生视频请求 ====================")
         
         # 1. 检查请求数据
         print("\n[DEBUG] 1. 检查请求数据:")
-        data = request.get_json()
+        data = request.json
         if not data or 'image' not in data:
             raise Exception("未找到图片数据")
         
         # 2. 获取并验证表单数据
         print("\n[DEBUG] 2. 获取表单数据:")
-        image_base64 = process_image_base64(data['image'])
-        image_tail_base64 = process_image_base64(data.get('image_tail', '')) if data.get('image_tail') else None
+        image_base64 = data['image']
+        image_tail_base64 = data.get('image_tail', '')
         prompt = data.get('prompt', '')[:2500]  # 限制提示词长度
         negative_prompt = data.get('negative_prompt', '')[:2500]  # 限制负向提示词长度
         duration = data.get('duration', '5')
@@ -377,118 +534,100 @@ def generate_video():
         
         # 5. 发送请求
         print("\n[DEBUG] 5. 发送API请求...")
-        max_retries = 3
-        retry_delay = 2
-        timeout = 60  # 增加超时时间
-        
-        for attempt in range(max_retries):
-            try:
-                print(f"[DEBUG] 第 {attempt + 1} 次尝试发送请求")
-                response = requests.post(
-                    url,
-                    json=payload,
-                    headers=headers,
-                    verify=False,
-                    timeout=timeout
-                )
-                break
-            except requests.exceptions.SSLError as ssl_err:
-                print(f"[ERROR] SSL错误 (尝试 {attempt + 1}/{max_retries}):")
-                print(f"[ERROR] - 错误类型: {type(ssl_err).__name__}")
-                print(f"[ERROR] - 错误信息: {str(ssl_err)}")
-                if attempt == max_retries - 1:
-                    raise
-                print(f"[DEBUG] 等待{retry_delay}秒后重试...")
-                time.sleep(retry_delay)
-            except requests.exceptions.Timeout as timeout_err:
-                print(f"[ERROR] 请求超时 (尝试 {attempt + 1}/{max_retries}):")
-                print(f"[ERROR] - 错误类型: {type(timeout_err).__name__}")
-                print(f"[ERROR] - 错误信息: {str(timeout_err)}")
-                if attempt == max_retries - 1:
-                    raise
-                print(f"[DEBUG] 等待{retry_delay}秒后重试...")
-                time.sleep(retry_delay)
-            except requests.exceptions.RequestException as req_err:
-                print(f"[ERROR] 请求错误 (尝试 {attempt + 1}/{max_retries}):")
-                print(f"[ERROR] - 错误类型: {type(req_err).__name__}")
-                print(f"[ERROR] - 错误信息: {str(req_err)}")
-                if attempt == max_retries - 1:
-                    raise
-                print(f"[DEBUG] 等待{retry_delay}秒后重试...")
-                time.sleep(retry_delay)
-        
-        response_data = response.json()
+        response = requests.post(
+            url,
+            headers=headers,
+            json=payload,
+            verify=False
+        )
         
         # 6. 处理响应
-        if response_data.get('code') == 0 and response_data.get('data', {}).get('task_id'):
-            task_id = response_data['data']['task_id']
-            
-            # 7. 保存任务记录
-            task_record = {
-                'task_id': task_id,
-                'external_task_id': external_task_id,
-                'prompt': prompt,
-                'negative_prompt': negative_prompt,
-                'status': 'submitted',
-                'status_msg': '',
-                'parameters': {
-                    'model_name': model_name,
-                    'duration': duration,
-                    'mode': mode,
-                    'cfg_scale': cfg_scale
-                },
-                'image_url': f"data:image/jpeg;base64,{image_base64}",
-                'videos': []
-            }
-            
-            save_task(task_record)
-            
-            return jsonify({
-                'success': True,
-                'message': '任务已提交',
-                'data': {'task_id': task_id, 'external_task_id': external_task_id}
-            })
-        else:
+        print(f"[DEBUG] 收到响应:")
+        print(f"[DEBUG] - 状态码: {response.status_code}")
+        
+        response_data = response.json()
+        print(f"[DEBUG] - 响应数据: {json.dumps(response_data, ensure_ascii=False)}")
+        
+        # 检查响应结果
+        if response_data.get('code') != 0:
             error_msg = response_data.get('message', '未知错误')
-            return jsonify({
-                'success': False,
-                'message': f'提交任务失败: {error_msg}',
-                'data': response_data
-            })
+            print(f"[ERROR] API返回错误: {error_msg}")
+            raise Exception(f"API返回错误: {error_msg}")
             
-    except Exception as e:
-        print(f"[ERROR] 处理失败: {str(e)}")
+        # 7. 获取任务ID
+        task_id = response_data['data']['task_id']
+        print(f"[DEBUG] 任务创建成功，任务ID: {task_id}")
+        
+        # 8. 保存任务信息
+        task_record = {
+            'task_id': task_id,
+            'external_task_id': external_task_id,
+            'prompt': prompt,
+            'negative_prompt': negative_prompt,
+            'status': 'submitted',
+            'status_msg': '',
+            'parameters': {
+                'model_name': model_name,
+                'duration': duration,
+                'mode': mode,
+                'cfg_scale': cfg_scale
+            },
+            'videos': [],  # 确保包含空的视频数组
+            'has_image_url_data': bool(image_base64) or bool(image_tail_base64)
+        }
+        
+        # 使用原来的 save_task 函数保存任务
+        save_task(task_record)
+        print(f"[DEBUG] 任务信息已保存")
+        
+        print("\n[DEBUG] ==================== 图生视频请求处理完成 ====================")
         return jsonify({
-            "success": False,
-            "message": f"处理失败: {str(e)}"
+            'success': True,
+            'message': '任务已提交',
+            'task_id': task_id
+        })
+        
+    except Exception as e:
+        print(f"[ERROR] 处理图生视频请求失败: {str(e)}")
+        return jsonify({
+            'success': False,
+            'message': str(e)
         }), 500
-def validate_image_dimensions(img):
-    """验证图片尺寸和宽高比"""
-    width = img.width
-    height = img.height
+
+# 修改保存任务信息的代码，避免保存 base64 数据：
+def save_task_info(task_id, data):
+    # 创建任务记录，但不保存base64图片数据
+    task_info = {
+        "task_id": task_id,
+        "create_time": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "status": "pending",
+        "prompt": data.get("prompt", ""),
+        "negative_prompt": data.get("negative_prompt", ""),
+        "model_name": data.get("model_name", ""),
+        "mode": data.get("mode", ""),
+        "duration": data.get("duration", ""),
+        "cfg_scale": data.get("cfg_scale", ""),
+        # 只记录是否有图片，不保存base64数据
+        "has_image": bool(data.get("image", "")),
+        "has_image_tail": bool(data.get("image_tail", ""))
+    }
     
-    # 检查最小分辨率
-    if width < 300 or height < 300:
-        raise Exception("图片分辨率不能小于300*300px")
+    # 读取现有任务
+    tasks = []
+    if os.path.exists(TASKS_FILE):
+        with open(TASKS_FILE, "r", encoding="utf-8") as f:
+            try:
+                tasks = json.load(f)
+            except json.JSONDecodeError:
+                tasks = []
     
-    # 检查宽高比
-    ratio = width / height
-    if ratio < 0.4 or ratio > 2.5:  # 1:2.5 ~ 2.5:1
-        raise Exception("图片宽高比必须在1:2.5到2.5:1之间")
+    # 添加新任务并保存
+    tasks.append(task_info)
+    with open(TASKS_FILE, "w", encoding="utf-8") as f:
+        json.dump(tasks, f, ensure_ascii=False, indent=2)
     
-    return True
-def process_image_base64(base64_str):
-    """处理Base64图片数据"""
-    # 如果包含前缀，去除前缀
-    if ',' in base64_str:
-        base64_str = base64_str.split(',')[1]
-    
-    # 检查文件大小（Base64字符串长度 * 0.75 ≈ 实际文件大小）
-    file_size = len(base64_str) * 0.75 / (1024 * 1024)  # 转换为MB
-    if file_size > 10:
-        raise Exception("图片文件大小不能超过10MB")
-    
-    return base64_str
+    return task_info
+
 @app.route('/extend_video', methods=['POST'])
 def extend_video():
     """处理视频延长请求 - 简化版"""
@@ -602,7 +741,7 @@ def check_status(task_id):
                 print(f"[DEBUG] 更新任务状态: {task_status} ({task_status_msg})")
                 
                 task['status'] = task_status
-                task['status_msg'] = task_msg
+                task['status_msg'] = task_status_msg
                 
                 # 如果任务成功且有视频信息
                 if task_status == 'succeed':
@@ -611,11 +750,17 @@ def check_status(task_id):
                     
                     if videos:
                         print(f"[DEBUG] 发现 {len(videos)} 个视频")
-                        task['videos'] = []
+                        
+                        # 创建现有视频的映射
+                        existing_videos = {v.get('id'): v for v in task.get('videos', [])}
+                        
+                        # 创建新的视频列表
+                        new_videos = []
                         
                         for video in videos:
+                            video_id = video.get('id', '')
                             video_info = {
-                                'id': video.get('id', ''),
+                                'id': video_id,
                                 'url': video.get('url', ''),
                                 'duration': video.get('duration', '0'),
                                 'local_url': None,
@@ -627,27 +772,29 @@ def check_status(task_id):
                             print(f"[DEBUG] - URL: {video_info['url']}")
                             print(f"[DEBUG] - 时长: {video_info['duration']}")
                             
-                            if video_info['url']:
-                                # 检查是否已下载过
-                                for old_video in task.get('videos', []):
-                                    if old_video.get('id') == video_info['id'] and old_video.get('downloaded'):
-                                        video_info['downloaded'] = True
-                                        video_info['local_url'] = old_video.get('local_url')
-                                        print(f"[DEBUG] 视频已下载过，跳过下载")
-                                        break
+                            # 检查是否已存在且已下载
+                            if video_id in existing_videos and existing_videos[video_id].get('downloaded'):
+                                # 保留已下载的信息
+                                video_info['downloaded'] = True
+                                video_info['local_url'] = existing_videos[video_id].get('local_url')
+                                print(f"[DEBUG] 视频已下载过，保留下载信息")
+                            # 下载视频
+                            elif video_info['url']:
+                                local_url = download_video(video_info['url'], f"{task_id}_{video_id}", force_download=False)
+                                if local_url:
+                                    video_info['local_url'] = local_url
+                                    video_info['downloaded'] = True
+                                    downloaded_count += 1
+                                    print(f"[DEBUG] 视频下载成功: {local_url}")
                                 else:
-                                    local_url = download_video(video_info['url'], f"{task_id}_{video_info['id']}", force_download=False)
-                                    if local_url:
-                                        video_info['local_url'] = local_url
-                                        video_info['downloaded'] = True
-                                        downloaded_count += 1
-                                        print(f"[DEBUG] 视频下载成功: {local_url}")
-                                    else:
-                                        print(f"[WARNING] 视频下载失败")
+                                    print(f"[WARNING] 视频下载失败")
                             else:
                                 print(f"[WARNING] 视频URL为空")
                                     
-                            task['videos'].append(video_info)
+                            new_videos.append(video_info)
+                            
+                        # 更新任务的视频列表
+                        task['videos'] = new_videos
                     else:
                         print("[WARNING] 任务成功但没有视频信息")
                 
@@ -748,6 +895,9 @@ def batch_update():
                 print(f"[DEBUG] 发现 {len(videos)} 个视频:")
                 existing_videos = {v.get('id'): v for v in task.get('videos', [])}
                 
+                # 创建新的视频列表
+                new_videos = []
+                
                 for i, video in enumerate(videos):
                     video_id = video.get('id')
                     if not video_id:
@@ -755,17 +905,7 @@ def batch_update():
                         
                     print(f"\n[DEBUG] 处理视频 {i+1}/{len(videos)}")
                     
-                    # 检查是否已存在且已下载
-                    if video_id in existing_videos and existing_videos[video_id].get('downloaded'):
-                        print(f"[DEBUG] 视频已下载过，跳过下载")
-                        continue
-                    
-                    # 检查任务是否已删除
-                    if task.get('status') == 'deleted':
-                        print(f"[DEBUG] 任务已被标记为删除，跳过下载")
-                        continue
-                    
-                    # 创建或更新视频信息
+                    # 创建视频信息对象
                     video_info = {
                         'id': video_id,
                         'url': video.get('url', ''),
@@ -774,8 +914,17 @@ def batch_update():
                         'downloaded': False
                     }
                     
+                    # 检查是否已存在且已下载
+                    if video_id in existing_videos and existing_videos[video_id].get('downloaded'):
+                        # 保留已下载的信息
+                        video_info['downloaded'] = True
+                        video_info['local_url'] = existing_videos[video_id].get('local_url')
+                        print(f"[DEBUG] 视频已下载过，保留下载信息")
+                    # 检查任务是否已删除
+                    elif task.get('status') == 'deleted':
+                        print(f"[DEBUG] 任务已被标记为删除，跳过下载")
                     # 下载视频
-                    if video_info['url']:
+                    elif video_info['url']:
                         local_url = download_video(video_info['url'], f"{task_id}_{video_id}", force_download=False)
                         if local_url:
                             video_info['local_url'] = local_url
@@ -785,14 +934,11 @@ def batch_update():
                         else:
                             print(f"[WARNING] 视频下载失败")
                     
-                    # 更新任务的视频列表
-                    if video_id in existing_videos:
-                        for i, v in enumerate(task['videos']):
-                            if v['id'] == video_id:
-                                task['videos'][i] = video_info
-                                break
-                    else:
-                        task['videos'].append(video_info)
+                    # 添加到新的视频列表
+                    new_videos.append(video_info)
+                
+                # 更新任务的视频列表
+                task['videos'] = new_videos
         
         # 保存更新后的任务记录
         print("\n[DEBUG] 保存更新后的任务记录...")
@@ -894,6 +1040,75 @@ def test_task_status():
         print(f"[ERROR] {error_msg}")
         print(f"[ERROR] - 错误类型: {type(e).__name__}")
         print(f"[ERROR] - 错误信息: {str(e)}")
+        return jsonify({"error": error_msg}), 500
+
+@app.route('/api/pull_video/<task_id>/<video_id>', methods=['POST'])
+def pull_video(task_id, video_id):
+    """从云端重新拉取视频"""
+    try:
+        print(f"\n[DEBUG] ==================== 开始拉取视频 ====================")
+        print(f"[DEBUG] 任务ID: {task_id}")
+        print(f"[DEBUG] 视频ID: {video_id}")
+        
+        tasks = load_tasks()
+        
+        # 查找对应的任务和视频
+        for task in tasks:
+            if task.get('task_id') == task_id:
+                for video in task.get('videos', []):
+                    if video.get('id') == video_id:
+                        # 获取视频URL
+                        video_url = video.get('url')
+                        if not video_url:
+                            print(f"[ERROR] 未找到视频URL")
+                            return jsonify({
+                                'success': False,
+                                'message': '未找到视频URL'
+                            })
+                        
+                        print(f"[DEBUG] 视频URL: {video_url}")
+                        print(f"[DEBUG] 开始强制重新下载视频...")
+                        
+                        # 强制重新下载视频
+                        local_url = download_video(video_url, f"{task_id}_{video_id}", force_download=True)
+                        if local_url:
+                            # 更新视频状态
+                            video['downloaded'] = True
+                            video['local_url'] = local_url
+                            
+                            # 保存更新后的任务记录
+                            with open(TASKS_FILE, 'w', encoding='utf-8') as f:
+                                json.dump(tasks, f, ensure_ascii=False, indent=2)
+                            
+                            print(f"[DEBUG] 视频拉取成功: {local_url}")
+                            print(f"[DEBUG] ==================== 完成拉取视频 ====================\n")
+                            
+                            return jsonify({
+                                'success': True,
+                                'message': '视频拉取成功',
+                                'local_url': local_url
+                            })
+                        else:
+                            print(f"[ERROR] 视频下载失败")
+                            print(f"[DEBUG] ==================== 拉取视频失败 ====================\n")
+                            
+                            return jsonify({
+                                'success': False,
+                                'message': '视频下载失败'
+                            })
+        
+        print(f"[ERROR] 未找到对应的任务或视频")
+        print(f"[DEBUG] ==================== 拉取视频失败 ====================\n")
+        
+        return jsonify({
+            'success': False,
+            'message': '未找到对应的任务或视频'
+        })
+    
+    except Exception as e:
+        error_msg = f"拉取视频失败: {str(e)}"
+        print(f"[ERROR] {error_msg}")
+        print(f"[DEBUG] ==================== 拉取视频异常 ====================\n")
         return jsonify({"error": error_msg}), 500
 
 @app.route('/delete_task/<task_id>', methods=['POST'])

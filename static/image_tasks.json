@@ -529,21 +529,14 @@
     "external_task_id": "custom_1741212428",
     "prompt": "女妖穿着白色丝绸贴身衣服，皮肤雪白，亚洲人五官，头上长满细细的白色小蛇，",
     "negative_prompt": "头发",
-    "status": "succeed",
-    "status_msg": "",
+    "status": "deleted",
+    "status_msg": "图片已删除",
     "parameters": {
       "model_name": "kling-v1",
       "n": 1,
       "aspect_ratio": "9:16"
     },
-    "images": [
-      {
-        "index": 0,
-        "url": "https://cdn.klingai.com/bs2/upload-kling-api/8534613866/image/Cji6lmfGy64AAAAAAH8HJw-0_raw_image_0.png",
-        "local_url": "/static/images/Cji6lmfGy64AAAAAAH8HJw_0.png",
-        "downloaded": true
-      }
-    ]
+    "images": []
   },
   {
     "task_id": "CjmgV2fGxuEAAAAAAIUjRA",
@@ -1152,26 +1145,33 @@
     "external_task_id": "custom_1741319857",
     "prompt": "一台笔记本电脑屏幕，屏幕前有一双手在打字， 屏幕中是一个唐装美女的肖像照",
     "negative_prompt": "",
-    "status": "succeed",
-    "status_msg": "",
+    "status": "deleted",
+    "status_msg": "图片已删除",
     "parameters": {
       "model_name": "kling-v1",
       "n": 1,
       "aspect_ratio": "9:16"
     },
-    "images": [
-      {
-        "index": 0,
-        "url": "https://cdn.klingai.com/bs2/upload-kling-api/4538927598/image/ChGYqWfJXY4AAAAAADhBiw-0_raw_image_0.png",
-        "local_url": "/static/images/ChGYqWfJXY4AAAAAADhBiw_0.png",
-        "downloaded": true
-      }
-    ]
+    "images": []
   },
   {
     "task_id": "CjJmkGfJXPUAAAAAADqxDg",
     "external_task_id": "custom_1741322735",
     "prompt": "一台笔记本电脑屏幕，屏幕前有一双手在打字， 屏幕里面显示到是一个唐装美女右手伸出的肖像照片",
+    "negative_prompt": "",
+    "status": "deleted",
+    "status_msg": "图片已删除",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "9:16"
+    },
+    "images": []
+  },
+  {
+    "task_id": "Cl6-G2fK_xwAAAAAAALtcA",
+    "external_task_id": "custom_1741359677",
+    "prompt": "天苍苍野茫茫，风吹草低见牛羊",
     "negative_prompt": "",
     "status": "succeed",
     "status_msg": "",
@@ -1183,8 +1183,1041 @@
     "images": [
       {
         "index": 0,
-        "url": "https://cdn.klingai.com/bs2/upload-kling-api/4092983486/image/CjJmkGfJXPUAAAAAADqxDg-0_raw_image_0.png",
-        "local_url": "/static/images/CjJmkGfJXPUAAAAAADqxDg_0.png",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/6215469460/image/Cl6-G2fK_xwAAAAAAALtcA-0_raw_image_0.png",
+        "local_url": "/static/images/Cl6-G2fK_xwAAAAAAALtcA_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CmJcDWfLA5QAAAAAAASrQg",
+    "external_task_id": "custom_1741363019",
+    "prompt": "一树梨花压海棠",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "9:16"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/1823924357/image/CmJcDWfLA5QAAAAAAASrQg-0_raw_image_0.png",
+        "local_url": "/static/images/CmJcDWfLA5QAAAAAAASrQg_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjgUsWfLADAAAAAAAAWX6g",
+    "external_task_id": "custom_1741363034",
+    "prompt": "一枝红杏出墙来",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "9:16"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/1932275759/image/CjgUsWfLADAAAAAAAAWX6g-0_raw_image_0.png",
+        "local_url": "/static/images/CjgUsWfLADAAAAAAAAWX6g_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CmB0HmfK9xQAAAAAAAfPMA",
+    "external_task_id": "custom_1741363063",
+    "prompt": "一只乌鸦口渴了\r\n",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "9:16"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/7820730969/image/CmB0HmfK9xQAAAAAAAfPMA-0_raw_image_0.png",
+        "local_url": "/static/images/CmB0HmfK9xQAAAAAAAfPMA_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CmJcDWfLA5QAAAAAAAToLw",
+    "external_task_id": "custom_1741363303",
+    "prompt": "关公战秦琼\r\n",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "9:16"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/6343092556/image/CmJcDWfLA5QAAAAAAAToLw-0_raw_image_0.png",
+        "local_url": "/static/images/CmJcDWfLA5QAAAAAAAToLw_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjgUsWfLADAAAAAAAAYlkA",
+    "external_task_id": "custom_1741363680",
+    "prompt": "关公战秦琼",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "16:9"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/6750019753/image/CjgUsWfLADAAAAAAAAYlkA-0_raw_image_0.png",
+        "local_url": "/static/images/CjgUsWfLADAAAAAAAAYlkA_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "Cjgj8GfK9x0AAAAAAAk45Q",
+    "external_task_id": "custom_1741364714",
+    "prompt": "蜘蛛侠大战死侍",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "16:9"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/9731841086/image/Cjgj8GfK9x0AAAAAAAk45Q-0_raw_image_0.png",
+        "local_url": "/static/images/Cjgj8GfK9x0AAAAAAAk45Q_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CmJcDWfLA5QAAAAAABuNKg",
+    "external_task_id": "custom_1741397190",
+    "prompt": "一条大河波浪宽",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "16:9"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/4538927598/image/CmJcDWfLA5QAAAAAABuNKg-0_raw_image_0.png",
+        "local_url": "/static/images/CmJcDWfLA5QAAAAAABuNKg_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CmB0HmfK9xQAAAAAACDgtw",
+    "external_task_id": "custom_1741400189",
+    "prompt": "拇指姑娘在手中",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "9:16"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/8534613866/image/CmB0HmfK9xQAAAAAACDgtw-0_raw_image_0.png",
+        "local_url": "/static/images/CmB0HmfK9xQAAAAAACDgtw_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CmJcDWfLA5QAAAAAAB3RDw",
+    "external_task_id": "custom_1741400280",
+    "prompt": "小人国的公主在大人手中",
+    "negative_prompt": "",
+    "status": "failed",
+    "status_msg": "Failure to pass the risk control system",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "9:16"
+    },
+    "images": []
+  },
+  {
+    "task_id": "Cjgj8GfK9x0AAAAAACEAAA",
+    "external_task_id": "custom_1741400314",
+    "prompt": "小人国的公主在大人手中",
+    "negative_prompt": "",
+    "status": "failed",
+    "status_msg": "Failure to pass the risk control system",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "9:16"
+    },
+    "images": []
+  },
+  {
+    "task_id": "CjgUsWfLADAAAAAAAB7hVw",
+    "external_task_id": "custom_1741400409",
+    "prompt": "绿色光剑",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.5,
+      "n": 1
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/1499944505/image/CjgUsWfLADAAAAAAAB7hVw-0_raw_image_0.png",
+        "local_url": "/static/images/CjgUsWfLADAAAAAAAB7hVw_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CmB0HmfK9xQAAAAAACRRtQ",
+    "external_task_id": "custom_1741404678",
+    "prompt": "中国版超女，周身流动着闪电。",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.5,
+      "n": 1
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/8534613866/image/CmB0HmfK9xQAAAAAACRRtQ-0_raw_image_0.png",
+        "local_url": "/static/images/CmB0HmfK9xQAAAAAACRRtQ_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "Cl6-G2fK_xwAAAAAACKPcw",
+    "external_task_id": "custom_1741404876",
+    "prompt": "白色比熊，吐舌头",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 4,
+      "aspect_ratio": "1:1"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/4538927598/image/Cl6-G2fK_xwAAAAAACKPcw-0_raw_image_0.png",
+        "local_url": "/static/images/Cl6-G2fK_xwAAAAAACKPcw_0.png",
+        "downloaded": true
+      },
+      {
+        "index": 1,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/4538927598/image/Cl6-G2fK_xwAAAAAACKPcw-1_raw_image_0.png",
+        "local_url": "/static/images/Cl6-G2fK_xwAAAAAACKPcw_1.png",
+        "downloaded": true
+      },
+      {
+        "index": 2,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/4538927598/image/Cl6-G2fK_xwAAAAAACKPcw-2_raw_image_0.png",
+        "local_url": "/static/images/Cl6-G2fK_xwAAAAAACKPcw_2.png",
+        "downloaded": true
+      },
+      {
+        "index": 3,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/4538927598/image/Cl6-G2fK_xwAAAAAACKPcw-3_raw_image_0.png",
+        "local_url": "/static/images/Cl6-G2fK_xwAAAAAACKPcw_3.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CmB0HmfK9xQAAAAAACSDDQ",
+    "external_task_id": "custom_1741404923",
+    "prompt": "金毛狗在草地上玩耍",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 4,
+      "aspect_ratio": "1:1"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/4092983486/image/CmB0HmfK9xQAAAAAACSDDQ-0_raw_image_0.png",
+        "local_url": "/static/images/CmB0HmfK9xQAAAAAACSDDQ_0.png",
+        "downloaded": true
+      },
+      {
+        "index": 1,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/4092983486/image/CmB0HmfK9xQAAAAAACSDDQ-1_raw_image_0.png",
+        "local_url": "/static/images/CmB0HmfK9xQAAAAAACSDDQ_1.png",
+        "downloaded": true
+      },
+      {
+        "index": 2,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/4092983486/image/CmB0HmfK9xQAAAAAACSDDQ-2_raw_image_0.png",
+        "local_url": "/static/images/CmB0HmfK9xQAAAAAACSDDQ_2.png",
+        "downloaded": true
+      },
+      {
+        "index": 3,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/4092983486/image/CmB0HmfK9xQAAAAAACSDDQ-3_raw_image_0.png",
+        "local_url": "/static/images/CmB0HmfK9xQAAAAAACSDDQ_3.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CmJbG2fK_3wAAAAAACKH_Q",
+    "external_task_id": "custom_1741404957",
+    "prompt": "一直哈士奇瞪着眼睛，歪头看下前方",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 4,
+      "aspect_ratio": "1:1"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/1823924357/image/CmJbG2fK_3wAAAAAACKH_Q-0_raw_image_0.png",
+        "local_url": "/static/images/CmJbG2fK_3wAAAAAACKH_Q_0.png",
+        "downloaded": true
+      },
+      {
+        "index": 1,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/1823924357/image/CmJbG2fK_3wAAAAAACKH_Q-1_raw_image_0.png",
+        "local_url": "/static/images/CmJbG2fK_3wAAAAAACKH_Q_1.png",
+        "downloaded": true
+      },
+      {
+        "index": 2,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/1823924357/image/CmJbG2fK_3wAAAAAACKH_Q-2_raw_image_0.png",
+        "local_url": "/static/images/CmJbG2fK_3wAAAAAACKH_Q_2.png",
+        "downloaded": true
+      },
+      {
+        "index": 3,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/1823924357/image/CmJbG2fK_3wAAAAAACKH_Q-3_raw_image_0.png",
+        "local_url": "/static/images/CmJbG2fK_3wAAAAAACKH_Q_3.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CmB0HmfK9xQAAAAAACZbhQ",
+    "external_task_id": "custom_1741407316",
+    "prompt": "英姿飒爽的中国古代女英雄穆桂英，穿着盔甲",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.5,
+      "n": 1
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/8525618121/image/CmB0HmfK9xQAAAAAACZbhQ-0_raw_image_0.png",
+        "local_url": "/static/images/CmB0HmfK9xQAAAAAACZbhQ_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CmJcDWfLA5QAAAAAACO5-A",
+    "external_task_id": "custom_1741407998",
+    "prompt": "绝美景色， 镜头跟随",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.5,
+      "n": 1
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/9731841086/image/CmJcDWfLA5QAAAAAACO5-A-0_raw_image_0.png",
+        "local_url": "/static/images/CmJcDWfLA5QAAAAAACO5-A_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "Cjgj8GfK9x0AAAAAACcnaw",
+    "external_task_id": "custom_1741408362",
+    "prompt": "中国侠女身穿黑色紧身蜘蛛装",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.5,
+      "n": 1
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/8525618121/image/Cjgj8GfK9x0AAAAAACcnaw-0_raw_image_0.png",
+        "local_url": "/static/images/Cjgj8GfK9x0AAAAAACcnaw_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CmB0HmfK9xQAAAAAACdmQw",
+    "external_task_id": "custom_1741408732",
+    "prompt": "18岁中国美女，吹泡泡",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.5,
+      "n": 1
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/6215469460/image/CmB0HmfK9xQAAAAAACdmQw-0_raw_image_0.png",
+        "local_url": "/static/images/CmB0HmfK9xQAAAAAACdmQw_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "Cjgj8GfK9x0AAAAAACfbVQ",
+    "external_task_id": "custom_1741409293",
+    "prompt": "浑身缠绕闪电的红黑色豹子",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.5,
+      "n": 1
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/9731841086/image/Cjgj8GfK9x0AAAAAACfbVQ-0_raw_image_0.png",
+        "local_url": "/static/images/Cjgj8GfK9x0AAAAAACfbVQ_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjiHUmfK_2MAAAAAACXnLQ",
+    "external_task_id": "custom_1741409349",
+    "prompt": "浑身缠绕闪电的红黑色豹子，看向镜头",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.5,
+      "n": 1
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/1932275759/image/CjiHUmfK_2MAAAAAACXnLQ-0_raw_image_0.png",
+        "local_url": "/static/images/CjiHUmfK_2MAAAAAACXnLQ_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjgUsWfLADAAAAAAACX5LQ",
+    "external_task_id": "custom_1741409712",
+    "prompt": "荧光风格的小龙女，头上有两个龙角，人类面孔，身上是五颜六色荧光风格的龙鳞",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.5,
+      "n": 1
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/1627674287/image/CjgUsWfLADAAAAAAACX5LQ-0_raw_image_0.png",
+        "local_url": "/static/images/CjgUsWfLADAAAAAAACX5LQ_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "Cl6-G2fK_xwAAAAAACxJew",
+    "external_task_id": "custom_1741417691",
+    "prompt": "女超人变身成机甲战士",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.5,
+      "n": 1
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/6215469460/image/Cl6-G2fK_xwAAAAAACxJew-0_raw_image_0.png",
+        "local_url": "/static/images/Cl6-G2fK_xwAAAAAACxJew_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "Cjgj8GfK9x0AAAAAAC_Nlw",
+    "external_task_id": "custom_1741419643",
+    "prompt": "亚洲面孔",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.5,
+      "n": 1
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/7820730969/image/Cjgj8GfK9x0AAAAAAC_Nlw-0_raw_image_0.png",
+        "local_url": "/static/images/Cjgj8GfK9x0AAAAAAC_Nlw_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "204753",
+    "external_task_id": "local_1741420122",
+    "prompt": "本地导入图片",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "unknown",
+      "n": 1,
+      "aspect_ratio": "unknown"
+    },
+    "images": [
+      {
+        "index": 3,
+        "url": "",
+        "local_url": "/static/images/204753_00003_p.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "ComfyUI",
+    "external_task_id": "local_1741420122",
+    "prompt": "本地导入图片",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "unknown",
+      "n": 1,
+      "aspect_ratio": "unknown"
+    },
+    "images": [
+      {
+        "index": 621,
+        "url": "",
+        "local_url": "/static/images/ComfyUI_00621_.png",
+        "downloaded": true
+      },
+      {
+        "index": 2558,
+        "url": "",
+        "local_url": "/static/images/ComfyUI_02558_2.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "Upscale2",
+    "external_task_id": "local_1741420122",
+    "prompt": "本地导入图片",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "unknown",
+      "n": 1,
+      "aspect_ratio": "unknown"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "",
+        "local_url": "/static/images/Upscale2_2024-06-19-121806.jpeg",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "universal",
+    "external_task_id": "local_1741420122",
+    "prompt": "本地导入图片",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "unknown",
+      "n": 1,
+      "aspect_ratio": "unknown"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "",
+        "local_url": "/static/images/universal_upscale_0_37f2e871-cedd-459b-8e7d-77e002b0e62f_0_upscale_ultra.jpeg",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "00098-2200186740c",
+    "external_task_id": "local_1741420122",
+    "prompt": "本地导入图片",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "unknown",
+      "n": 1,
+      "aspect_ratio": "unknown"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "",
+        "local_url": "/static/images/00098-2200186740c_edited.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "915432872144841-30-1-euler-simple-1",
+    "external_task_id": "local_1741420122",
+    "prompt": "本地导入图片",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "unknown",
+      "n": 1,
+      "aspect_ratio": "unknown"
+    },
+    "images": [
+      {
+        "index": 36,
+        "url": "",
+        "local_url": "/static/images/915432872144841-30-1-euler-simple-1_00036_.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "lyrics",
+    "external_task_id": "local_1741420122",
+    "prompt": "本地导入图片",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "unknown",
+      "n": 1,
+      "aspect_ratio": "unknown"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "",
+        "local_url": "/static/images/lyrics_and_lovecraft-artsy_vibe-flux-fp8-20250302232147.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "2024-11-27-222615",
+    "external_task_id": "local_1741420122",
+    "prompt": "本地导入图片",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "unknown",
+      "n": 1,
+      "aspect_ratio": "unknown"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "",
+        "local_url": "/static/images/2024-11-27-222615_FLUX1-Dev_412901624947403.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "Adetailer",
+    "external_task_id": "local_1741420122",
+    "prompt": "本地导入图片",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "unknown",
+      "n": 1,
+      "aspect_ratio": "unknown"
+    },
+    "images": [
+      {
+        "index": 6,
+        "url": "",
+        "local_url": "/static/images/Adetailer_00006_.jpeg",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "00232-flux1DevV1V2Flux1",
+    "external_task_id": "local_1741420122",
+    "prompt": "本地导入图片",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "unknown",
+      "n": 1,
+      "aspect_ratio": "unknown"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "",
+        "local_url": "/static/images/00232-flux1DevV1V2Flux1_flux1DevBNBNF4V2_3086387790_Euler_1_20_896x1152.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "00016-3923165169",
+    "external_task_id": "local_1741420122",
+    "prompt": "本地导入图片",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "unknown",
+      "n": 1,
+      "aspect_ratio": "unknown"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "",
+        "local_url": "/static/images/00016-3923165169_a (1)_a.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "00005-[number]-598762146-xl juggernautXL",
+    "external_task_id": "local_1741420122",
+    "prompt": "本地导入图片",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "unknown",
+      "n": 1,
+      "aspect_ratio": "unknown"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "",
+        "local_url": "/static/images/00005-[number]-598762146-xl juggernautXL_v9Rundiffusionphoto2-A Masterfully drawn (((comic Horror poster style))) for a (retrospective world) featuring a sleek, (((Dodge Charger muscle car)).jpeg",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "232158",
+    "external_task_id": "local_1741420122",
+    "prompt": "本地导入图片",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "unknown",
+      "n": 1,
+      "aspect_ratio": "unknown"
+    },
+    "images": [
+      {
+        "index": 3,
+        "url": "",
+        "local_url": "/static/images/232158_00003_p.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "00011-808547410",
+    "external_task_id": "local_1741420122",
+    "prompt": "本地导入图片",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "unknown",
+      "n": 1,
+      "aspect_ratio": "unknown"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "",
+        "local_url": "/static/images/00011-808547410_.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "2024-10-26-152612",
+    "external_task_id": "local_1741420122",
+    "prompt": "本地导入图片",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "unknown",
+      "n": 1,
+      "aspect_ratio": "unknown"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "",
+        "local_url": "/static/images/2024-10-26-152612_flux1-dev_562807733157279.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "MarkuryFLUX",
+    "external_task_id": "local_1741420122",
+    "prompt": "本地导入图片",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "unknown",
+      "n": 1,
+      "aspect_ratio": "unknown"
+    },
+    "images": [
+      {
+        "index": 581,
+        "url": "",
+        "local_url": "/static/images/MarkuryFLUX_00581_.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "2025-01-22",
+    "external_task_id": "local_1741420122",
+    "prompt": "本地导入图片",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "unknown",
+      "n": 1,
+      "aspect_ratio": "unknown"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "",
+        "local_url": "/static/images/2025-01-22_14-49-45_flux1-dev.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "morgana",
+    "external_task_id": "local_1741420122",
+    "prompt": "本地导入图片",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "unknown",
+      "n": 1,
+      "aspect_ratio": "unknown"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "",
+        "local_url": "/static/images/morgana_le_fay-cyberpunk_2077-artsy_vibe-flux-fp8-20250304213743.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "00084-3858851523",
+    "external_task_id": "local_1741420122",
+    "prompt": "本地导入图片",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "unknown",
+      "n": 1,
+      "aspect_ratio": "unknown"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "",
+        "local_url": "/static/images/00084-3858851523_edited.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "00097-239816616-",
+    "external_task_id": "local_1741420122",
+    "prompt": "本地导入图片",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "unknown",
+      "n": 1,
+      "aspect_ratio": "unknown"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "",
+        "local_url": "/static/images/00097-239816616-_lora_PinkieEnchantedMJFLUX_1_, pinkenchantedmj, _lora_aidmaImageUpgrader-FLUX-V0.2_0.5_, aidmaimageupgrader, _lora_FluxDFaeTast.jpeg",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "2024-07-08-162415",
+    "external_task_id": "local_1741420122",
+    "prompt": "本地导入图片",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "unknown",
+      "n": 1,
+      "aspect_ratio": "unknown"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "",
+        "local_url": "/static/images/2024-07-08-162415_revEnginePonyxl_v10_912676020_USX_FDpp.jpeg",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "Create",
+    "external_task_id": "local_1741420122",
+    "prompt": "本地导入图片",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "unknown",
+      "n": 1,
+      "aspect_ratio": "unknown"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "",
+        "local_url": "/static/images/Create_an_intricate_illustration_of_an_angel_with_grand__flowing_wings_S2453208376_St30_G1.jpeg",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "Latent",
+    "external_task_id": "local_1741420122",
+    "prompt": "本地导入图片",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "unknown",
+      "n": 1,
+      "aspect_ratio": "unknown"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "",
+        "local_url": "/static/images/Latent_Adetailer_00031_fff.png",
         "downloaded": true
       }
     ]

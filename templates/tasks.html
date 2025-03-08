@@ -27,6 +27,8 @@
         .task-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            z-index: 1;
+            position: relative;
         }
         
         /* 响应式布局优化 */
@@ -83,27 +85,30 @@
             margin-bottom: 20px;
         }
         .task-grid {
-            column-count: 5;
+            column-count: 4;
             column-gap: 15px;
             margin-top: 20px;
         }
         .task-card {
             break-inside: avoid;
-            border: 1px solid #ddd;
-            padding: 15px;
-            border-radius: 8px;
-            background: #fff;
+            border: 1px solid var(--border-color);
+            padding: 0;
+            border-radius: 12px;
+            background: var(--card-background);
             margin-bottom: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+            position: relative;
         }
-        .task-card img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 10px;
-        }
+        .task-card img,
         .task-card video {
-            max-width: 100%;
-            margin-bottom: 10px;
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0;
+            border-radius: 0;
         }
+        
         .status {
             display: inline-block;
             padding: 4px 8px;
@@ -158,9 +163,8 @@
             margin-top: 5px;
         }
         .video-info {
-            border-top: 1px solid #eee;
-            padding-top: 10px;
-            margin-top: 10px;
+            padding: 0;
+            margin: 0;
         }
         .video-actions {
             display: flex;
@@ -173,6 +177,93 @@
             font-size: 14px;
             text-align: center;
             margin: 0;
+        }
+        
+        /* 视频卡片覆盖层样式 */
+        .video-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+        
+        /* 隐藏视频进度条 */
+        video::-webkit-media-controls,
+        video::-webkit-media-controls-panel,
+        video::-webkit-media-controls-play-button,
+        video::-webkit-media-controls-volume-slider,
+        video::-webkit-media-controls-mute-button,
+        video::-webkit-media-controls-timeline,
+        video::-webkit-media-controls-progress-bar,
+        video::-webkit-media-controls-time-remaining-display,
+        video::-webkit-media-controls-current-time-display,
+        video::-webkit-media-controls-seek-back-button,
+        video::-webkit-media-controls-seek-forward-button,
+        video::-webkit-media-controls-fullscreen-button,
+        video::-webkit-media-controls-overlay-play-button,
+        video::-webkit-media-controls-enclosure,
+        video::-moz-range-thumb,
+        video::-ms-fill-lower,
+        video::-ms-fill-upper,
+        video::-webkit-media-controls-toggle-closed-captions-button {
+            display: none !important;
+        }
+        
+        /* 确保视频不显示任何控件 */
+        video::-webkit-media-controls-enclosure {
+            display: none !important;
+        }
+        
+        video {
+            pointer-events: none; /* 防止点击视频时出现控件 */
+        }
+        
+        .card-overlay {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            display: flex;
+            gap: 8px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .video-container:hover .card-overlay {
+            opacity: 1;
+        }
+        
+        .btn-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .btn-icon:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+            transform: scale(1.1);
+        }
+        
+        .btn-icon.extend-btn {
+            background-color: rgba(76, 175, 80, 0.8);
+        }
+        
+        .btn-icon.extend-btn:hover {
+            background-color: rgba(69, 160, 73, 0.9);
+        }
+        
+        .btn-icon.delete-btn {
+            background-color: rgba(244, 67, 54, 0.8);
+        }
+        
+        .btn-icon.delete-btn:hover {
+            background-color: rgba(211, 47, 47, 0.9);
         }
         
         /* 回到顶部按钮样式 */
@@ -350,6 +441,8 @@
         <h1>视频生成任务历史</h1>
         <div>
             <a href="/" class="button">返回首页</a>
+            <a href="/images" class="button">图片生成</a>
+            <a href="/videos" class="button">视频墙</a>
             <button onclick="refreshAllTasks()" class="button refresh-btn">刷新所有状态</button>
             <button onclick="toggleTheme()" class="button" id="themeToggle">
                 <i class="fas fa-moon"></i>
@@ -366,67 +459,35 @@
     <div class="task-grid">
         {% for task in tasks|reverse %}
         <div class="task-card" id="task-{{ task.task_id }}">
-            <div class="task-info">
-                <span>创建时间:</span> {{ task.created_at }}
-            </div>
-            <div class="task-info">
-                <span>任务ID:</span> {{ task.task_id }}
-            </div>
-            <div class="task-info">
-                <span>自定义任务ID:</span> {{ task.external_task_id }}
-            </div>
-            <div class="task-info">
-                <span>提示词:</span> {{ task.prompt }}
-            </div>
-            {% if task.parameters and task.parameters.model_name %}
-            <div class="task-info">
-                <span>使用模型:</span> {{ task.parameters.model_name }}
-            </div>
-            {% endif %}
-            <div class="task-info">
-                <span>状态:</span> 
-                <span class="status status-{{ task.status }}">{{ task.status }}</span>
-                {% if task.status_msg %}
-                <div class="status-msg">{{ task.status_msg }}</div>
-                {% endif %}
-            </div>
-            {% if task.expiration_date %}
-            <div class="task-info warning">
-                <span>视频过期时间:</span> {{ task.expiration_date }}
-                <div class="warning-text">请注意：视频文件将在30天后被清理，请及时下载保存</div>
-            </div>
-            {% endif %}
-            {% if task.image_url %}
-            <img src="{{ task.image_url }}" alt="原始图片">
-            {% endif %}
             {% if task.videos %}
                 {% for video in task.videos %}
                     <div class="video-info">
-                        <div class="task-info">
-                            <span>视频ID:</span> {{ video.id }}
-                        </div>
-                        <div class="task-info">
-                            <span>时长:</span> {{ video.duration }}秒
-                        </div>
                         {% if video.local_url %}
-                        <video controls autoplay loop preload="auto">
-                            <source src="{{ video.local_url }}" type="video/mp4">
-                            <source src="{{ video.local_url }}" type="video/mp4">
-                            您的浏览器不支持视频标签。
-                        </video>
-                        <div class="video-actions">
+                        <div class="video-container">
+                            <video controls autoplay loop preload="auto">
+                                <source src="{{ video.local_url }}" type="video/mp4">
+                                <source src="{{ video.local_url }}" type="video/mp4">
+                                您的浏览器不支持视频标签。
+                            </video>
                             {% if task.status != 'failed' %}
-                            <button onclick="extendVideo('{{ video.id }}', '{{ task.external_task_id }}')" class="button extend-btn">延长</button>
-                            <a href="{{ video.local_url }}" download class="button">下载</a>
+                            <div class="card-overlay">
+                                <button onclick="extendVideo('{{ video.id }}', '{{ task.external_task_id }}')" class="btn-icon extend-btn" title="延长视频">
+                                    <i class="fas fa-clock"></i>
+                                </button>
+                                <a href="{{ video.local_url }}" download class="btn-icon" title="下载视频">
+                                    <i class="fas fa-download"></i>
+                                </a>
+                                <button onclick="deleteTask('{{ task.task_id }}')" class="btn-icon" title="删除任务">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
                             {% endif %}
                         </div>
                         {% endif %}
                     </div>
                 {% endfor %}
             {% endif %}
-            <div class="video-actions" style="margin-top: 15px;">
-                <button onclick="deleteTask('{{ task.task_id }}')" class="button delete-btn" style="background-color: #f44336;">删除任务</button>
-            </div>
+
         </div>
         {% endfor %}
     </div>
@@ -568,8 +629,16 @@ function toggleTheme() {
 // 初始化主题
 function initTheme() {
     const savedTheme = localStorage.getItem('theme') || 'dark';
+    const root = document.documentElement;
+    const themeToggle = document.getElementById('themeToggle');
+    const icon = themeToggle.querySelector('i');
+    const text = themeToggle.querySelector('span');
+
     if (savedTheme === 'dark') {
-        toggleTheme();
+        root.classList.add('dark-theme');
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+        text.textContent = '切换亮色';
     }
 }
 
@@ -595,10 +664,186 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         });
     }
+    
+    // 初始化视频加载
+    initializeVideos();
+    
+    // 启动自动更新任务状态
+    updateTimer = setTimeout(batchUpdateTasks, UPDATE_INTERVAL);
 });
+
+// 初始化视频加载函数
+function initializeVideos() {
+    console.log("开始初始化视频...");
+    
+    // 获取所有视频元素
+    const videoElements = document.querySelectorAll('video');
+    console.log(`找到 ${videoElements.length} 个视频元素`);
+    
+    videoElements.forEach((video, index) => {
+        // 设置视频加载事件
+        video.addEventListener('loadedmetadata', function() {
+            console.log(`视频 ${index+1} 元数据已加载: ${video.src}`);
+        });
+        
+        // 设置视频错误处理
+        video.addEventListener('error', function(e) {
+            console.error(`视频 ${index+1} 加载失败: ${video.src}`, e);
+            
+            // 显示错误信息
+            const videoContainer = video.parentElement;
+            if (videoContainer) {
+                const errorMsg = document.createElement('div');
+                errorMsg.className = 'video-error';
+                errorMsg.innerHTML = '<i class="fas fa-exclamation-triangle"></i> 视频加载失败';
+                errorMsg.style.color = 'var(--error-text)';
+                errorMsg.style.backgroundColor = 'var(--error-background)';
+                errorMsg.style.padding = '10px';
+                errorMsg.style.borderRadius = '4px';
+                errorMsg.style.marginTop = '10px';
+                errorMsg.style.textAlign = 'center';
+                
+                // 插入到视频后面
+                video.after(errorMsg);
+            }
+        });
+        
+        // 预加载视频缩略图
+        video.setAttribute('preload', 'metadata');
+        
+        // 保留autoplay和loop属性，确保视频自动播放并循环
+        video.setAttribute('autoplay', true);
+        video.setAttribute('loop', true);
+        
+        // 添加静音属性，解决大多数浏览器对自动播放的限制
+        video.setAttribute('muted', true);
+    });
+    
+    // 检查是否有需要从本地加载的视频
+    checkLocalVideos();
+}
+
+// 检查本地视频文件
+function checkLocalVideos() {
+    // 获取所有视频元素的src属性
+    const videoSources = Array.from(document.querySelectorAll('video source')).map(source => source.src);
+    
+    // 过滤出本地视频路径
+    const localVideos = videoSources.filter(src => src.startsWith('/static/') || src.startsWith('static/'));
+    console.log(`找到 ${localVideos.length} 个本地视频路径`);
+    
+    // 如果有本地视频，可以在这里添加额外的处理逻辑
+    if (localVideos.length > 0) {
+        console.log("本地视频路径:", localVideos);
+    }
+}
 
             <!-- 页面加载完成后初始化主题 -->
             document.addEventListener('DOMContentLoaded', initTheme);
         </script>
     </body>
 </html>
+
+$(document).ready(function() {
+    // 加载任务历史
+    loadTaskHistory();
+    
+    // 刷新按钮点击事件
+    $('#refreshBtn').click(function() {
+        loadTaskHistory();
+    });
+    
+    // 返回按钮点击事件
+    $('#backBtn').click(function() {
+        window.location.href = '/';
+    });
+});
+
+function loadTaskHistory() {
+    $.ajax({
+        url: '/api/task_history',
+        type: 'GET',
+        success: function(response) {
+            if (response.success) {
+                displayTasks(response.data);
+            } else {
+                alert('加载任务历史失败: ' + response.message);
+            }
+        },
+        error: function(xhr, status, error) {
+            console.error('请求失败:', xhr.responseText);
+            alert('加载任务历史失败');
+        }
+    });
+}
+
+function displayTasks(tasks) {
+    const taskGrid = $('#taskGrid');
+    taskGrid.empty();
+    
+    if (tasks.length === 0) {
+        taskGrid.html('<p>暂无任务历史</p>');
+        return;
+    }
+    
+    // 按创建时间倒序排序
+    tasks.sort((a, b) => new Date(b.create_time) - new Date(a.create_time));
+    
+    tasks.forEach(task => {
+        const card = createTaskCard(task);
+        taskGrid.append(card);
+    });
+}
+
+function createTaskCard(task) {
+    const card = $('<div>').addClass('task-card');
+    
+    // 添加视频或图片
+    if (task.url && task.url.endsWith('.mp4')) {
+        const video = $('<video loop muted playsinline>');
+        video.append($('<source>').attr('src', task.url).attr('type', 'video/mp4'));
+        video.on('mouseover', function() { this.play(); });
+        video.on('mouseout', function() { this.pause(); });
+        card.append(video);
+    } else if (task.url) {
+        card.append($('<img>').attr('src', task.url));
+    }
+    
+    // 添加任务信息区域
+    const infoSection = $('<div>').addClass('task-info-section').css({
+        'padding': '12px',
+        'background': 'var(--card-background)'
+    });
+    
+    // 添加状态标签
+    const statusClass = 'status-' + task.status;
+    const statusText = {
+        'submitted': '已提交',
+        'processing': '处理中',
+        'succeed': '已完成',
+        'failed': '失败'
+    }[task.status] || task.status;
+    
+    infoSection.append($('<div>').addClass('status ' + statusClass).text(statusText));
+    
+    // 添加任务ID和创建时间
+    infoSection.append(
+        $('<div>').addClass('task-info').html(`<span>任务ID:</span> ${task.task_id}`),
+        $('<div>').addClass('task-info').html(`<span>创建时间:</span> ${formatDate(task.create_time)}`)
+    );
+    
+    card.append(infoSection);
+    return card;
+}
+
+function formatDate(dateString) {
+    const date = new Date(dateString);
+    return date.toLocaleString('zh-CN', {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+    });
+}

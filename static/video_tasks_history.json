@@ -1,0 +1,2173 @@
+[
+  {
+    "task_id": "CmBhnmePZ8YAAAAAAxpjdg",
+    "prompt": "两人激烈的打斗",
+    "image_url": "https://raw.githubusercontent.com/gameblind/image-storage/main/images/20250204_214058_5677af45-ed4d-42f8-be53-1cd8efdf4901_0.png",
+    "status": "succeed",
+    "parameters": {
+      "duration": "5",
+      "mode": "std",
+      "aspect_ratio": "1:1"
+    },
+    "created_at": "2025-02-04 21:41:06",
+    "status_msg": "",
+    "videos": [
+      {
+        "id": "a45ba3f7-0d93-4773-a30f-1b8905f47091",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/6735284740/image2video/CmBhnmePZ8YAAAAAAxpjdg-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/CmBhnmePZ8YAAAAAAxpjdg.mp4",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CmJ8DGePZioAAAAAAxsdCg",
+    "external_task_id": "custom_1738677020",
+    "prompt": "一个女孩在夕阳下随着音乐摇摆",
+    "image_url": "https://raw.githubusercontent.com/gameblind/image-storage/main/images/20250204_215010_3d15b009-46aa-4d07-a50d-7837f516d83a_0.png",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "duration": "5",
+      "mode": "std",
+      "aspect_ratio": "1:1"
+    },
+    "videos": [
+      {
+        "id": "c89ca4b5-1530-4d35-ada9-cf8305829664",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/2865328640/image2video/CmJ8DGePZioAAAAAAxsdCg-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/CmJ8DGePZioAAAAAAxsdCg.mp4",
+        "downloaded": true
+      }
+    ],
+    "created_at": "2025-02-04 21:50:20",
+    "expiration_date": "2025-03-06"
+  },
+  {
+    "task_id": "CmBhnmePZ8YAAAAAAxvQ1w",
+    "external_task_id": "custom_1738677932",
+    "prompt": "镜头缓慢移动，女孩旋转",
+    "image_url": "https://raw.githubusercontent.com/gameblind/image-storage/main/images/20250204_220523_VYPUaTViYY948ePdWCzI0Y8tT4WFWx.png",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "duration": "5",
+      "mode": "std",
+      "aspect_ratio": "1:1"
+    },
+    "videos": [
+      {
+        "id": "979dd5bf-9516-484a-b8ec-b60fe13adc49",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/2865328640/image2video/CmBhnmePZ8YAAAAAAxvQ1w-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/CmBhnmePZ8YAAAAAAxvQ1w.mp4",
+        "downloaded": true
+      }
+    ],
+    "created_at": "2025-02-04 22:05:32",
+    "expiration_date": "2025-03-06"
+  },
+  {
+    "task_id": "CmJ8DGePZioAAAAAAx5h_g",
+    "external_task_id": "custom_1738680414",
+    "prompt": "悟空坐在筋斗云上在天空飞行",
+    "negative_prompt": "",
+    "image_url": "https://raw.githubusercontent.com/gameblind/image-storage/main/images/20250204_224641_603cb73b7ce949ddb9c30b223501c5d7_3.png",
+    "image_tail_url": null,
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1-6",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "e769e4c6-939a-4f0e-895c-17bf60227b55",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/7806313308/image2video/CmJ8DGePZioAAAAAAx5h_g-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/CmJ8DGePZioAAAAAAx5h.mp4",
+        "downloaded": true
+      }
+    ],
+    "created_at": "2025-02-04 22:46:54",
+    "expiration_date": "2025-03-06"
+  },
+  {
+    "task_id": "CmBhnmePZ8YAAAAAAx5C-A",
+    "external_task_id": "custom_1738680506",
+    "prompt": "",
+    "negative_prompt": "",
+    "image_url": "https://raw.githubusercontent.com/gameblind/image-storage/main/images/20250204_224811_1738047178954.png",
+    "image_tail_url": "https://raw.githubusercontent.com/gameblind/image-storage/main/images/20250204_224815_ComfyUI_temp_rverv_00001_.png",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "ff3fd581-b243-44e7-9146-794a41abdc40",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/3036251016/image2video/CmBhnmePZ8YAAAAAAx5C-A-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/CmBhnmePZ8YAAAAAAx5C-A.mp4",
+        "downloaded": true
+      }
+    ],
+    "created_at": "2025-02-04 22:48:26",
+    "expiration_date": "2025-03-06"
+  },
+  {
+    "task_id": "CmJ8DGePZioAAAAAAx6S4g",
+    "external_task_id": "custom_1738680614",
+    "prompt": "魔法师在雪地中施展魔法，空气中凝结了大量的菱形冰晶",
+    "negative_prompt": "",
+    "image_url": "https://raw.githubusercontent.com/gameblind/image-storage/main/images/20250204_225003_1738167168949.png",
+    "image_tail_url": null,
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1-6",
+      "duration": "5",
+      "mode": "pro",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "dc184dd3-5063-4d61-9c6b-b0f4c309d0e1",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/7791892340/image2video/CmJ8DGePZioAAAAAAx6S4g-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/CmJ8DGePZioAAAAAAx6S4g.mp4",
+        "downloaded": true
+      }
+    ],
+    "created_at": "2025-02-04 22:50:14",
+    "expiration_date": "2025-03-06"
+  },
+  {
+    "task_id": "CjhrqWePZ88AAAAAAx-Hhw",
+    "external_task_id": "custom_1738682087",
+    "prompt": "春节喜庆的氛围，背景是绚烂的烟花，财神爷给大家派发金元宝",
+    "negative_prompt": "",
+    "image_url": "https://raw.githubusercontent.com/gameblind/image-storage/main/images/20250204_231435_Liblib_00211_.png",
+    "image_tail_url": null,
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1-6",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "b4a2c085-fd0e-40aa-ae7c-1236c9c6da19",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/8956199480/image2video/CjhrqWePZ88AAAAAAx-Hhw-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/CjhrqWePZ88AAAAAAx-Hhw.mp4",
+        "downloaded": true
+      }
+    ],
+    "created_at": "2025-02-04 23:14:47",
+    "expiration_date": "2025-03-06"
+  },
+  {
+    "task_id": "CjhrqWePZ88AAAAAAyCgKQ",
+    "external_task_id": "custom_1738683224",
+    "prompt": "寿星开心的看着仙鹤，把手中的桃子给仙鹤吃，仙鹤吃完就飞走了。 ",
+    "negative_prompt": "",
+    "image_url": "https://raw.githubusercontent.com/gameblind/image-storage/main/images/20250204_233334_1738053837996.png",
+    "image_tail_url": null,
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1-5",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "4bdce412-501c-4b27-ac5e-90a2c16632e5",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/5117782304/image2video/CjhrqWePZ88AAAAAAyCgKQ-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/CjhrqWePZ88AAAAAAyCgKQ.mp4",
+        "downloaded": true
+      }
+    ],
+    "created_at": "2025-02-04 23:33:44",
+    "expiration_date": "2025-03-06"
+  },
+  {
+    "task_id": "CmJ8DGePZioAAAAAA2EZcQ",
+    "external_task_id": "custom_1738766375",
+    "prompt": "两人开始打斗",
+    "negative_prompt": "",
+    "image_url": "https://raw.githubusercontent.com/gameblind/image-storage/main/images/20250205_223926_30d3a599-0d43-42d5-bd3d-f704fd7f8a61_0.png",
+    "image_tail_url": null,
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "13200447-6b37-45c1-9a0a-6417b14d2f84",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/5180633698/image2video/CmJ8DGePZioAAAAAA2EZcQ-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/CmJ8DGePZioAAAAAA2EZcQ.mp4",
+        "downloaded": true
+      }
+    ],
+    "created_at": "2025-02-05 22:39:35",
+    "expiration_date": "2025-03-07"
+  },
+  {
+    "task_id": "CmJ8DGePZioAAAAAA2OA2Q",
+    "external_task_id": "custom_1738768999",
+    "prompt": "",
+    "negative_prompt": "",
+    "image_url": "https://raw.githubusercontent.com/gameblind/image-storage/main/images/20250205_232302_daa9aeac-d942-4f6b-bc33-b3aff3045c1b_0.png",
+    "image_tail_url": null,
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1-6",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "7172f98e-e43c-4ae0-8478-2377f37b1156",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/0104076022/image2video/CmJ8DGePZioAAAAAA2OA2Q-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/CmJ8DGePZioAAAAAA2OA2Q.mp4",
+        "downloaded": true
+      }
+    ],
+    "created_at": "2025-02-05 23:23:19",
+    "expiration_date": "2025-03-07"
+  },
+  {
+    "task_id": "ChFolWenCXIAAAAAAO-JKQ",
+    "external_task_id": "custom_1739417036",
+    "prompt": "镜头缓慢移动，微风吹动女孩的长发",
+    "negative_prompt": "",
+    "image_url": "https://raw.githubusercontent.com/gameblind/image-storage/main/images/20250213_112348_1girl1.png",
+    "image_tail_url": null,
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1-6",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "e431bd50-d20e-419a-a878-3f9148c7a0fb",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/8555921277/image2video/ChFolWenCXIAAAAAAO-JKQ-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/ChFolWenCXIAAAAAAO-JKQ.mp4",
+        "downloaded": true
+      }
+    ],
+    "created_at": "2025-02-13 11:23:56",
+    "expiration_date": "2025-03-15"
+  },
+  {
+    "task_id": "ChFolWenCXIAAAAAAPDBtQ",
+    "external_task_id": "custom_1739418856",
+    "prompt": "镜头拉高，鸟瞰整个废墟城市",
+    "negative_prompt": "",
+    "image_url": "https://raw.githubusercontent.com/gameblind/image-storage/main/images/20250213_115408_photo.png",
+    "image_tail_url": null,
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1-5",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "c557ed2f-6dcf-465c-8a13-acfc0ed4479a",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/5106978304/image2video/ChFolWenCXIAAAAAAPDBtQ-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/ChFolWenCXIAAAAAAPDBtQ.mp4",
+        "downloaded": true
+      }
+    ],
+    "created_at": "2025-02-13 11:54:16",
+    "expiration_date": "2025-03-15"
+  },
+  {
+    "task_id": "CjikOmePZi0AAAAABQ44Rw",
+    "external_task_id": "custom_1739419888",
+    "prompt": "害羞的古装美女",
+    "negative_prompt": "",
+    "image_url": "https://raw.githubusercontent.com/gameblind/image-storage/main/images/20250213_121120_36150773-e9bb-4373-9374-cfb1459ba414.png",
+    "image_tail_url": null,
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1-6",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "bf84e5ac-0983-45f8-8f9f-c03c27d51ba6",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/1506560710/image2video/CjikOmePZi0AAAAABQ44Rw-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/CjikOmePZi0AAAAABQ44Rw.mp4",
+        "downloaded": true
+      }
+    ],
+    "created_at": "2025-02-13 12:11:28",
+    "expiration_date": "2025-03-15"
+  },
+  {
+    "task_id": "CjNQoGenCbEAAAAAAPL1oA",
+    "external_task_id": "custom_1739422666",
+    "prompt": "",
+    "negative_prompt": "",
+    "image_url": "https://raw.githubusercontent.com/gameblind/image-storage/main/images/20250213_125737_56128255.jpeg",
+    "image_tail_url": null,
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "3c88cf10-74b5-407d-b20b-8b4cc5c1048c",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/0940364001/image2video/CjNQoGenCbEAAAAAAPL1oA-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/CjNQoGenCbEAAAAAAPL1oA.mp4",
+        "downloaded": true
+      }
+    ],
+    "created_at": "2025-02-13 12:57:46",
+    "expiration_date": "2025-03-15"
+  },
+  {
+    "task_id": "CjNQoGenCbEAAAAAAQaJng",
+    "external_task_id": "custom_1739454236",
+    "prompt": "第一人称视角，沿着道路前进",
+    "negative_prompt": "",
+    "image_url": "https://raw.githubusercontent.com/gameblind/image-storage/main/images/20250213_214347_photo.png",
+    "image_tail_url": null,
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "4f37cc75-d17b-41c6-8f7b-38a33925d3d9",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/5117821957/image2video/CjNQoGenCbEAAAAAAQaJng-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/CjNQoGenCbEAAAAAAQaJng.mp4",
+        "downloaded": true
+      }
+    ],
+    "created_at": "2025-02-13 21:43:56",
+    "expiration_date": "2025-03-15"
+  },
+  {
+    "task_id": "CjioomenCqgAAAAAAQzgcA",
+    "external_task_id": "custom_1739464145",
+    "prompt": "镜头推进，五彩斑斓的微观世界呈现",
+    "negative_prompt": "",
+    "image_url": "https://raw.githubusercontent.com/gameblind/image-storage/main/images/20250214_002839_微观摄影.png",
+    "image_tail_url": null,
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1-5",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "1c639d9c-e0c8-40bc-bff8-f41c4f2ca423",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/7086940838/image2video/CjioomenCqgAAAAAAQzgcA-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/CjioomenCqgAAAAAAQzgcA.mp4",
+        "downloaded": true
+      }
+    ],
+    "created_at": "2025-02-14 00:29:05",
+    "expiration_date": "2025-03-16"
+  },
+  {
+    "task_id": "ChFolWenCXIAAAAAAQ7qMg",
+    "external_task_id": "custom_1739467172",
+    "prompt": "美女害羞的点点头",
+    "negative_prompt": "",
+    "image_url": "https://raw.githubusercontent.com/gameblind/image-storage/main/images/20250214_011919_36150773-e9bb-4373-9374-cfb1459ba414.png",
+    "image_tail_url": null,
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "28710fed-42b3-4f85-9090-64405a6abdcf",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/4564373680/image2video/ChFolWenCXIAAAAAAQ7qMg-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/ChFolWenCXIAAAAAAQ7qMg.mp4",
+        "downloaded": true
+      }
+    ],
+    "created_at": "2025-02-14 01:19:32",
+    "expiration_date": "2025-03-16"
+  },
+  {
+    "task_id": "CjnVU2evHRAAAAAAAGyhaw",
+    "external_task_id": "custom_1739720881",
+    "prompt": "五颜六色的球球接连爆炸，喷洒出彩色的粉末",
+    "negative_prompt": "",
+    "image_url": "https://raw.githubusercontent.com/gameblind/image-storage/main/images/20250216_234741_奇幻梦幻.png",
+    "image_tail_url": null,
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "de5f2bb1-4ca7-4684-a872-3990099fd806",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/6737310628/image2video/CjnVU2evHRAAAAAAAGyhaw-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/CjnVU2evHRAAAAAAAGyhaw.mp4",
+        "downloaded": true
+      }
+    ],
+    "created_at": "2025-02-16 23:48:01",
+    "expiration_date": "2025-03-18"
+  },
+  {
+    "task_id": "CjMx3WevHR8AAAAAAGz-9A",
+    "external_task_id": "custom_1739721563",
+    "prompt": "镜头拉远，温馨的山洞里，有个中国小学生在书桌旁辛苦的做题， 远处飞鸟和云彩飞",
+    "negative_prompt": "",
+    "image_url": "https://raw.githubusercontent.com/gameblind/image-storage/main/images/20250216_235913_11.png",
+    "image_tail_url": null,
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1-5",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "12389dd2-d242-4aad-956c-88288ccefb54",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/0669129465/image2video/CjMx3WevHR8AAAAAAGz-9A-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/CjMx3WevHR8AAAAAAGz-9A.mp4",
+        "downloaded": true
+      }
+    ],
+    "created_at": "2025-02-16 23:59:23",
+    "expiration_date": "2025-03-18"
+  },
+  {
+    "task_id": "CjR6emevG1gAAAAAAJxOFw",
+    "external_task_id": "custom_1739800699",
+    "prompt": "",
+    "negative_prompt": "",
+    "image_url": "https://raw.githubusercontent.com/gameblind/image-storage/main/images/20250217_215808_e4fcfe7c-0655-4ff3-a254-124da7f64bc1.png",
+    "image_tail_url": "https://raw.githubusercontent.com/gameblind/image-storage/main/images/20250217_215811_奇幻梦幻.png",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "0ac28820-4d0c-44dc-80ab-bcee3a0ee955",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/4832060987/image2video/CjR6emevG1gAAAAAAJxOFw-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/CjR6emevG1gAAAAAAJxOFw.mp4",
+        "downloaded": true
+      }
+    ],
+    "created_at": "2025-02-17 21:58:19",
+    "expiration_date": "2025-03-19"
+  },
+  {
+    "task_id": "CjnVU2evHRAAAAAAAKC2pg",
+    "external_task_id": "custom_1739807836",
+    "prompt": "美丽的极光",
+    "negative_prompt": "",
+    "image_url": "https://raw.githubusercontent.com/gameblind/image-storage/main/images/20250217_235702_jg.png",
+    "image_tail_url": null,
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "e51a6a1e-ab09-463e-895a-364ac561f63e",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/2955173232/image2video/CjnVU2evHRAAAAAAAKC2pg-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/CjnVU2evHRAAAAAAAKC2pg.mp4",
+        "downloaded": true
+      }
+    ],
+    "created_at": "2025-02-17 23:57:16",
+    "expiration_date": "2025-03-19"
+  },
+  {
+    "task_id": "CjR6emevG1gAAAAAAKHAtQ",
+    "external_task_id": "custom_1739809148",
+    "prompt": "美女招手呼唤过来",
+    "negative_prompt": "",
+    "image_url": "https://raw.githubusercontent.com/gameblind/image-storage/main/images/20250218_001853_e6fbdac5-35a6-47cb-b54d-c74d1673d34e.png",
+    "image_tail_url": null,
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "d137ac4f-c8bb-48fd-86cb-419a1bdc2cf2",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/8580665548/image2video/CjR6emevG1gAAAAAAKHAtQ-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/CjR6emevG1gAAAAAAKHAtQ.mp4",
+        "downloaded": true
+      }
+    ],
+    "created_at": "2025-02-18 00:19:08",
+    "expiration_date": "2025-03-20"
+  },
+  {
+    "task_id": "ChFDtGe0beEAAAAAAbpw4g",
+    "external_task_id": "custom_1740582448",
+    "prompt": "绚丽动态的波浪",
+    "negative_prompt": "",
+    "image_url": "https://raw.githubusercontent.com/gameblind/image-storage/main/images/20250226_230718_8325e57a-60f9-4994-8da5-ad7a52984457_0.png",
+    "image_tail_url": null,
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "34652cfe-9c9a-4b52-914f-bf3fefe26ea8",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/0056821570/image2video/ChFDtGe0beEAAAAAAbpw4g-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/ChFDtGe0beEAAAAAAbpw4g.mp4",
+        "downloaded": true
+      }
+    ],
+    "created_at": "2025-02-26 23:07:28",
+    "expiration_date": "2025-03-28"
+  },
+  {
+    "task_id": "ChFDtGe0beEAAAAAAbwhGA",
+    "external_task_id": "custom_1740584780",
+    "prompt": "跳舞的女孩们",
+    "negative_prompt": "",
+    "image_url": "https://raw.githubusercontent.com/gameblind/image-storage/main/images/20250226_234604_ComfyUI_00042_.png",
+    "image_tail_url": null,
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "97218dec-0d10-41e0-b0be-9ab8b70f9fb1",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/4080232009/image2video/ChFDtGe0beEAAAAAAbwhGA-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/ChFDtGe0beEAAAAAAbwhGA.mp4",
+        "downloaded": true
+      }
+    ],
+    "created_at": "2025-02-26 23:46:20",
+    "expiration_date": "2025-03-28"
+  },
+  {
+    "task_id": "Cjil4mfBfs0AAAAAAEq2sw",
+    "external_task_id": "custom_1740836126",
+    "prompt": "女人转过身来，裙摆随风飘荡",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "8f48b232-8618-4667-a528-99292ed21db6",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/7471809093/image2video/Cjil4mfBfs0AAAAAAEq2sw-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/Cjil4mfBfs0AAAAAAEq2sw.mp4",
+        "downloaded": true
+      }
+    ],
+    "created_at": "2025-03-01 21:35:26",
+    "expiration_date": "2025-03-31"
+  },
+  {
+    "task_id": "Cjil4mfBfs0AAAAAAEwIFw",
+    "external_task_id": "custom_1740837835",
+    "prompt": "双手平伸，练习深蹲的健身女，",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1-6",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "61dbd770-8f75-43ec-9593-b69290dd5994",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/7471809093/image2video/Cjil4mfBfs0AAAAAAEwIFw-0_raw_video_2.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/Cjil4mfBfs0AAAAAAEwIFw.mp4",
+        "downloaded": true
+      }
+    ],
+    "created_at": "2025-03-01 22:03:55",
+    "expiration_date": "2025-03-31"
+  },
+  {
+    "task_id": "ChFBM2fBfJ0AAAAAAFH4qQ",
+    "external_task_id": "custom_1740844696",
+    "prompt": "孔雀纹身飞了起来",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "a3f8524b-45ef-4172-8322-6b9df9fd4c98",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/4745422170/image2video/ChFBM2fBfJ0AAAAAAFH4qQ-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/ChFBM2fBfJ0AAAAAAFH4qQ.mp4",
+        "downloaded": true
+      }
+    ],
+    "created_at": "2025-03-01 23:58:16",
+    "expiration_date": "2025-03-31",
+    "has_image_url_data": true
+  },
+  {
+    "task_id": "ChGhYGfBfwEAAAAAAFRuXw",
+    "external_task_id": "custom_1740848579",
+    "prompt": "美女开车转向",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "87fd608c-3982-4900-b2e6-618cbee7f619",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/6618207745/image2video/ChGhYGfBfwEAAAAAAFRuXw-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/ChGhYGfBfwEAAAAAAFRuXw.mp4",
+        "downloaded": true
+      }
+    ],
+    "created_at": "2025-03-02 01:02:59",
+    "expiration_date": "2025-04-01",
+    "has_image_url_data": true
+  },
+  {
+    "task_id": "CjJi7mfBfkMAAAAAAFV26A",
+    "external_task_id": "custom_1740849897",
+    "prompt": "向镜头妩媚的抛媚眼",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1-6",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "ff273955-474f-4270-a781-8c2df6e82e0a",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/3246837780/image2video/CjJi7mfBfkMAAAAAAFV26A-0_raw_video_2.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/CjJi7mfBfkMAAAAAAFV26A.mp4",
+        "downloaded": true
+      }
+    ],
+    "created_at": "2025-03-02 01:24:57",
+    "expiration_date": "2025-04-01",
+    "has_image_url_data": true
+  },
+  {
+    "task_id": "CjijuGfBfJsAAAAAAFZGqA",
+    "external_task_id": "custom_1740850470",
+    "prompt": "两只萌宠精灵在打闹",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1-6",
+      "duration": "10",
+      "mode": "pro",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "5dde8b0e-85d6-4a33-a68c-a01cfc758b14",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/8121311850/image2video/CjijuGfBfJsAAAAAAFZGqA-0_raw_video_2.mp4",
+        "duration": "10.433",
+        "local_url": "/static/videos/CjijuGfBfJsAAAAAAFZGqA.mp4",
+        "downloaded": true
+      }
+    ],
+    "created_at": "2025-03-02 01:34:30",
+    "expiration_date": "2025-04-01",
+    "has_image_url_data": true
+  },
+  {
+    "task_id": "CjJi7mfBfkMAAAAAAOzaEA",
+    "external_task_id": "custom_1741051306",
+    "prompt": "美女向前走来",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1-5",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "3a25c926-aad2-44bd-9f87-c7f94c98b8ff",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/4745422170/image2video/CjJi7mfBfkMAAAAAAOzaEA-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/CjJi7mfBfkMAAAAAAOzaEA.mp4",
+        "downloaded": true
+      }
+    ],
+    "created_at": "2025-03-04 09:21:46",
+    "expiration_date": "2025-04-03",
+    "has_image_url_data": true
+  },
+  {
+    "task_id": "CjijuGfBfJsAAAAAAPhqoA",
+    "external_task_id": "custom_1741063550",
+    "prompt": "绚丽多姿的动态起伏",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "466e4895-c115-4c1d-80e1-1c2f872dd84d",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/0483574923/image2video/CjijuGfBfJsAAAAAAPhqoA-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/CjijuGfBfJsAAAAAAPhqoA.mp4",
+        "downloaded": true
+      }
+    ],
+    "created_at": "2025-03-04 12:45:50",
+    "expiration_date": "2025-04-03",
+    "has_image_url_data": true
+  },
+  {
+    "task_id": "CjJi7mfBfkMAAAAAAPhqPg",
+    "external_task_id": "custom_1741063965",
+    "prompt": "镜头慢慢拉近特写，女孩挑逗的眼神，左眼轻轻眨了一下,做了个飞吻的动作，飞出一颗心形的泡泡。",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1-6",
+      "duration": "10",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "c0513f58-db0b-438d-99fc-67e9cafcd4c4",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/5045545495/image2video/CjJi7mfBfkMAAAAAAPhqPg-0_raw_video_2.mp4",
+        "duration": "10.433",
+        "local_url": "/static/videos/CjJi7mfBfkMAAAAAAPhqPg.mp4",
+        "downloaded": true
+      }
+    ],
+    "created_at": "2025-03-04 12:52:45",
+    "expiration_date": "2025-04-03",
+    "has_image_url_data": true
+  },
+  {
+    "task_id": "CjilnGfBfjYAAAAAAPkFMA",
+    "external_task_id": "custom_1741064643",
+    "prompt": "镜头慢慢拉近特写，女孩挑逗的眼神，做了个飞吻的动作，飞出泡泡状的字“FUCK ME\"。",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1-6",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "cbd07b3f-7b42-473d-b52f-3fe8d23a05fe",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/2693838864/image2video/CjilnGfBfjYAAAAAAPkFMA-0_raw_video_2.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/CjilnGfBfjYAAAAAAPkFMA.mp4",
+        "downloaded": true
+      }
+    ],
+    "created_at": "2025-03-04 13:04:03",
+    "expiration_date": "2025-04-03",
+    "has_image_url_data": true
+  },
+  {
+    "task_id": "ChGhYGfBfwEAAAAAAPkLYg",
+    "external_task_id": "custom_1741064943",
+    "prompt": "美丽的女孩跳起肚皮舞",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1-5",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "c89f4e76-aded-442b-9d8a-2dd42b880d4e",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/6905561238/image2video/ChGhYGfBfwEAAAAAAPkLYg-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/ChGhYGfBfwEAAAAAAPkLYg.mp4",
+        "downloaded": true
+      }
+    ],
+    "created_at": "2025-03-04 13:09:03",
+    "expiration_date": "2025-04-03",
+    "has_image_url_data": true
+  },
+  {
+    "task_id": "CjmgV2fGxuEAAAAAAABFrA",
+    "external_task_id": "custom_1741080575",
+    "prompt": "练习深蹲的美女",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1-5",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "d36a5755-4286-47d8-921d-01a52b674b1a",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/7498638950/image2video/CjmgV2fGxuEAAAAAAABFrA-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/CjmgV2fGxuEAAAAAAABFrA.mp4",
+        "downloaded": true
+      }
+    ],
+    "created_at": "2025-03-04 17:29:35",
+    "expiration_date": "2025-04-03",
+    "has_image_url_data": true
+  },
+  {
+    "task_id": "CjmgV2fGxuEAAAAAADKifA",
+    "external_task_id": "custom_1741138078",
+    "prompt": "美女面带微笑，害羞的低头整理衣服",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "9e32db25-23c6-4193-b39a-34f6e85b24cb",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/2990962825/image2video/CjmgV2fGxuEAAAAAADKifA-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/CjmgV2fGxuEAAAAAADKifA.mp4",
+        "downloaded": true
+      }
+    ],
+    "created_at": "2025-03-05 09:27:58",
+    "expiration_date": "2025-04-04",
+    "has_image_url_data": true
+  },
+  {
+    "task_id": "CjmgV2fGxuEAAAAAAENziA",
+    "external_task_id": "custom_1741155481",
+    "prompt": "密密麻麻的小球",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "231611c6-af4b-4139-8e1c-600ca3dd1115",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/4282099336/image2video/CjmgV2fGxuEAAAAAAENziA-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/CjmgV2fGxuEAAAAAAENziA.mp4",
+        "downloaded": true
+      }
+    ],
+    "created_at": "2025-03-05 14:18:01",
+    "expiration_date": "2025-04-04",
+    "has_image_url_data": true
+  },
+  {
+    "task_id": "CjgFpGfGyJQAAAAAAENmzg",
+    "external_task_id": "custom_1741155826",
+    "prompt": "镜头拉近上半身，任务淡淡的微笑",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "7d6a4cff-3957-45d7-bd17-41448d5b6f92",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/0102946607/image2video/CjgFpGfGyJQAAAAAAENmzg-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/CjgFpGfGyJQAAAAAAENmzg.mp4",
+        "downloaded": true
+      }
+    ],
+    "created_at": "2025-03-05 14:23:46",
+    "expiration_date": "2025-04-04",
+    "has_image_url_data": true
+  },
+  {
+    "task_id": "ChCUFWfGxxgAAAAAAETOGg",
+    "external_task_id": "custom_1741156784",
+    "prompt": "最大的虫卵，孵化出一只可爱的毛虫",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "48af5024-bcb2-4171-84df-173e8c3c9236",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/6586100809/image2video/ChCUFWfGxxgAAAAAAETOGg-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/ChCUFWfGxxgAAAAAAETOGg.mp4",
+        "downloaded": true
+      }
+    ],
+    "created_at": "2025-03-05 14:39:44",
+    "expiration_date": "2025-04-04",
+    "has_image_url_data": true
+  },
+  {
+    "task_id": "ChCUFWfGxxgAAAAAAEfwfg",
+    "external_task_id": "custom_1741159511",
+    "prompt": "Female japanese heavy metal guitarist playing guitar on stage",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "aee5d365-0bbf-4b5b-94ab-d2567cb8e1c1",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/5457927139/image2video/ChCUFWfGxxgAAAAAAEfwfg-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/ChCUFWfGxxgAAAAAAEfwfg.mp4",
+        "downloaded": true
+      }
+    ],
+    "created_at": "2025-03-05 15:25:11",
+    "expiration_date": "2025-04-04",
+    "has_image_url_data": true
+  },
+  {
+    "task_id": "Cji6lmfGy64AAAAAAIQFzQ",
+    "external_task_id": "custom_1741219570",
+    "prompt": "墨水覆盖住人物面部",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "2d635c71-7fc4-4251-8160-b6ad96d45d1b",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/6195749188/image2video/Cji6lmfGy64AAAAAAIQFzQ-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/Cji6lmfGy64AAAAAAIQFzQ.mp4",
+        "downloaded": true
+      }
+    ],
+    "created_at": "2025-03-06 08:06:10",
+    "expiration_date": "2025-04-05",
+    "has_image_url_data": true
+  },
+  {
+    "task_id": "Cji6lmfGy64AAAAAAIUszA",
+    "external_task_id": "custom_1741221189",
+    "prompt": "8k,延时摄影，日出",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "9753dd06-9d15-488a-b260-afb32191bbc4",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/6195749188/image2video/Cji6lmfGy64AAAAAAIUszA-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/Cji6lmfGy64AAAAAAIUszA.mp4",
+        "downloaded": true
+      }
+    ],
+    "created_at": "2025-03-06 08:33:09",
+    "expiration_date": "2025-04-05",
+    "has_image_url_data": true
+  },
+  {
+    "task_id": "CjJmYGfGydYAAAAAAIXvEg",
+    "external_task_id": "custom_1741221582",
+    "prompt": "小老鼠在水上快速奔跑，溅起水花",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1-6",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "4e7e175a-2b24-4e7c-a8cb-27740d468cb5",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/2794896450/image2video/CjJmYGfGydYAAAAAAIXvEg-0_raw_video_2.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/CjJmYGfGydYAAAAAAIXvEg.mp4",
+        "downloaded": true
+      }
+    ],
+    "created_at": "2025-03-06 08:39:42",
+    "expiration_date": "2025-04-05",
+    "has_image_url_data": true
+  },
+  {
+    "task_id": "CjmgV2fGxuEAAAAAAJkjwA",
+    "external_task_id": "custom_1741241830",
+    "prompt": "伤心的女孩",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "925e2dd6-d154-4116-8a6c-be5d711fe705",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/8403170201/image2video/CjmgV2fGxuEAAAAAAJkjwA-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/CjmgV2fGxuEAAAAAAJkjwA.mp4",
+        "downloaded": true
+      }
+    ],
+    "created_at": "2025-03-06 14:17:10",
+    "expiration_date": "2025-04-05",
+    "has_image_url_data": true
+  },
+  {
+    "task_id": "ChAkX2fGy3kAAAAAAJggQA",
+    "external_task_id": "custom_1741241970",
+    "prompt": "建筑手绘插画绘制的过程倒放",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "00c61f28-3945-49db-a4b5-1a41d75c236e",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/6301131188/image2video/ChAkX2fGy3kAAAAAAJggQA-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/ChAkX2fGy3kAAAAAAJggQA.mp4",
+        "downloaded": true
+      }
+    ],
+    "created_at": "2025-03-06 14:19:30",
+    "expiration_date": "2025-04-05",
+    "has_image_url_data": true
+  },
+  {
+    "task_id": "CjipUWfGyPMAAAAAAJjUEw",
+    "external_task_id": "custom_1741242029",
+    "prompt": "唐装美少女在中式园林中漫步",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "5f6dbee4-aa55-48f9-b34d-bf55746d12f0",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/7677803571/image2video/CjipUWfGyPMAAAAAAJjUEw-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/CjipUWfGyPMAAAAAAJjUEw.mp4",
+        "downloaded": true
+      }
+    ],
+    "created_at": "2025-03-06 14:20:29",
+    "expiration_date": "2025-04-05",
+    "has_image_url_data": true
+  },
+  {
+    "task_id": "CjRq5GfJWzUAAAAAAAiqRQ",
+    "external_task_id": "custom_1741258315",
+    "prompt": "电流在女孩身边流动，",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "ce199e2e-df68-4c9d-b1a2-8199309cc6cd",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/9680204309/image2video/CjRq5GfJWzUAAAAAAAiqRQ-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/CjRq5GfJWzUAAAAAAAiqRQ.mp4",
+        "downloaded": true
+      }
+    ],
+    "created_at": "2025-03-06 18:51:55",
+    "expiration_date": "2025-04-05",
+    "has_image_url_data": true
+  },
+  {
+    "task_id": "CjilGmfJXYIAAAAAABWrww",
+    "external_task_id": "custom_1741273053",
+    "prompt": "龙族摇滚明星弹吉他",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "4ba607bf-10f8-4a20-a04a-a362449892f4",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/3956177181/image2video/CjilGmfJXYIAAAAAABWrww-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/CjilGmfJXYIAAAAAABWrww.mp4",
+        "downloaded": true
+      }
+    ],
+    "created_at": "2025-03-06 22:57:33",
+    "expiration_date": "2025-04-05",
+    "has_image_url_data": true
+  },
+  {
+    "task_id": "CjilGmfJXYIAAAAAADgynw",
+    "external_task_id": "custom_1741319821",
+    "prompt": "赛博朋克风格的涂鸦",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "af9fcf7a-3c3d-4955-a46b-db1b44c14322",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/5586370078/image2video/CjilGmfJXYIAAAAAADgynw-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/CjilGmfJXYIAAAAAADgynw.mp4",
+        "downloaded": true
+      }
+    ],
+    "created_at": "2025-03-07 11:57:01",
+    "expiration_date": "2025-04-06",
+    "has_image_url_data": true
+  },
+  {
+    "task_id": "ChGYrGfJXjoAAAAAADgp-Q",
+    "external_task_id": "custom_1741319963",
+    "prompt": "女人伸出手，握住屏幕前的手",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "05a35284-f0f1-40e3-b9f8-0b684bbecfcf",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/9023595014/image2video/ChGYrGfJXjoAAAAAADgp-Q-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/ChGYrGfJXjoAAAAAADgp-Q.mp4",
+        "downloaded": true
+      }
+    ],
+    "created_at": "2025-03-07 11:59:23",
+    "expiration_date": "2025-04-06",
+    "has_image_url_data": true
+  },
+  {
+    "task_id": "Cjgj8GfK9x0AAAAAAARAJg",
+    "external_task_id": "custom_1741359042",
+    "prompt": "小狗转头看向前方",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "ed1509a6-77fb-43c0-b989-cec6fbdf9d7a",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/0423929340/image2video/Cjgj8GfK9x0AAAAAAARAJg-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/Cjgj8GfK9x0AAAAAAARAJg.mp4",
+        "downloaded": true
+      }
+    ],
+    "created_at": "2025-03-07 22:50:42",
+    "expiration_date": "2025-04-06",
+    "has_image_url_data": true
+  },
+  {
+    "task_id": "CjiHUmfK_2MAAAAAABu7Wg",
+    "external_task_id": "custom_1741395834",
+    "prompt": "面向镜头微笑",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "6fab1c20-dd5f-4a0a-8c7e-b1f85d716868",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/8879385446/image2video/CjiHUmfK_2MAAAAAABu7Wg-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/CjiHUmfK.mp4",
+        "downloaded": true
+      }
+    ],
+    "has_image_url_data": true,
+    "created_at": "2025-03-08 09:03:54",
+    "expiration_date": "2025-04-07"
+  },
+  {
+    "task_id": "CjgUsWfLADAAAAAAABv_Hw",
+    "external_task_id": "custom_1741396457",
+    "prompt": "",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "626e8665-f260-4c99-a87e-3f94af6c3aa7",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/2421536471/image2video/CjgUsWfLADAAAAAAABv_Hw-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/CjgUsWfLADAAAAAAABv.mp4",
+        "downloaded": true
+      }
+    ],
+    "has_image_url_data": true,
+    "created_at": "2025-03-08 09:14:17",
+    "expiration_date": "2025-04-07"
+  },
+  {
+    "task_id": "Cl6-G2fK_xwAAAAAAByh-Q",
+    "external_task_id": "custom_1741397004",
+    "prompt": "",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "4988c61a-5cd6-44ec-b19c-ce4f276d0b47",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/3481496247/image2video/Cl6-G2fK_xwAAAAAAByh-Q-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/Cl6-G2fK.mp4",
+        "downloaded": true
+      }
+    ],
+    "has_image_url_data": true,
+    "created_at": "2025-03-08 09:23:24",
+    "expiration_date": "2025-04-07"
+  },
+  {
+    "task_id": "CmB0HmfK9xQAAAAAAB7IpQ",
+    "external_task_id": "custom_1741397344",
+    "prompt": "",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "152c08f0-89a5-4e66-b22e-3838b2ea6e10",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/3045273146/image2video/CmB0HmfK9xQAAAAAAB7IpQ-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/CmB0HmfK9xQAAAAAAB7IpQ.mp4",
+        "downloaded": true
+      }
+    ],
+    "has_image_url_data": true,
+    "created_at": "2025-03-08 09:29:04",
+    "expiration_date": "2025-04-07"
+  },
+  {
+    "task_id": "CmJcDWfLA5QAAAAAABvpvg",
+    "external_task_id": "custom_1741397708",
+    "prompt": "两人打了起来",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "a57f0264-8cea-45da-be91-666474ad2ece",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/5602922871/image2video/CmJcDWfLA5QAAAAAABvpvg-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/CmJcDWfLA5QAAAAAABvpvg.mp4",
+        "downloaded": true
+      }
+    ],
+    "has_image_url_data": true,
+    "created_at": "2025-03-08 09:35:08",
+    "expiration_date": "2025-04-07"
+  },
+  {
+    "task_id": "Cjgh02fLA5cAAAAAABwarQ",
+    "external_task_id": "custom_1741397941",
+    "prompt": "一条大河波浪宽",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "eab6e9a8-19bc-4368-b4ca-96bcde8cd530",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/0385281784/image2video/Cjgh02fLA5cAAAAAABwarQ-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/Cjgh02fLA5cAAAAAABwarQ.mp4",
+        "downloaded": true
+      }
+    ],
+    "has_image_url_data": true,
+    "created_at": "2025-03-08 09:39:01",
+    "expiration_date": "2025-04-07"
+  },
+  {
+    "task_id": "CmJcDWfLA5QAAAAAABw_fA",
+    "external_task_id": "custom_1741398169",
+    "prompt": "两人打拳击，红色领导的人被打出血。",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "a5208172-7dbb-4aa3-9ce7-7ba3ae9bd6a2",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/3781015790/image2video/CmJcDWfLA5QAAAAAABw_fA-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/CmJcDWfLA5QAAAAAABw.mp4",
+        "downloaded": true
+      }
+    ],
+    "has_image_url_data": true,
+    "created_at": "2025-03-08 09:42:49",
+    "expiration_date": "2025-04-07"
+  },
+  {
+    "task_id": "CmB0HmfK9xQAAAAAAB_Qag",
+    "external_task_id": "custom_1741398740",
+    "prompt": "女孩向前走，镜头后拉",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "3b39ff3c-335c-42b4-a76e-f68c0b0d7970",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/3828711915/image2video/CmB0HmfK9xQAAAAAAB_Qag-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/CmB0HmfK9xQAAAAAAB.mp4",
+        "downloaded": true
+      }
+    ],
+    "has_image_url_data": true,
+    "created_at": "2025-03-08 09:52:20",
+    "expiration_date": "2025-04-07"
+  },
+  {
+    "task_id": "Cl6-G2fK_xwAAAAAAB501w",
+    "external_task_id": "custom_1741399507",
+    "prompt": "镜头推进",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "27716e7a-2c8d-4052-a317-348d0e37bbea",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/2967223707/image2video/Cl6-G2fK_xwAAAAAAB501w-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/Cl6-G2fK.mp4",
+        "downloaded": true
+      }
+    ],
+    "has_image_url_data": true,
+    "created_at": "2025-03-08 10:05:07",
+    "expiration_date": "2025-04-07"
+  },
+  {
+    "task_id": "CmJbG2fK_3wAAAAAAB8g6w",
+    "external_task_id": "custom_1741400520",
+    "prompt": "",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "56e23fd2-25df-4417-9d1d-c1adf8955fc8",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/6742068620/image2video/CmJbG2fK_3wAAAAAAB8g6w-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/CmJbG2fK.mp4",
+        "downloaded": true
+      }
+    ],
+    "has_image_url_data": true,
+    "created_at": "2025-03-08 10:22:00",
+    "expiration_date": "2025-04-07"
+  },
+  {
+    "task_id": "Cjgh02fLA5cAAAAAACDmjw",
+    "external_task_id": "custom_1741404296",
+    "prompt": "超女身上电光流动",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1-6",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "5bef04c7-6e86-4a30-b257-274e106e07c2",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/5366847196/image2video/Cjgh02fLA5cAAAAAACDmjw-0_raw_video_2.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/Cjgh02fLA5cAAAAAACDmjw.mp4",
+        "downloaded": true
+      }
+    ],
+    "has_image_url_data": true,
+    "created_at": "2025-03-08 11:24:56",
+    "expiration_date": "2025-04-07"
+  },
+  {
+    "task_id": "Cjgj8GfK9x0AAAAAACQ6VA",
+    "external_task_id": "custom_1741404547",
+    "prompt": "花朵上的花瓣化作蝴蝶飞舞起来",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1-5",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "dd3e47c2-274b-460d-bd39-c55b11c7185b",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/0423929340/image2video/Cjgj8GfK9x0AAAAAACQ6VA-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/Cjgj8GfK9x0AAAAAACQ6VA.mp4",
+        "downloaded": true
+      }
+    ],
+    "has_image_url_data": true,
+    "created_at": "2025-03-08 11:29:07",
+    "expiration_date": "2025-04-07"
+  },
+  {
+    "task_id": "CjiHUmfK_2MAAAAAACJiyQ",
+    "external_task_id": "custom_1741404744",
+    "prompt": "中国版闪电侠，周身流动着闪电，瞬间跑向远处",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "60025195-9cb5-48fd-a74d-6835042803a8",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/3258300163/image2video/CjiHUmfK_2MAAAAAACJiyQ-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/CjiHUmfK.mp4",
+        "downloaded": true
+      }
+    ],
+    "has_image_url_data": true,
+    "created_at": "2025-03-08 11:32:24",
+    "expiration_date": "2025-04-07"
+  },
+  {
+    "task_id": "Cl6-G2fK_xwAAAAAACLTow",
+    "external_task_id": "custom_1741405223",
+    "prompt": "一直哈士奇瞪着眼睛，歪头看下前方",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "d9b58706-f168-443b-a241-78fffc9e4214",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/6168336561/image2video/Cl6-G2fK_xwAAAAAACLTow-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/Cl6-G2fK.mp4",
+        "downloaded": true
+      }
+    ],
+    "has_image_url_data": true,
+    "created_at": "2025-03-08 11:40:23",
+    "expiration_date": "2025-04-07"
+  },
+  {
+    "task_id": "Cl6-G2fK_xwAAAAAACNMPQ",
+    "external_task_id": "custom_1741405810",
+    "prompt": "一直哈士奇瞪着眼睛，歪一下头看下上方",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "597f84ee-883a-4808-8c5b-105812272d9b",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/3322264798/image2video/Cl6-G2fK_xwAAAAAACNMPQ-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/Cl6-G2fK.mp4",
+        "downloaded": true
+      }
+    ],
+    "has_image_url_data": true,
+    "created_at": "2025-03-08 11:50:10",
+    "expiration_date": "2025-04-07"
+  },
+  {
+    "task_id": "CmB0HmfK9xQAAAAAACVfIA",
+    "external_task_id": "custom_1741406020",
+    "prompt": "哈士奇撕咬一根木棍",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "b3abcb7b-3a43-474a-8abf-d741f6d2d8f2",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/3972561559/image2video/CmB0HmfK9xQAAAAAACVfIA-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/CmB0HmfK9xQAAAAAACVfIA.mp4",
+        "downloaded": true
+      }
+    ],
+    "has_image_url_data": true,
+    "created_at": "2025-03-08 11:53:40",
+    "expiration_date": "2025-04-07"
+  },
+  {
+    "task_id": "CjgUsWfLADAAAAAAACUdKw",
+    "external_task_id": "custom_1741408581",
+    "prompt": "女人捂着肚子疼痛",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "cdd59a47-6ff6-469c-ac53-b7074f82dde9",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/1312544059/image2video/CjgUsWfLADAAAAAAACUdKw-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/CjgUsWfLADAAAAAAACUdKw.mp4",
+        "downloaded": true
+      }
+    ],
+    "has_image_url_data": true,
+    "created_at": "2025-03-08 12:36:21",
+    "expiration_date": "2025-04-07"
+  },
+  {
+    "task_id": "Cjgh02fLA5cAAAAAACRoAA",
+    "external_task_id": "custom_1741408863",
+    "prompt": "18岁中国美女，吹泡泡",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "14896e28-2bcd-4eb6-a693-8d6deb4aeba4",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/1462331467/image2video/Cjgh02fLA5cAAAAAACRoAA-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/Cjgh02fLA5cAAAAAACRoAA.mp4",
+        "downloaded": true
+      }
+    ],
+    "has_image_url_data": true,
+    "created_at": "2025-03-08 12:41:03",
+    "expiration_date": "2025-04-07"
+  },
+  {
+    "task_id": "Cjgh02fLA5cAAAAAACUfyA",
+    "external_task_id": "custom_1741409812",
+    "prompt": "小龙女转头，微笑",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "35f2cd41-0176-4659-90c4-472dc5e50bde",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/1587665954/image2video/Cjgh02fLA5cAAAAAACUfyA-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/Cjgh02fLA5cAAAAAACUfyA.mp4",
+        "downloaded": true
+      }
+    ],
+    "has_image_url_data": true,
+    "created_at": "2025-03-08 12:56:52",
+    "expiration_date": "2025-04-07"
+  },
+  {
+    "task_id": "Cl6-G2fK_xwAAAAAACidSQ",
+    "external_task_id": "custom_1741412925",
+    "prompt": "镜头推进 ，微风吹动头发",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "42693449-5329-4ea4-b27c-a336d5b9d431",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/4179380356/image2video/Cl6-G2fK_xwAAAAAACidSQ-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/Cl6-G2fK.mp4",
+        "downloaded": true
+      }
+    ],
+    "has_image_url_data": true,
+    "created_at": "2025-03-08 13:48:45",
+    "expiration_date": "2025-04-07"
+  },
+  {
+    "task_id": "CjgUsWfLADAAAAAAACiqyg",
+    "external_task_id": "custom_1741413342",
+    "prompt": "狂风吹动衣衫",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "6373f92c-4e69-48be-9d18-d313bf3eac0b",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/1462331467/image2video/CjgUsWfLADAAAAAAACiqyg-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/CjgUsWfLADAAAAAAACiqyg.mp4",
+        "downloaded": true
+      }
+    ],
+    "has_image_url_data": true,
+    "created_at": "2025-03-08 13:55:42",
+    "expiration_date": "2025-04-07"
+  },
+  {
+    "task_id": "Cjgj8GfK9x0AAAAAACvQAw",
+    "external_task_id": "custom_1741414572",
+    "prompt": "美女害羞的点点头",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "efef315f-500f-4b10-9d55-76a34f0f13f3",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/9023595014/image2video/Cjgj8GfK9x0AAAAAACvQAw-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/Cjgj8GfK9x0AAAAAACvQAw.mp4",
+        "downloaded": true
+      }
+    ],
+    "has_image_url_data": true,
+    "created_at": "2025-03-08 14:16:12",
+    "expiration_date": "2025-04-07"
+  },
+  {
+    "task_id": "CmB0HmfK9xQAAAAAACwdsQ",
+    "external_task_id": "custom_1741414995",
+    "prompt": "女人，头发飘动，表情冷库，镜头缓慢推进",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "6bb9f2ae-c60e-4623-aa26-e0412418dfd0",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/8656098638/image2video/CmB0HmfK9xQAAAAAACwdsQ-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/CmB0HmfK9xQAAAAAACwdsQ.mp4",
+        "downloaded": true
+      }
+    ],
+    "has_image_url_data": true,
+    "created_at": "2025-03-08 14:23:15",
+    "expiration_date": "2025-04-07"
+  },
+  {
+    "task_id": "CmB0HmfK9xQAAAAAACz61A",
+    "external_task_id": "custom_1741416110",
+    "prompt": "女人等的优点不耐烦，",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "95ca9ba3-1c42-4d2f-bbec-04e4a9a999f8",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/3322264798/image2video/CmB0HmfK9xQAAAAAACz61A-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/CmB0HmfK9xQAAAAAACz61A.mp4",
+        "downloaded": true
+      }
+    ],
+    "has_image_url_data": true,
+    "created_at": "2025-03-08 14:41:50",
+    "expiration_date": "2025-04-07"
+  },
+  {
+    "task_id": "CmJcDWfLA5QAAAAAACuQzw",
+    "external_task_id": "custom_1741418316",
+    "prompt": "女人伸长蟒蛇状脖子露出减压和蛇形舌头",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "16163778-1875-433a-b418-b97c0c1ce233",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/3972561559/image2video/CmJcDWfLA5QAAAAAACuQzw-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/CmJcDWfLA5QAAAAAACuQzw.mp4",
+        "downloaded": true
+      }
+    ],
+    "has_image_url_data": true,
+    "created_at": "2025-03-08 15:18:36",
+    "expiration_date": "2025-04-07"
+  },
+  {
+    "task_id": "Cl6-G2fK_xwAAAAAAC1Ucw",
+    "external_task_id": "custom_1741419000",
+    "prompt": "小狗摇尾巴",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "65c74d8c-211f-436d-8503-756f423856fd",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/2019054443/image2video/Cl6-G2fK_xwAAAAAAC1Ucw-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/Cl6-G2fK.mp4",
+        "downloaded": true
+      }
+    ],
+    "has_image_url_data": true,
+    "created_at": "2025-03-08 15:30:00",
+    "expiration_date": "2025-04-07"
+  },
+  {
+    "task_id": "CjiHUmfK_2MAAAAAAC18cw",
+    "external_task_id": "custom_1741419239",
+    "prompt": "僵尸向前走",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "8f0f8ea2-a7cb-4d3b-803f-1898c3b9bdb2",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/7230399769/image2video/CjiHUmfK_2MAAAAAAC18cw-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/CjiHUmfK.mp4",
+        "downloaded": true
+      }
+    ],
+    "has_image_url_data": true,
+    "created_at": "2025-03-08 15:33:59",
+    "expiration_date": "2025-04-07"
+  },
+  {
+    "task_id": "Cjgh02fLA5cAAAAAACy__w",
+    "external_task_id": "custom_1741419729",
+    "prompt": "沙滩排球赛场",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "d6dc6ccc-509f-46a1-bf9b-f75ea49bab00",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/3322264798/image2video/Cjgh02fLA5cAAAAAACy__w-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/Cjgh02fLA5cAAAAAACy.mp4",
+        "downloaded": true
+      }
+    ],
+    "has_image_url_data": true,
+    "created_at": "2025-03-08 15:42:09",
+    "expiration_date": "2025-04-07"
+  },
+  {
+    "task_id": "CjiHUmfK_2MAAAAAAC466g",
+    "external_task_id": "custom_1741420169",
+    "prompt": "夕阳下，汽车在公路上行驶",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [
+      {
+        "id": "00b79c36-8d9e-4806-8dfb-32fee08ed3bb",
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/7660838837/image2video/CjiHUmfK_2MAAAAAAC466g-0_raw_video_1.mp4",
+        "duration": "5.1",
+        "local_url": "/static/videos/CjiHUmfK.mp4",
+        "downloaded": true
+      }
+    ],
+    "has_image_url_data": true,
+    "created_at": "2025-03-08 15:49:29",
+    "expiration_date": "2025-04-07"
+  },
+  {
+    "task_id": "Cjgj8GfK9x0AAAAAADC-sQ",
+    "external_task_id": "custom_1741420831",
+    "prompt": "变异成僵尸",
+    "negative_prompt": "",
+    "status": "submitted",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.5
+    },
+    "videos": [],
+    "has_image_url_data": true,
+    "created_at": "2025-03-08 16:00:31",
+    "expiration_date": "2025-04-07"
+  },
+  {
+    "task_id": "CjiHUmfK_2MAAAAAAC7RMQ",
+    "external_task_id": "custom_1741420906",
+    "prompt": "女孩们在沙滩排球场，镜头上移",
+    "negative_prompt": "",
+    "status": "submitted",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1-5",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.1
+    },
+    "videos": [],
+    "has_image_url_data": true,
+    "created_at": "2025-03-08 16:01:46",
+    "expiration_date": "2025-04-07"
+  },
+  {
+    "task_id": "Cjgj8GfK9x0AAAAAADDxjg",
+    "external_task_id": "custom_1741421085",
+    "prompt": "荧光液体流淌，女孩抬起头看向天空",
+    "negative_prompt": "",
+    "status": "submitted",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "duration": "5",
+      "mode": "std",
+      "cfg_scale": 0.3
+    },
+    "videos": [],
+    "has_image_url_data": true,
+    "created_at": "2025-03-08 16:04:45",
+    "expiration_date": "2025-04-07"
+  }
+]

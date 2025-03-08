@@ -3,10 +3,11 @@ import json
 import shutil
 from datetime import datetime
 from video_extend import get_extend_task
+import glob
 
 # 文件路径配置
-TASKS_FILE = 'tasks_history.json'
-BACKUP_DIR = 'backups'
+TASKS_FILE = 'static/video_tasks_history.json'
+BACKUP_DIR = 'static/backups'
 VIDEOS_DIR = 'static/videos'
 
 # 确保备份目录存在

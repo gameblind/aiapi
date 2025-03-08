@@ -421,6 +421,7 @@
                 <h2>AI图像生成</h2>
                 <div>
                     <a href="/" class="btn btn-outline-secondary me-2">视频生成</a>
+                    <a href="/videos" class="btn btn-outline-secondary me-2">视频墙</a>
                     <a href="/tasks" class="btn btn-outline-secondary me-2">历史任务</a>
                     <button onclick="toggleTheme()" class="btn btn-outline-secondary" id="themeToggle">
                         <i class="fas fa-moon"></i>
@@ -635,7 +636,7 @@
         // 模态框中"用于生成视频"按钮点击事件
         document.getElementById('useForVideo').addEventListener('click', function() {
             const imageUrl = document.getElementById('modalImage').src;
-            window.location.href = `/index.html?image=${encodeURIComponent(imageUrl)}`;
+            window.location.href = `/videos?image=${encodeURIComponent(imageUrl)}&prompt=${encodeURIComponent(prompt)}`;
         });
 
         // 删除图片按钮点击事件
@@ -897,7 +898,8 @@
                 });
             const overlay = $('<div>').addClass('card-overlay')
                 .append($('<button>').html('<i class="fas fa-video"></i>').addClass('btn-icon btn-video').attr('title', '生成视频').click(function() {
-                    window.location.href = `/index.html?image=${encodeURIComponent(imageUrl)}&prompt=${encodeURIComponent(prompt)}`;
+                    const fullImageUrl = new URL(imageUrl, window.location.origin).href;
+                    window.location.href = `/videos?image=${encodeURIComponent(fullImageUrl)}&prompt=${encodeURIComponent(prompt)}`;
                 }))
                 .append($('<button>').html('<i class="fas fa-images"></i>').addClass('btn-icon btn-img2img').attr('title', '图生图').click(async function() {
                     const response = await fetch(imageUrl);

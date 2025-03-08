@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  aiapi:
+    build: .
+    image: aiapi:latest
+    container_name: aiapi
+    restart: always
+    ports:
+      - "5001:5001"
+    volumes:
+      - ./static:/app/static
+      - ./tasks_history.json:/app/tasks_history.json
+      # 移除了 video_tasks_history.json 的单独挂载，因为它现在在 static 目录中
+    environment:
+      - FLASK_APP=app.py
+      - FLASK_ENV=production
+      - TZ=Asia/Shanghai
+      - API_KEY=${API_KEY}
+      - API_BASE_URL=${API_BASE_URL}
+      - DB_HOST=${DB_HOST:-localhost}
+      - DB_USER=${DB_USER:-username}
+      - DB_PASSWORD=${DB_PASSWORD:-password}
+      - DB_NAME=${DB_NAME:-database_name}
+      - SERVICE_URL=${SERVICE_URL:-https://example.com/api}
+    networks:
+      - aiapi_network
+
+networks:
+  aiapi_network:
+    driver: bridge
