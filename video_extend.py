@@ -7,7 +7,8 @@ from dotenv import load_dotenv
 
 # 禁用不安全请求警告
 from urllib3.exceptions import InsecureRequestWarning
-requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
+import urllib3  # 直接导入urllib3
+urllib3.disable_warnings(InsecureRequestWarning)  # 使用直接导入的urllib3
 
 load_dotenv()
 
@@ -24,8 +25,11 @@ def create_extend_task(video_id, prompt=None, callback_url=None):
     
     try:
         if not API_BASE_URL:
-            raise Exception("API_BASE_URL not configured")
+            raise Exception("API_BASE_URL未配置")
             
+        if not API_KEY:
+            raise Exception("API_KEY未配置")
+        
         url = f"{API_BASE_URL}/kling/v1/videos/video-extend"
         print(f"[DEBUG] 请求URL: {url}")
         
@@ -35,16 +39,13 @@ def create_extend_task(video_id, prompt=None, callback_url=None):
         }
         print(f"[DEBUG] 请求头: {headers}")
         
-        # 处理video_id格式
-        if "-" in video_id:
-            # 假设video_id格式可能是UUID格式
-            print(f"[DEBUG] 原始video_id: {video_id}")
-            video_id = video_id.split("-")[0] if "-" in video_id else video_id
-            print(f"[DEBUG] 处理后video_id: {video_id}")
+        # 注意：不需要处理video_id格式
+        # API需要完整的UUID格式，而不是task_id
+        # 例如："cfb10889-cf09-41c7-ae58-acf2e67556ee"
         
         # 构建请求数据
         payload = {
-            "video_id": video_id,
+            "video_id": video_id,  # 使用完整的UUID
             "prompt": prompt if prompt else ""
         }
         
@@ -155,15 +156,21 @@ def list_extend_tasks(page_num=1, page_size=30):
     
     try:
         if not API_BASE_URL:
-            raise Exception("API_BASE_URL not configured")
+            raise Exception("API_BASE_URL未配置")
+            
+        if not API_KEY:
+            raise Exception("API_KEY未配置")
             
         url = f"{API_BASE_URL}/kling/v1/videos/video-extend"
-        params = {
-            'pageNum': page_num,
-            'pageSize': page_size
+        
+        # 构建请求数据 - 尝试使用不同的参数名称
+        payload = {
+            'page': page_num,  # 尝试使用更简单的参数名
+            'size': page_size  # 尝试使用更简单的参数名
         }
+        
         print(f"[DEBUG] 请求URL: {url}")
-        print(f"[DEBUG] 请求参数: {params}")
+        print(f"[DEBUG] 请求参数: {payload}")
         
         headers = {
             'Authorization': API_KEY,
@@ -171,10 +178,10 @@ def list_extend_tasks(page_num=1, page_size=30):
         }
         print(f"[DEBUG] 请求头: {headers}")
         
-        # 发送请求
+        # 发送请求 - 尝试使用GET方法
         response = requests.get(
             url,
-            params=params,
+            params=payload,  # 使用params而不是json
             headers=headers,
             verify=False
         )
@@ -195,3 +202,20 @@ def list_extend_tasks(page_num=1, page_size=30):
             "data": None
         }
         return error_response
+
+
+def get_video_uuid_from_task(task_id, video_tasks_file='/Users/wangchong/DEV/AIAPI_2025-3-5/static/video_tasks_history.json'):
+    """从任务ID获取视频UUID"""
+    try:
+        with open(video_tasks_file, 'r', encoding='utf-8') as f:
+            tasks = json.load(f)
+            
+        for task in tasks:
+            if task.get('task_id') == task_id and task.get('videos'):
+                # 返回第一个视频的UUID
+                return task['videos'][0]['id']
+                
+        return None
+    except Exception as e:
+        print(f"[ERROR] 获取视频UUID失败: {str(e)}")
+        return None

@@ -1778,6 +1778,24 @@
         "url": "",
         "local_url": "/static/images/ComfyUI_02558_2.png",
         "downloaded": true
+      },
+      {
+        "index": 0,
+        "url": "",
+        "local_url": "/static/images/ComfyUI_00000_6197.jpeg",
+        "downloaded": true
+      },
+      {
+        "index": 1,
+        "url": "",
+        "local_url": "/static/images/ComfyUI_00001_4000.jpeg",
+        "downloaded": true
+      },
+      {
+        "index": 186252,
+        "url": "",
+        "local_url": "/static/images/ComfyUI_186252_.jpeg.png",
+        "downloaded": true
       }
     ]
   },
@@ -2218,6 +2236,2156 @@
         "index": 0,
         "url": "",
         "local_url": "/static/images/Latent_Adetailer_00031_fff.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "Cl6-G2fK_xwAAAAAADM0mg",
+    "external_task_id": "custom_1741426280",
+    "prompt": "1 girl",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "1:1"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/8534613866/image/Cl6-G2fK_xwAAAAAADM0mg-0_raw_image_0.png",
+        "local_url": "/static/images/Cl6-G2fK_xwAAAAAADM0mg_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CmJcDWfLA5QAAAAAADJz3A",
+    "external_task_id": "custom_1741426896",
+    "prompt": "汗流浃背的沙排运动员",
+    "negative_prompt": "",
+    "status": "deleted",
+    "status_msg": "图片已删除",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.5,
+      "n": 1
+    },
+    "images": []
+  },
+  {
+    "task_id": "Cl6-G2fK_xwAAAAAADO-sA",
+    "external_task_id": "custom_1741426960",
+    "prompt": "汗流浃背的沙排运动员",
+    "negative_prompt": "",
+    "status": "deleted",
+    "status_msg": "图片已删除",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.5,
+      "n": 1
+    },
+    "images": []
+  },
+  {
+    "task_id": "Cl6-G2fK_xwAAAAAADPjkw",
+    "external_task_id": "custom_1741427133",
+    "prompt": "两位汗流浃背的沙排运动员，不同的发型，不同的队服，小麦色批复，身材很好",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.5,
+      "n": 1
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/9731841086/image/Cl6-G2fK_xwAAAAAADPjkw-0_raw_image_0.png",
+        "local_url": "/static/images/Cl6-G2fK_xwAAAAAADPjkw_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "Cjgj8GfK9x0AAAAAADX50w",
+    "external_task_id": "custom_1741427330",
+    "prompt": "手持宝剑的国王，愤怒的看向镜头， 满身血迹和灰尘，战斗痕迹明显。",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.5,
+      "n": 1
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/1499944505/image/Cjgj8GfK9x0AAAAAADX50w-0_raw_image_0.png",
+        "local_url": "/static/images/Cjgj8GfK9x0AAAAAADX50w_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CmJcDWfLA5QAAAAAADROqA",
+    "external_task_id": "custom_1741429213",
+    "prompt": "死神挥舞镰刀看向前方",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.5,
+      "n": 1
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/5271820290/image/CmJcDWfLA5QAAAAAADROqA-0_raw_image_0.png",
+        "local_url": "/static/images/CmJcDWfLA5QAAAAAADROqA_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CmJbG2fK_3wAAAAAAEc4Bg",
+    "external_task_id": "custom_1741451147",
+    "prompt": "赛博朋克风格的兔子与中国传统武术大师风格的乌龟在武道大会赛场比武",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "16:9"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/6343092556/image/CmJbG2fK_3wAAAAAAEc4Bg-0_raw_image_0.png",
+        "local_url": "/static/images/CmJbG2fK_3wAAAAAAEc4Bg_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "Cl6-G2fO2hMAAAAAAF4Nwg",
+    "external_task_id": "custom_1741739956",
+    "prompt": "书画类主题创作要求\r\n以\"一颗红星．耀我中华心\"主题，通过绘画的方式来展现革命历史场景、英雄人物或象征性元素，传递革命精神的时代价值。；也可通过书法作品的方式，选取能够激发人心、反映革命精神的诗词或名言，通过笔墨的力度与韵律，展现文字的力量与美感。\r\n美术类：包括国画、油画、素描、水粉、水彩、蜡笔画、漫画、综合绘画等，作品幅面规格不大于4开。",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "16:9"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/1823924357/image/Cl6-G2fO2hMAAAAAAF4Nwg-0_raw_image_0.png",
+        "local_url": "/static/images/Cl6-G2fO2hMAAAAAAF4Nwg_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "Cl68jmfO2ocAAAAAAF3OUA",
+    "external_task_id": "custom_1741740031",
+    "prompt": "一颗红星．耀我中华心\"主题，通过绘画的方式来展现革命历史场景、英雄人物或象征性元素，传递革命精神的时代价值。；也可通过书法作品的方式，选取能够激发人心、反映革命精神的诗词或名言，通过笔墨的力度与韵律，展现文字的力量与美感。",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "9:16"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/1627674287/image/Cl68jmfO2ocAAAAAAF3OUA-0_raw_image_0.png",
+        "local_url": "/static/images/Cl68jmfO2ocAAAAAAF3OUA_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "Cl6-G2fO2hMAAAAAAF50aQ",
+    "external_task_id": "custom_1741740539",
+    "prompt": "一颗红星．耀我中华心\"主题，通过绘画的方式来展现革命历史场景、英雄人物或象征性元素，传递革命精神的时代价值。；也可通过书法作品的方式，选取能够激发人心、反映革命精神的诗词或名言，通过笔墨的力度与韵律，展现文字的力量与美感。",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "1:1"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/0177388329/image/Cl6-G2fO2hMAAAAAAF50aQ-0_raw_image_0.png",
+        "local_url": "/static/images/Cl6-G2fO2hMAAAAAAF50aQ_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjWFtmfSls0AAAAAAAXKXw",
+    "external_task_id": "custom_1741861549",
+    "prompt": "一幢老旧但整洁的非常有韵味的房子",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "9:16"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/6247668263/image/CjWFtmfSls0AAAAAAAXKXw-0_raw_image_0.png",
+        "local_url": "/static/images/CjWFtmfSls0AAAAAAAXKXw_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjWFtmfSls0AAAAAAAXleA",
+    "external_task_id": "custom_1741861664",
+    "prompt": "整栋房子都开满了鲜花",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.5,
+      "n": 1
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/1823924357/image/CjWFtmfSls0AAAAAAAXleA-0_raw_image_0.png",
+        "local_url": "/static/images/CjWFtmfSls0AAAAAAAXleA_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjRWHWfSlloAAAAAAAYY0w",
+    "external_task_id": "custom_1741861790",
+    "prompt": "所有的墙体都布满了五颜六色的月季花",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.5,
+      "n": 1
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/5271820290/image/CjRWHWfSlloAAAAAAAYY0w-0_raw_image_0.png",
+        "local_url": "/static/images/CjRWHWfSlloAAAAAAAYY0w_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjRVjGfSk_QAAAAAAAbH_g",
+    "external_task_id": "custom_1741861996",
+    "prompt": "爬满鲜花的房子",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.5,
+      "n": 4
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/1499944505/image/CjRVjGfSk_QAAAAAAAbH_g-0_raw_image_0.png",
+        "local_url": "/static/images/CjRVjGfSk_QAAAAAAAbH_g_0.png",
+        "downloaded": true
+      },
+      {
+        "index": 1,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/1499944505/image/CjRVjGfSk_QAAAAAAAbH_g-1_raw_image_0.png",
+        "local_url": "/static/images/CjRVjGfSk_QAAAAAAAbH_g_1.png",
+        "downloaded": true
+      },
+      {
+        "index": 2,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/1499944505/image/CjRVjGfSk_QAAAAAAAbH_g-2_raw_image_0.png",
+        "local_url": "/static/images/CjRVjGfSk_QAAAAAAAbH_g_2.png",
+        "downloaded": true
+      },
+      {
+        "index": 3,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/1499944505/image/CjRVjGfSk_QAAAAAAAbH_g-3_raw_image_0.png",
+        "local_url": "/static/images/CjRVjGfSk_QAAAAAAAbH_g_3.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjNiL2fSluIAAAAAAAZKRw",
+    "external_task_id": "custom_1741862156",
+    "prompt": "房子长满了鲜花",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.5,
+      "n": 1
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/9731841086/image/CjNiL2fSluIAAAAAAAZKRw-0_raw_image_0.png",
+        "local_url": "/static/images/CjNiL2fSluIAAAAAAAZKRw_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CmKOn2fSk-UAAAAAAFlV2w",
+    "external_task_id": "custom_1741970271",
+    "prompt": "一个超现实的梦境，一座漂浮的图书馆由透明、活生生的珊瑚礁构成，重力失衡的书页在空中悬浮，散发着光芒。一只由固化的星光（银色皮毛由闪烁的超新星残骸组成）制成的两足狐狸，通过喷射星座到大气中的生物发光墨水大声朗读。地面是一幅不断变化的马赛克，镶嵌着反射不同现实的镜片——有些碎片显示沙漠中绽放着水晶兰花，另一些则描绘出冻结在波浪中的海洋，如同玻璃雕塑。头顶上，双月以冲突的角度轨道运行，投下棱镜般的阴影，形状像古老的符文，触碰时便会消失。楼梯螺旋上升至北极光幕前，通向一扇由分层蜻蜓翅膀制成的门。灯光结合了虚幻的生物发光与穿透珊瑚建筑的霓虹粉太阳耀斑。使用200毫米微距镜头在f/4光圈下拍摄，冻结了墨星粒子的运动，同时模糊了镜面反射，形成液体抽象效果。色彩分级将水下蓝色与超新星橙色融合，并添加了一层极光绿雾，强调跨维度门户的效果。",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "9:16"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/6750019753/image/CmKOn2fSk-UAAAAAAFlV2w-0_raw_image_0.png",
+        "local_url": "/static/images/CmKOn2fSk-UAAAAAAFlV2w_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjWFtmfSls0AAAAAAFjvmA",
+    "external_task_id": "custom_1741970572",
+    "prompt": "一个奇幻场景，半狮半龙的神话生物雄伟地矗立在两座巨大的水晶塔之间的浮动岛屿上。夕阳西下，天空被深紫色和炽热橙色的光辉笼罩，整个景色都披上了超凡脱俗的光芒。生物的金色眼睛闪烁着古老的智慧，鳞片如同熔化的金属般闪耀。它巨大的翅膀张开，捕捉着最后一缕阳光，然后渐渐消失在暮色中。使用70-200毫米镜头拍摄，以突出场景的宏大与壮丽，采用戏剧性的构图来强调高耸的建筑。",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "9:16"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/1823924357/image/CjWFtmfSls0AAAAAAFjvmA-0_raw_image_0.png",
+        "local_url": "/static/images/CjWFtmfSls0AAAAAAFjvmA_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjWFtmfSls0AAAAAAFlhyQ",
+    "external_task_id": "custom_1741971117",
+    "prompt": "一幅令人难忘的超现实场景，画面中一只雄伟、发光的凤凰栖息在暮色中的冰湖边缘。凤凰鲜艳的羽毛闪烁着彩虹般的光泽，它凝视着下方深邃的世界。远处有一座孤独的城堡，被透过雪山的幽蓝光芒笼罩。冰天雪地延伸到凤凰巨大的翅膀下，营造出一种令人不安的宁静氛围。使用广角镜头捕捉到场景的广阔，图像以高分辨率呈现，展现了每一个细微之处。这幅超凡脱俗的风景画，带着诡异的平静和梦幻般的质感，邀请观众探索其中的奥秘。",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "16:9"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/6215469460/image/CjWFtmfSls0AAAAAAFlhyQ-0_raw_image_0.png",
+        "local_url": "/static/images/CjWFtmfSls0AAAAAAFlhyQ_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjWFtmfSls0AAAAAAFlynw",
+    "external_task_id": "custom_1741971204",
+    "prompt": "一个超现实的场景，意外地结合了一只巨大的蒸汽朋克章鱼，它挥舞着发光的电吉他，与一位维多利亚时代的芭蕾舞者在漂浮的霓虹灯平台上优雅旋转。背景是充满紫色和蓝色的绚丽宇宙星系，由生物发光珊瑚礁脉动的能量照亮。采用动态广角构图拍摄，具有未来主义赛博朋克风格，细节丰富且生动。",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "1:1"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/7820730969/image/CjWFtmfSls0AAAAAAFlynw-0_raw_image_0.png",
+        "local_url": "/static/images/CjWFtmfSls0AAAAAAFlynw_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjNiL2fSluIAAAAAAFmJ1A",
+    "external_task_id": "custom_1741971367",
+    "prompt": "一只狂野的霸王龙戴着华丽的巴洛克假发，从精致的瓷杯中品茶，坐在一个身着飘逸和服的人形机器人对面。场景展开于一片金光沐浴下的茂密竹林中，樱花花瓣轻轻飘落。画面以柔和的焦点和温暖的色调，呈现出如画的浮世绘风格。",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "9:16"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/1499944505/image/CjNiL2fSluIAAAAAAFmJ1A-0_raw_image_0.png",
+        "local_url": "/static/images/CjNiL2fSluIAAAAAAFmJ1A_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjRWHWfSlloAAAAAAFnV7g",
+    "external_task_id": "custom_1741971613",
+    "prompt": "一只咆哮的霸王龙戴着华丽的巴洛克假发，从精致的瓷杯中品茶，坐在一个身着飘逸和服的人形机器人对面。这一幕发生在一片金光沐浴下的茂密竹林中，樱花花瓣轻轻飘落。画面以柔和的焦点和温暖的色调，呈现出如画的浮世绘风格。",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 2,
+      "aspect_ratio": "1:1"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/4092983486/image/CjRWHWfSlloAAAAAAFnV7g-0_raw_image_0.png",
+        "local_url": "/static/images/CjRWHWfSlloAAAAAAFnV7g_0.png",
+        "downloaded": true
+      },
+      {
+        "index": 1,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/4092983486/image/CjRWHWfSlloAAAAAAFnV7g-1_raw_image_0.png",
+        "local_url": "/static/images/CjRWHWfSlloAAAAAAFnV7g_1.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjRVjGfSk_QAAAAAAFpomA",
+    "external_task_id": "custom_1741971665",
+    "prompt": "一只调皮的海盗企鹅手持闪耀的迪斯科球作为武器，在悬浮的老式打字机上跳舞，与一位宁静的佛教僧侣在空中冥想时手握一束发光的萤火虫相映成趣。故事背景设定在一个梦幻般的淡紫色沙漠中，星空下的暮色天空下，沙丘缓缓起伏，微光闪烁。画面采用大胆的波普艺术风格，线条清晰，充满复古未来感。”",
+    "negative_prompt": "",
+    "status": "failed",
+    "status_msg": "Failure to pass the risk control system",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 2,
+      "aspect_ratio": "9:16"
+    },
+    "images": []
+  },
+  {
+    "task_id": "CjWFtmfSls0AAAAAAFntCA",
+    "external_task_id": "custom_1741971817",
+    "prompt": "一只调皮的海盗企鹅手持闪耀的迪斯科球作为武器，在悬浮的老式打字机上跳舞，与一位宁静的佛教僧侣在空中冥想时手握一束发光的萤火虫相映成趣。故事背景设定在一个梦幻般的淡紫色沙漠中，星空下的暮色天空下，沙丘缓缓起伏，微光闪烁。画面采用大胆的波普艺术风格，线条清晰，充满复古未来感。”",
+    "negative_prompt": "",
+    "status": "failed",
+    "status_msg": "Failure to pass the risk control system",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "9:16"
+    },
+    "images": []
+  },
+  {
+    "task_id": "CjNh7WfSlnsAAAAAAFoyNg",
+    "external_task_id": "custom_1741972084",
+    "prompt": "一幅引人注目的画面，身穿铠甲的武士狐狸手持水晶刀剑，与身着定制天鹅绒套装、挥舞银色手杖的华丽孔雀交锋。决斗发生在一座抛光大理石桥上，桥下是一片宁静的锦鲤池塘，四周是盛开的紫藤，在灿烂的红日余晖中显得格外美丽。通过戏剧性的明暗对比照明效果捕捉到这一场景，使用35毫米镜头在f/1.4光圈下拍摄，以锐利的细节和奶油般的虚化效果呈现，呈现出超现实主义巴洛克风格，精致的质感和高度细致的完成度。”",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "9:16"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/5271820290/image/CjNh7WfSlnsAAAAAAFoyNg-0_raw_image_0.png",
+        "local_url": "/static/images/CjNh7WfSlnsAAAAAAFoyNg_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CmKOn2fSk-UAAAAAAFrRQw",
+    "external_task_id": "custom_1741972116",
+    "prompt": "safe_pos, score_9, score_8_up, score_7_up BREAK\r\n(detailed face and eyes:1.3), (perfect eyes:1.1), a beautiful athletic and lean woman, tight jumpsuit, fully clothed, blond hair, very short hair, cute, aroused, Caucasian features, pale skin tone, fair skin, many freckles, freckle faced, bedroom setting, dynamic angle, vibrant lighting, high contrast, nice thighs, perfect butt, butt focus",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "9:16"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/9731841086/image/CmKOn2fSk-UAAAAAAFrRQw-0_raw_image_0.png",
+        "local_url": "/static/images/CmKOn2fSk-UAAAAAAFrRQw_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CmKOn2fSk-UAAAAAAFrnqw",
+    "external_task_id": "custom_1741972230",
+    "prompt": "一幅引人注目的画面，身穿铠甲的武士狐狸手持水晶刀剑，与身着定制天鹅绒套装、挥舞银色手杖的华丽孔雀交锋。决斗发生在一座抛光大理石桥上，桥下是一片宁静的锦鲤池塘，四周是盛开的紫藤，在灿烂的红日余晖中显得格外美丽。通过戏剧性的明暗对比照明效果捕捉到这一场景，使用35毫米镜头在f/1.4光圈下拍摄，以锐利的细节和奶油般的虚化效果呈现，呈现出超现实主义巴洛克风格，精致的质感和高度细致的完成度。”",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "9:16"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/1627674287/image/CmKOn2fSk-UAAAAAAFrnqw-0_raw_image_0.png",
+        "local_url": "/static/images/CmKOn2fSk-UAAAAAAFrnqw_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjRVjGfSk_QAAAAAAFsiaQ",
+    "external_task_id": "custom_1741972580",
+    "prompt": "菩提树下坐化的僧侣",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.5,
+      "n": 1
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/6750019753/image/CjRVjGfSk_QAAAAAAFsiaQ-0_raw_image_0.png",
+        "local_url": "/static/images/CjRVjGfSk_QAAAAAAFsiaQ_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjNiL2fSluIAAAAAAHDBXg",
+    "external_task_id": "custom_1742006585",
+    "prompt": "一只大红狗",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "9:16"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/8534613866/image/CjNiL2fSluIAAAAAAHDBXg-0_raw_image_0.png",
+        "local_url": "/static/images/CjNiL2fSluIAAAAAAHDBXg_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "ChEg5mfSmJwAAAAAAHHp2Q",
+    "external_task_id": "custom_1742008527",
+    "prompt": "一幅令人叹为观止的美丽场景，一位娇嫩的仙女，翅膀如虹彩蜻蜓般轻盈，温柔地拥抱着一颗璀璨的珍珠，在一只身披玫瑰花冠的雄伟白鹿的和谐舞动中翩翩起舞。它们在一片闪耀的银色湖面上移动，周围是飘渺的薄雾和随风摇曳的柔和淡彩野花，天空被晨曦染成细腻的色调——柔和的粉红、淡紫色和金色。柔和而弥漫的光芒增强了梦幻般的宁静感，使用85毫米镜头在f/1.2光圈下捕捉到了精致的细节和丝滑的景深，以超详细的浪漫印象派风格呈现，注重极致的优雅与诗意之美。",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "9:16"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/4092983486/image/ChEg5mfSmJwAAAAAAHHp2Q-0_raw_image_0.png",
+        "local_url": "/static/images/ChEg5mfSmJwAAAAAAHHp2Q_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjiLpGfSmJwAAAAAAHHzjw",
+    "external_task_id": "custom_1742008594",
+    "prompt": "一幅令人叹为观止的美丽场景，一位娇嫩的仙女，翅膀如虹彩蜻蜓般轻盈，温柔地拥抱着一颗璀璨的珍珠，在一只身披玫瑰花冠的雄伟白鹿的和谐舞动中翩翩起舞。它们在一片闪耀的银色湖面上移动，周围是飘渺的薄雾和随风摇曳的柔和淡彩野花，天空被晨曦染成细腻的色调——柔和的粉红、淡紫色和金色。柔和而弥漫的光芒增强了梦幻般的宁静感，使用85毫米镜头在f/1.2光圈下捕捉到了精致的细节和丝滑的景深，以超详细的浪漫印象派风格呈现，注重极致的优雅与诗意之美。",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "16:9"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/4127863017/image/CjiLpGfSmJwAAAAAAHHzjw-0_raw_image_0.png",
+        "local_url": "/static/images/CjiLpGfSmJwAAAAAAHHzjw_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjWFtmfSls0AAAAAAHJajg",
+    "external_task_id": "custom_1742008638",
+    "prompt": "一个迷人的景象，一位天上的美人鱼，长发如星尘般飘逸，轻抚着用月光下的贝壳制成的竖琴，身旁是一只优雅的天鹅，翅膀尖端镶嵌着熔金。他们漂浮在一片玫瑰色云朵构成的宁静海面上，四周是瀑布般的紫色紫水晶花朵藤蔓，暮色天空下，北极光以翠绿和紫色的波浪舞动。沐浴在柔和的珍珠光泽中，用50毫米镜头在f/1.6下捕捉，呈现出完美的清晰度和丝滑的背景，在超精细的超现实幻想风格中散发出永恒的美丽与细腻的和谐。",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "16:9"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/1823924357/image/CjWFtmfSls0AAAAAAHJajg-0_raw_image_0.png",
+        "local_url": "/static/images/CjWFtmfSls0AAAAAAHJajg_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjNh7WfSlnsAAAAAAHJ1rQ",
+    "external_task_id": "custom_1742008698",
+    "prompt": "一个迷人的景象，一位天上的美人鱼，长发如星尘般飘逸，轻抚着用月光下的贝壳制成的竖琴，身旁是一只优雅的天鹅，翅膀尖端镶嵌着熔金。他们漂浮在一片玫瑰色云朵构成的宁静海面上，四周是瀑布般的紫色紫水晶花朵藤蔓，暮色天空下，北极光以翠绿和紫色的波浪舞动。沐浴在柔和的珍珠光泽中，用50毫米镜头在f/1.6下捕捉，呈现出完美的清晰度和丝滑的背景，在超精细的超现实幻想风格中散发出永恒的美丽与细腻的和谐。",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "16:9"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/1861268914/image/CjNh7WfSlnsAAAAAAHJ1rQ-0_raw_image_0.png",
+        "local_url": "/static/images/CjNh7WfSlnsAAAAAAHJ1rQ_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjNiL2fSluIAAAAAAJLglg",
+    "external_task_id": "custom_1742051328",
+    "prompt": "\"A surreal underwater scene with a translucent, glowing jellyfish floating among vibrant bioluminescent corals. The jellyfish emits soft blue and purple light, illuminating the dark ocean cavern. Ambient light from jellyfish tendrils creates shimmering reflections on the cave walls. Ultra-detailed, hyperrealistic style, rendered in 8K resolution with a wide-angle lens capturing the vastness of the underwater environment.\"",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "16:9"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/6750019753/image/CjNiL2fSluIAAAAAAJLglg-0_raw_image_0.png",
+        "local_url": "/static/images/CjNiL2fSluIAAAAAAJLglg_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjRVjGfSk_QAAAAAAJPSLg",
+    "external_task_id": "custom_1742051636",
+    "prompt": "An eccentric inventor with bright, multi-colored clothing experiments wildly within an exuberant, chaotic lab filled to brim with odd contraptions floating mid-air. Their oversized goggles glint as they manipulate bizarre gadgets that hover around them amidst moving platforms in a maze-like pattern above their workbench.",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "9:16"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/0177388329/image/CjRVjGfSk_QAAAAAAJPSLg-0_raw_image_0.png",
+        "local_url": "/static/images/CjRVjGfSk_QAAAAAAJPSLg_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "ChEg5mfSmJwAAAAAAMLUBg",
+    "external_task_id": "custom_1742120234",
+    "prompt": "A majestic lion, wearing a tiny crown, peacefully attending a tea party with a group of fluffy rabbits in a vibrant wildflower field, soft golden hour light, whimsical, detailed, high resolution.",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "9:16"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/7820730969/image/ChEg5mfSmJwAAAAAAMLUBg-0_raw_image_0.png",
+        "local_url": "/static/images/ChEg5mfSmJwAAAAAAMLUBg_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjNh7WfSlnsAAAAAAQFpMA",
+    "external_task_id": "custom_1742208056",
+    "prompt": "接满花骨朵",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.5,
+      "n": 1
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/5271820290/image/CjNh7WfSlnsAAAAAAQFpMA-0_raw_image_0.png",
+        "local_url": "/static/images/CjNh7WfSlnsAAAAAAQFpMA_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjRG5mfYJJkAAAAAAEBZGQ",
+    "external_task_id": "custom_1742304875",
+    "prompt": "荧光色头发，的女孩",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.5,
+      "n": 1
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/4538927598/image/CjRG5mfYJJkAAAAAAEBZGQ-0_raw_image_0.png",
+        "local_url": "/static/images/CjRG5mfYJJkAAAAAAEBZGQ_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjNh0mfZOvEAAAAAAA040Q",
+    "external_task_id": "custom_1742305281",
+    "prompt": "残阳如血染江天",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "16:9"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/5271820290/image/CjNh0mfZOvEAAAAAAA040Q-0_raw_image_0.png",
+        "local_url": "/static/images/CjNh0mfZOvEAAAAAAA040Q_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjiTU2fYH4oAAAAAAEH3SA",
+    "external_task_id": "custom_1742305294",
+    "prompt": "莲塘月色浮萤火",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "9:16"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/6343092556/image/CjiTU2fYH4oAAAAAAEH3SA-0_raw_image_0.png",
+        "local_url": "/static/images/CjiTU2fYH4oAAAAAAEH3SA_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "ChFiNGfYH4EAAAAAAEH6KA",
+    "external_task_id": "custom_1742305311",
+    "prompt": "莲塘月色浮萤火",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "9:16"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/8534613866/image/ChFiNGfYH4EAAAAAAEH6KA-0_raw_image_0.png",
+        "local_url": "/static/images/ChFiNGfYH4EAAAAAAEH6KA_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjNiaWfYIdIAAAAAAEFqmQ",
+    "external_task_id": "custom_1742305319",
+    "prompt": "千山叶落金铺路",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "9:16"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/6343092556/image/CjNiaWfYIdIAAAAAAEFqmQ-0_raw_image_0.png",
+        "local_url": "/static/images/CjNiaWfYIdIAAAAAAEFqmQ_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjRG5mfYJJkAAAAAAEDMow",
+    "external_task_id": "custom_1742305405",
+    "prompt": "晓露沾衣山路转",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "9:16"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/4092983486/image/CjRG5mfYJJkAAAAAAEDMow-0_raw_image_0.png",
+        "local_url": "/static/images/CjRG5mfYJJkAAAAAAEDMow_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjiTU2fYH4oAAAAAAEIVBQ",
+    "external_task_id": "custom_1742305424",
+    "prompt": "孤鸿影掠寒潭水",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "9:16"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/1499944505/image/CjiTU2fYH4oAAAAAAEIVBQ-0_raw_image_0.png",
+        "local_url": "/static/images/CjiTU2fYH4oAAAAAAEIVBQ_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "Cjgh0GfYIcUAAAAAAEF9Mg",
+    "external_task_id": "custom_1742305442",
+    "prompt": "竹影摇窗星斗稀",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "9:16"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/1499944505/image/Cjgh0GfYIcUAAAAAAEF9Mg-0_raw_image_0.png",
+        "local_url": "/static/images/Cjgh0GfYIcUAAAAAAEF9Mg_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjNiaWfYIdIAAAAAAEGQLg",
+    "external_task_id": "custom_1742305504",
+    "prompt": "玉龙横卧雪连峰",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "16:9"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/0177388329/image/CjNiaWfYIdIAAAAAAEGQLg-0_raw_image_0.png",
+        "local_url": "/static/images/CjNiaWfYIdIAAAAAAEGQLg_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjNh0mfZOvEAAAAAAZg0gw",
+    "external_task_id": "custom_1742824984",
+    "prompt": "女吸血鬼漏出獠牙",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.5,
+      "n": 1
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/6194562750/image/CjNh0mfZOvEAAAAAAZg0gw-0_raw_image_0.png",
+        "local_url": "/static/images/CjNh0mfZOvEAAAAAAZg0gw_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjNbjmfhdHsAAAAAACFJuQ",
+    "external_task_id": "custom_1742877367",
+    "prompt": "身材火辣的格特风美女吸血鬼，在街上回眸，夜空中大大的月亮",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.5,
+      "n": 1
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/3287763778/image/CjNbjmfhdHsAAAAAACFJuQ-0_raw_image_0.png",
+        "local_url": "/static/images/CjNbjmfhdHsAAAAAACFJuQ_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "250310093939",
+    "external_task_id": "local_1742878559",
+    "prompt": "本地导入图片",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "unknown",
+      "n": 1,
+      "aspect_ratio": "unknown"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "",
+        "local_url": "/static/images/250310093939_flux_StdFloultrarealFineTune_v4.safetensors_pass4.jpeg.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "2025-03-20",
+    "external_task_id": "local_1742878559",
+    "prompt": "本地导入图片",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "unknown",
+      "n": 1,
+      "aspect_ratio": "unknown"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "",
+        "local_url": "/static/images/2025-03-20_Flux.1-Dev_fp_16_Compact_00288_.jpeg.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "Reveal5",
+    "external_task_id": "local_1742878559",
+    "prompt": "本地导入图片",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "unknown",
+      "n": 1,
+      "aspect_ratio": "unknown"
+    },
+    "images": [
+      {
+        "index": 377,
+        "url": "",
+        "local_url": "/static/images/Reveal5_00377_.jpeg.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "Seed-3837936349-CFG-1.0-Step-25-Sampler-DPM2-Simple-fluxFusionV24StepsGGUFNF4",
+    "external_task_id": "local_1742878559",
+    "prompt": "本地导入图片",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "unknown",
+      "n": 1,
+      "aspect_ratio": "unknown"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "",
+        "local_url": "/static/images/Seed-3837936349-CFG-1.0-Step-25-Sampler-DPM2-Simple-fluxFusionV24StepsGGUFNF4_V2NF4AIO-3072x4096-20250320101852.jpeg",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "20250316205337",
+    "external_task_id": "local_1742878559",
+    "prompt": "本地导入图片",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "unknown",
+      "n": 1,
+      "aspect_ratio": "unknown"
+    },
+    "images": [
+      {
+        "index": 1,
+        "url": "",
+        "local_url": "/static/images/20250316205337_00001_.jpeg.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "0223-RAW photo, 8K, captured with a Sony A1 a-flux1",
+    "external_task_id": "local_1742878559",
+    "prompt": "本地导入图片",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "unknown",
+      "n": 1,
+      "aspect_ratio": "unknown"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "",
+        "local_url": "/static/images/0223-RAW photo, 8K, captured with a Sony A1 a-flux1_v30Fp8flux1_v30Fp8-335218908.jpeg.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "1742636013452.png",
+    "external_task_id": "local_1742878559",
+    "prompt": "本地导入图片",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "unknown",
+      "n": 1,
+      "aspect_ratio": "unknown"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "",
+        "local_url": "/static/images/1742636013452.png_image.jpeg.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "openart-8k-ultra-high-resolution-exisuitedetailed-high-quality-realistic-portrait-",
+    "external_task_id": "local_1742878559",
+    "prompt": "本地导入图片",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "unknown",
+      "n": 1,
+      "aspect_ratio": "unknown"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "",
+        "local_url": "/static/images/openart-8k-ultra-high-resolution-exisuitedetailed-high-quality-realistic-portrait-_.jpeg",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "RedHOME",
+    "external_task_id": "local_1742878559",
+    "prompt": "本地导入图片",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "unknown",
+      "n": 1,
+      "aspect_ratio": "unknown"
+    },
+    "images": [
+      {
+        "index": 28,
+        "url": "",
+        "local_url": "/static/images/RedHOME_00028_.jpeg.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "Seed-2576558890-CFG-1.0-Step-50-Sampler-IPNDM",
+    "external_task_id": "local_1742878559",
+    "prompt": "本地导入图片",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "unknown",
+      "n": 1,
+      "aspect_ratio": "unknown"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "",
+        "local_url": "/static/images/Seed-2576558890-CFG-1.0-Step-50-Sampler-IPNDM_V-Simple-nsfwMASTERFLUXFp16LoraMerged_v12Fp8-3840x5120-20250322130621.jpeg",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "Reveal5-upscale",
+    "external_task_id": "local_1742878559",
+    "prompt": "本地导入图片",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "unknown",
+      "n": 1,
+      "aspect_ratio": "unknown"
+    },
+    "images": [
+      {
+        "index": 7,
+        "url": "",
+        "local_url": "/static/images/Reveal5-upscale_00007_.jpeg.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjNbjmfhdHsAAAAAAHk_Nw",
+    "external_task_id": "custom_1742998266",
+    "prompt": "大漠孤烟直，长河落日圆。",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 4,
+      "aspect_ratio": "9:16"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/7179136712/image/CjNbjmfhdHsAAAAAAHk_Nw-0_raw_image_0.png",
+        "local_url": "/static/images/CjNbjmfhdHsAAAAAAHk_Nw_0.png",
+        "downloaded": true
+      },
+      {
+        "index": 1,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/7179136712/image/CjNbjmfhdHsAAAAAAHk_Nw-1_raw_image_0.png",
+        "local_url": "/static/images/CjNbjmfhdHsAAAAAAHk_Nw_1.png",
+        "downloaded": true
+      },
+      {
+        "index": 2,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/7179136712/image/CjNbjmfhdHsAAAAAAHk_Nw-2_raw_image_0.png",
+        "local_url": "/static/images/CjNbjmfhdHsAAAAAAHk_Nw_2.png",
+        "downloaded": true
+      },
+      {
+        "index": 3,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/7179136712/image/CjNbjmfhdHsAAAAAAHk_Nw-3_raw_image_0.png",
+        "local_url": "/static/images/CjNbjmfhdHsAAAAAAHk_Nw_3.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjNQlmfhcZYAAAAAAHnRQg",
+    "external_task_id": "custom_1742998297",
+    "prompt": "星垂平野阔，月涌大江流。",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 4,
+      "aspect_ratio": "9:16"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/2836867991/image/CjNQlmfhcZYAAAAAAHnRQg-0_raw_image_0.png",
+        "local_url": "/static/images/CjNQlmfhcZYAAAAAAHnRQg_0.png",
+        "downloaded": true
+      },
+      {
+        "index": 1,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/2836867991/image/CjNQlmfhcZYAAAAAAHnRQg-1_raw_image_0.png",
+        "local_url": "/static/images/CjNQlmfhcZYAAAAAAHnRQg_1.png",
+        "downloaded": true
+      },
+      {
+        "index": 2,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/2836867991/image/CjNQlmfhcZYAAAAAAHnRQg-2_raw_image_0.png",
+        "local_url": "/static/images/CjNQlmfhcZYAAAAAAHnRQg_2.png",
+        "downloaded": true
+      },
+      {
+        "index": 3,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/2836867991/image/CjNQlmfhcZYAAAAAAHnRQg-3_raw_image_0.png",
+        "local_url": "/static/images/CjNQlmfhcZYAAAAAAHnRQg_3.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjNBNmfhaccAAAAAAHtQrA",
+    "external_task_id": "custom_1742998318",
+    "prompt": "接天莲叶无穷碧，映日荷花别样红",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 4,
+      "aspect_ratio": "9:16"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/3287763778/image/CjNBNmfhaccAAAAAAHtQrA-0_raw_image_0.png",
+        "local_url": "/static/images/CjNBNmfhaccAAAAAAHtQrA_0.png",
+        "downloaded": true
+      },
+      {
+        "index": 1,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/3287763778/image/CjNBNmfhaccAAAAAAHtQrA-1_raw_image_0.png",
+        "local_url": "/static/images/CjNBNmfhaccAAAAAAHtQrA_1.png",
+        "downloaded": true
+      },
+      {
+        "index": 2,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/3287763778/image/CjNBNmfhaccAAAAAAHtQrA-2_raw_image_0.png",
+        "local_url": "/static/images/CjNBNmfhaccAAAAAAHtQrA_2.png",
+        "downloaded": true
+      },
+      {
+        "index": 3,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/3287763778/image/CjNBNmfhaccAAAAAAHtQrA-3_raw_image_0.png",
+        "local_url": "/static/images/CjNBNmfhaccAAAAAAHtQrA_3.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjNQlmfhcZYAAAAAAHnY7A",
+    "external_task_id": "custom_1742998342",
+    "prompt": "小荷才露尖尖角，早有蜻蜓立上头。",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 4,
+      "aspect_ratio": "9:16"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/5166544707/image/CjNQlmfhcZYAAAAAAHnY7A-0_raw_image_0.png",
+        "local_url": "/static/images/CjNQlmfhcZYAAAAAAHnY7A_0.png",
+        "downloaded": true
+      },
+      {
+        "index": 1,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/5166544707/image/CjNQlmfhcZYAAAAAAHnY7A-1_raw_image_0.png",
+        "local_url": "/static/images/CjNQlmfhcZYAAAAAAHnY7A_1.png",
+        "downloaded": true
+      },
+      {
+        "index": 2,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/5166544707/image/CjNQlmfhcZYAAAAAAHnY7A-2_raw_image_0.png",
+        "local_url": "/static/images/CjNQlmfhcZYAAAAAAHnY7A_2.png",
+        "downloaded": true
+      },
+      {
+        "index": 3,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/5166544707/image/CjNQlmfhcZYAAAAAAHnY7A-3_raw_image_0.png",
+        "local_url": "/static/images/CjNQlmfhcZYAAAAAAHnY7A_3.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjNQlmfhcZYAAAAAAHndlQ",
+    "external_task_id": "custom_1742998355",
+    "prompt": "枯藤老树昏鸦，小桥流水人家。",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 4,
+      "aspect_ratio": "9:16"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/9294081583/image/CjNQlmfhcZYAAAAAAHndlQ-0_raw_image_0.png",
+        "local_url": "/static/images/CjNQlmfhcZYAAAAAAHndlQ_0.png",
+        "downloaded": true
+      },
+      {
+        "index": 1,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/9294081583/image/CjNQlmfhcZYAAAAAAHndlQ-1_raw_image_0.png",
+        "local_url": "/static/images/CjNQlmfhcZYAAAAAAHndlQ_1.png",
+        "downloaded": true
+      },
+      {
+        "index": 2,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/9294081583/image/CjNQlmfhcZYAAAAAAHndlQ-2_raw_image_0.png",
+        "local_url": "/static/images/CjNQlmfhcZYAAAAAAHndlQ_2.png",
+        "downloaded": true
+      },
+      {
+        "index": 3,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/9294081583/image/CjNQlmfhcZYAAAAAAHndlQ-3_raw_image_0.png",
+        "local_url": "/static/images/CjNQlmfhcZYAAAAAAHndlQ_3.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjNQlmfhcZYAAAAAAHnftw",
+    "external_task_id": "custom_1742998371",
+    "prompt": "千山鸟飞绝，万径人踪灭。",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 4,
+      "aspect_ratio": "9:16"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/3287763778/image/CjNQlmfhcZYAAAAAAHnftw-0_raw_image_0.png",
+        "local_url": "/static/images/CjNQlmfhcZYAAAAAAHnftw_0.png",
+        "downloaded": true
+      },
+      {
+        "index": 1,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/3287763778/image/CjNQlmfhcZYAAAAAAHnftw-1_raw_image_0.png",
+        "local_url": "/static/images/CjNQlmfhcZYAAAAAAHnftw_1.png",
+        "downloaded": true
+      },
+      {
+        "index": 2,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/3287763778/image/CjNQlmfhcZYAAAAAAHnftw-2_raw_image_0.png",
+        "local_url": "/static/images/CjNQlmfhcZYAAAAAAHnftw_2.png",
+        "downloaded": true
+      },
+      {
+        "index": 3,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/3287763778/image/CjNQlmfhcZYAAAAAAHnftw-3_raw_image_0.png",
+        "local_url": "/static/images/CjNQlmfhcZYAAAAAAHnftw_3.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjioKmfhcZYAAAAAAHnztw",
+    "external_task_id": "custom_1742998383",
+    "prompt": "落霞与孤鹜齐飞，秋水共长天一色。",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 4,
+      "aspect_ratio": "9:16"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/2836867991/image/CjioKmfhcZYAAAAAAHnztw-0_raw_image_0.png",
+        "local_url": "/static/images/CjioKmfhcZYAAAAAAHnztw_0.png",
+        "downloaded": true
+      },
+      {
+        "index": 1,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/2836867991/image/CjioKmfhcZYAAAAAAHnztw-1_raw_image_0.png",
+        "local_url": "/static/images/CjioKmfhcZYAAAAAAHnztw_1.png",
+        "downloaded": true
+      },
+      {
+        "index": 2,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/2836867991/image/CjioKmfhcZYAAAAAAHnztw-2_raw_image_0.png",
+        "local_url": "/static/images/CjioKmfhcZYAAAAAAHnztw_2.png",
+        "downloaded": true
+      },
+      {
+        "index": 3,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/2836867991/image/CjioKmfhcZYAAAAAAHnztw-3_raw_image_0.png",
+        "local_url": "/static/images/CjioKmfhcZYAAAAAAHnztw_3.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjioMWfhcTkAAAAAAHn3Iw",
+    "external_task_id": "custom_1742998409",
+    "prompt": "竹外桃花三两枝，春江水暖鸭先知。",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 4,
+      "aspect_ratio": "9:16"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/2836867991/image/CjioMWfhcTkAAAAAAHn3Iw-0_raw_image_0.png",
+        "local_url": "/static/images/CjioMWfhcTkAAAAAAHn3Iw_0.png",
+        "downloaded": true
+      },
+      {
+        "index": 1,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/2836867991/image/CjioMWfhcTkAAAAAAHn3Iw-1_raw_image_0.png",
+        "local_url": "/static/images/CjioMWfhcTkAAAAAAHn3Iw_1.png",
+        "downloaded": true
+      },
+      {
+        "index": 2,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/2836867991/image/CjioMWfhcTkAAAAAAHn3Iw-2_raw_image_0.png",
+        "local_url": "/static/images/CjioMWfhcTkAAAAAAHn3Iw_2.png",
+        "downloaded": true
+      },
+      {
+        "index": 3,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/2836867991/image/CjioMWfhcTkAAAAAAHn3Iw-3_raw_image_0.png",
+        "local_url": "/static/images/CjioMWfhcTkAAAAAAHn3Iw_3.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjNBNmfhaccAAAAAAHu1PQ",
+    "external_task_id": "custom_1742998799",
+    "prompt": "云想衣裳花想容，春风拂槛露华浓。",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "16:9"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/2894379287/image/CjNBNmfhaccAAAAAAHu1PQ-0_raw_image_0.png",
+        "local_url": "/static/images/CjNBNmfhaccAAAAAAHu1PQ_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjNQlmfhcZYAAAAAAHpDxg",
+    "external_task_id": "custom_1742998863",
+    "prompt": " 玉容寂寞泪阑干，梨花一枝春带雨",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "1:1"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/5464240474/image/CjNQlmfhcZYAAAAAAHpDxg-0_raw_image_0.png",
+        "local_url": "/static/images/CjNQlmfhcZYAAAAAAHpDxg_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "Cjil7mfhdHgAAAAAAHm0lg",
+    "external_task_id": "custom_1742998880",
+    "prompt": "娉婷十五胜天仙，秋水芙蓉镜里颜。",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "1:1"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/2894379287/image/Cjil7mfhdHgAAAAAAHm0lg-0_raw_image_0.png",
+        "local_url": "/static/images/Cjil7mfhdHgAAAAAAHm0lg_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjmWkmfhacgAAAAAAHvANA",
+    "external_task_id": "custom_1742998895",
+    "prompt": ". 一面风情千里递，愁心密意使人迷",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 4,
+      "aspect_ratio": "1:1"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/4618986211/image/CjmWkmfhacgAAAAAAHvANA-0_raw_image_0.png",
+        "local_url": "/static/images/CjmWkmfhacgAAAAAAHvANA_0.png",
+        "downloaded": true
+      },
+      {
+        "index": 1,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/4618986211/image/CjmWkmfhacgAAAAAAHvANA-1_raw_image_0.png",
+        "local_url": "/static/images/CjmWkmfhacgAAAAAAHvANA_1.png",
+        "downloaded": true
+      },
+      {
+        "index": 2,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/4618986211/image/CjmWkmfhacgAAAAAAHvANA-2_raw_image_0.png",
+        "local_url": "/static/images/CjmWkmfhacgAAAAAAHvANA_2.png",
+        "downloaded": true
+      },
+      {
+        "index": 3,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/4618986211/image/CjmWkmfhacgAAAAAAHvANA-3_raw_image_0.png",
+        "local_url": "/static/images/CjmWkmfhacgAAAAAAHvANA_3.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "Cjil7mfhdHgAAAAAAHm7bA",
+    "external_task_id": "custom_1742998913",
+    "prompt": " 花钿委地无人收，翠翘金雀玉搔头。",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 4,
+      "aspect_ratio": "1:1"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/1238659759/image/Cjil7mfhdHgAAAAAAHm7bA-0_raw_image_0.png",
+        "local_url": "/static/images/Cjil7mfhdHgAAAAAAHm7bA_0.png",
+        "downloaded": true
+      },
+      {
+        "index": 1,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/1238659759/image/Cjil7mfhdHgAAAAAAHm7bA-1_raw_image_0.png",
+        "local_url": "/static/images/Cjil7mfhdHgAAAAAAHm7bA_1.png",
+        "downloaded": true
+      },
+      {
+        "index": 2,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/1238659759/image/Cjil7mfhdHgAAAAAAHm7bA-2_raw_image_0.png",
+        "local_url": "/static/images/Cjil7mfhdHgAAAAAAHm7bA_2.png",
+        "downloaded": true
+      },
+      {
+        "index": 3,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/1238659759/image/Cjil7mfhdHgAAAAAAHm7bA-3_raw_image_0.png",
+        "local_url": "/static/images/Cjil7mfhdHgAAAAAAHm7bA_3.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjNbjmfhdHsAAAAAAHnFyw",
+    "external_task_id": "custom_1742998923",
+    "prompt": "玉指朱弦写怨情，满城砧声杂管弦。",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 4,
+      "aspect_ratio": "1:1"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/1238659759/image/CjNbjmfhdHsAAAAAAHnFyw-0_raw_image_0.png",
+        "local_url": "/static/images/CjNbjmfhdHsAAAAAAHnFyw_0.png",
+        "downloaded": true
+      },
+      {
+        "index": 1,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/1238659759/image/CjNbjmfhdHsAAAAAAHnFyw-1_raw_image_0.png",
+        "local_url": "/static/images/CjNbjmfhdHsAAAAAAHnFyw_1.png",
+        "downloaded": true
+      },
+      {
+        "index": 2,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/1238659759/image/CjNbjmfhdHsAAAAAAHnFyw-2_raw_image_0.png",
+        "local_url": "/static/images/CjNbjmfhdHsAAAAAAHnFyw_2.png",
+        "downloaded": true
+      },
+      {
+        "index": 3,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/1238659759/image/CjNbjmfhdHsAAAAAAHnFyw-3_raw_image_0.png",
+        "local_url": "/static/images/CjNbjmfhdHsAAAAAAHnFyw_3.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjNBNmfhaccAAAAAAHvjSw",
+    "external_task_id": "custom_1742999033",
+    "prompt": "云想衣裳花想容，春风拂槛露华浓",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 4,
+      "aspect_ratio": "16:9"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/4618986211/image/CjNBNmfhaccAAAAAAHvjSw-0_raw_image_0.png",
+        "local_url": "/static/images/CjNBNmfhaccAAAAAAHvjSw_0.png",
+        "downloaded": true
+      },
+      {
+        "index": 1,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/4618986211/image/CjNBNmfhaccAAAAAAHvjSw-1_raw_image_0.png",
+        "local_url": "/static/images/CjNBNmfhaccAAAAAAHvjSw_1.png",
+        "downloaded": true
+      },
+      {
+        "index": 2,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/4618986211/image/CjNBNmfhaccAAAAAAHvjSw-2_raw_image_0.png",
+        "local_url": "/static/images/CjNBNmfhaccAAAAAAHvjSw_2.png",
+        "downloaded": true
+      },
+      {
+        "index": 3,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/4618986211/image/CjNBNmfhaccAAAAAAHvjSw-3_raw_image_0.png",
+        "local_url": "/static/images/CjNBNmfhaccAAAAAAHvjSw_3.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjNbjmfhdHsAAAAAAHnhiQ",
+    "external_task_id": "custom_1742999055",
+    "prompt": "火影日向雏田",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 4,
+      "aspect_ratio": "16:9"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/4618986211/image/CjNbjmfhdHsAAAAAAHnhiQ-0_raw_image_0.png",
+        "local_url": "/static/images/CjNbjmfhdHsAAAAAAHnhiQ_0.png",
+        "downloaded": true
+      },
+      {
+        "index": 1,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/4618986211/image/CjNbjmfhdHsAAAAAAHnhiQ-1_raw_image_0.png",
+        "local_url": "/static/images/CjNbjmfhdHsAAAAAAHnhiQ_1.png",
+        "downloaded": true
+      },
+      {
+        "index": 2,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/4618986211/image/CjNbjmfhdHsAAAAAAHnhiQ-2_raw_image_0.png",
+        "local_url": "/static/images/CjNbjmfhdHsAAAAAAHnhiQ_2.png",
+        "downloaded": true
+      },
+      {
+        "index": 3,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/4618986211/image/CjNbjmfhdHsAAAAAAHnhiQ-3_raw_image_0.png",
+        "local_url": "/static/images/CjNbjmfhdHsAAAAAAHnhiQ_3.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjioMWfhcTkAAAAAAHp-6Q",
+    "external_task_id": "custom_1742999072",
+    "prompt": "一个奇幻场景，半狮半龙的神话生物雄伟地矗立在两座巨大的水晶塔之间的浮动岛屿上。夕阳西下，天空被深紫色和炽热橙色的光辉笼罩，整个景色都披上了超凡脱俗的光芒。生物的金色眼睛闪烁着古老的智慧，鳞片如同熔化的金属般闪耀。它巨大的翅膀张开，捕捉着最后一缕阳光，然后渐渐消失在暮色中。使用70-200毫米镜头拍摄，以突出场景的宏大与壮丽，采用戏剧性的构图来强调高耸的建筑。",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 4,
+      "aspect_ratio": "1:1"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/5166544707/image/CjioMWfhcTkAAAAAAHp-6Q-0_raw_image_0.png",
+        "local_url": "/static/images/CjioMWfhcTkAAAAAAHp-6Q_0.png",
+        "downloaded": true
+      },
+      {
+        "index": 1,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/5166544707/image/CjioMWfhcTkAAAAAAHp-6Q-1_raw_image_0.png",
+        "local_url": "/static/images/CjioMWfhcTkAAAAAAHp-6Q_1.png",
+        "downloaded": true
+      },
+      {
+        "index": 2,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/5166544707/image/CjioMWfhcTkAAAAAAHp-6Q-2_raw_image_0.png",
+        "local_url": "/static/images/CjioMWfhcTkAAAAAAHp-6Q_2.png",
+        "downloaded": true
+      },
+      {
+        "index": 3,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/5166544707/image/CjioMWfhcTkAAAAAAHp-6Q-3_raw_image_0.png",
+        "local_url": "/static/images/CjioMWfhcTkAAAAAAHp-6Q_3.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "ChFolWfhcTwAAAAAAHq-xQ",
+    "external_task_id": "custom_1742999276",
+    "prompt": "意想不到， 绝美的场景图片",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 1,
+      "aspect_ratio": "16:9"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/3287763778/image/ChFolWfhcTwAAAAAAHq-xQ-0_raw_image_0.png",
+        "local_url": "/static/images/ChFolWfhcTwAAAAAAHq-xQ_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjmWkmfhacgAAAAAAHwp9A",
+    "external_task_id": "custom_1742999408",
+    "prompt": "意想不到， 绝美的场景图片",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 3,
+      "aspect_ratio": "4:3"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/3287763778/image/CjmWkmfhacgAAAAAAHwp9A-0_raw_image_0.png",
+        "local_url": "/static/images/CjmWkmfhacgAAAAAAHwp9A_0.png",
+        "downloaded": true
+      },
+      {
+        "index": 1,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/3287763778/image/CjmWkmfhacgAAAAAAHwp9A-1_raw_image_0.png",
+        "local_url": "/static/images/CjmWkmfhacgAAAAAAHwp9A_1.png",
+        "downloaded": true
+      },
+      {
+        "index": 2,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/3287763778/image/CjmWkmfhacgAAAAAAHwp9A-2_raw_image_0.png",
+        "local_url": "/static/images/CjmWkmfhacgAAAAAAHwp9A_2.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjioKmfhcZYAAAAAAHrMJw",
+    "external_task_id": "custom_1742999426",
+    "prompt": "华美的花饰散落一地，发间的翡翠步摇、黄金钗环遗落尘埃——战乱中杨贵妃被迫舍弃珠宝的仓皇，反衬出其日常衣着之奢美与身份尊贵。",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "n": 3,
+      "aspect_ratio": "4:3"
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/5464240474/image/CjioKmfhcZYAAAAAAHrMJw-0_raw_image_0.png",
+        "local_url": "/static/images/CjioKmfhcZYAAAAAAHrMJw_0.png",
+        "downloaded": true
+      },
+      {
+        "index": 1,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/5464240474/image/CjioKmfhcZYAAAAAAHrMJw-1_raw_image_0.png",
+        "local_url": "/static/images/CjioKmfhcZYAAAAAAHrMJw_1.png",
+        "downloaded": true
+      },
+      {
+        "index": 2,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/5464240474/image/CjioKmfhcZYAAAAAAHrMJw-2_raw_image_0.png",
+        "local_url": "/static/images/CjioKmfhcZYAAAAAAHrMJw_2.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjmWkmfhacgAAAAAAHyelA",
+    "external_task_id": "custom_1742999979",
+    "prompt": "各种颜色的猫咪",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.5,
+      "n": 4
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/6194562750/image/CjmWkmfhacgAAAAAAHyelA-0_raw_image_0.png",
+        "local_url": "/static/images/CjmWkmfhacgAAAAAAHyelA_0.png",
+        "downloaded": true
+      },
+      {
+        "index": 1,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/6194562750/image/CjmWkmfhacgAAAAAAHyelA-1_raw_image_0.png",
+        "local_url": "/static/images/CjmWkmfhacgAAAAAAHyelA_1.png",
+        "downloaded": true
+      },
+      {
+        "index": 2,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/6194562750/image/CjmWkmfhacgAAAAAAHyelA-2_raw_image_0.png",
+        "local_url": "/static/images/CjmWkmfhacgAAAAAAHyelA_2.png",
+        "downloaded": true
+      },
+      {
+        "index": 3,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/6194562750/image/CjmWkmfhacgAAAAAAHyelA-3_raw_image_0.png",
+        "local_url": "/static/images/CjmWkmfhacgAAAAAAHyelA_3.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjioKmfhcZYAAAAAAHtDoQ",
+    "external_task_id": "custom_1743000013",
+    "prompt": "各种颜色的狗狗",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.5,
+      "n": 4
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/7179136712/image/CjioKmfhcZYAAAAAAHtDoQ-0_raw_image_0.png",
+        "local_url": "/static/images/CjioKmfhcZYAAAAAAHtDoQ_0.png",
+        "downloaded": true
+      },
+      {
+        "index": 1,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/7179136712/image/CjioKmfhcZYAAAAAAHtDoQ-1_raw_image_0.png",
+        "local_url": "/static/images/CjioKmfhcZYAAAAAAHtDoQ_1.png",
+        "downloaded": true
+      },
+      {
+        "index": 2,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/7179136712/image/CjioKmfhcZYAAAAAAHtDoQ-2_raw_image_0.png",
+        "local_url": "/static/images/CjioKmfhcZYAAAAAAHtDoQ_2.png",
+        "downloaded": true
+      },
+      {
+        "index": 3,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/7179136712/image/CjioKmfhcZYAAAAAAHtDoQ-3_raw_image_0.png",
+        "local_url": "/static/images/CjioKmfhcZYAAAAAAHtDoQ_3.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "ChFolWfhcTwAAAAAAHtjaA",
+    "external_task_id": "custom_1743000086",
+    "prompt": "各种颜色的狗头聚在一起",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.5,
+      "n": 4
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/7179136712/image/ChFolWfhcTwAAAAAAHtjaA-0_raw_image_0.png",
+        "local_url": "/static/images/ChFolWfhcTwAAAAAAHtjaA_0.png",
+        "downloaded": true
+      },
+      {
+        "index": 1,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/7179136712/image/ChFolWfhcTwAAAAAAHtjaA-1_raw_image_0.png",
+        "local_url": "/static/images/ChFolWfhcTwAAAAAAHtjaA_1.png",
+        "downloaded": true
+      },
+      {
+        "index": 2,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/7179136712/image/ChFolWfhcTwAAAAAAHtjaA-2_raw_image_0.png",
+        "local_url": "/static/images/ChFolWfhcTwAAAAAAHtjaA_2.png",
+        "downloaded": true
+      },
+      {
+        "index": 3,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/7179136712/image/ChFolWfhcTwAAAAAAHtjaA-3_raw_image_0.png",
+        "local_url": "/static/images/ChFolWfhcTwAAAAAAHtjaA_3.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "Cjil7mfhdHgAAAAAAHqwjg",
+    "external_task_id": "custom_1743000106",
+    "prompt": "各种狗狗聚在一起，神态各异",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.5,
+      "n": 4
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/7179136712/image/Cjil7mfhdHgAAAAAAHqwjg-0_raw_image_0.png",
+        "local_url": "/static/images/Cjil7mfhdHgAAAAAAHqwjg_0.png",
+        "downloaded": true
+      },
+      {
+        "index": 1,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/7179136712/image/Cjil7mfhdHgAAAAAAHqwjg-1_raw_image_0.png",
+        "local_url": "/static/images/Cjil7mfhdHgAAAAAAHqwjg_1.png",
+        "downloaded": true
+      },
+      {
+        "index": 2,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/7179136712/image/Cjil7mfhdHgAAAAAAHqwjg-2_raw_image_0.png",
+        "local_url": "/static/images/Cjil7mfhdHgAAAAAAHqwjg_2.png",
+        "downloaded": true
+      },
+      {
+        "index": 3,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/7179136712/image/Cjil7mfhdHgAAAAAAHqwjg-3_raw_image_0.png",
+        "local_url": "/static/images/Cjil7mfhdHgAAAAAAHqwjg_3.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "ChFolWfhcTwAAAAAAH2YTQ",
+    "external_task_id": "custom_1743002531",
+    "prompt": "皮卡丘人偶",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.5,
+      "n": 1
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/5464240474/image/ChFolWfhcTwAAAAAAH2YTQ-0_raw_image_0.png",
+        "local_url": "/static/images/ChFolWfhcTwAAAAAAH2YTQ_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjNBNmfhaccAAAAAAJXEnQ",
+    "external_task_id": "custom_1743037738",
+    "prompt": "穿着紧身短裤的女孩",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.5,
+      "n": 1
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/4618986211/image/CjNBNmfhaccAAAAAAJXEnQ-0_raw_image_0.png",
+        "local_url": "/static/images/CjNBNmfhaccAAAAAAJXEnQ_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjioKmfhcZYAAAAAAJ3_aA",
+    "external_task_id": "custom_1743051120",
+    "prompt": "黑发中国女省",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.5,
+      "n": 1
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/2836867991/image/CjioKmfhcZYAAAAAAJ3_aA-0_raw_image_0.png",
+        "local_url": "/static/images/CjioKmfhcZYAAAAAAJ3_aA_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "CjNQlmflOt0AAAAAAA62sA",
+    "external_task_id": "custom_1743094967",
+    "prompt": "改成高马尾发型",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.5,
+      "n": 1
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/9294081583/image/CjNQlmflOt0AAAAAAA62sA-0_raw_image_0.png",
+        "local_url": "/static/images/CjNQlmflOt0AAAAAAA62sA_0.png",
         "downloaded": true
       }
     ]

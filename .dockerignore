@@ -1,0 +1,38 @@
+# 排除static目录下的图片和视频文件
+static/images/*
+static/videos/*
+static/backups/*
+
+# 保留任务历史记录文件
+!static/image_tasks.json
+!static/video_tasks_history.json
+
+# 排除其他不需要的文件
+.git
+.gitignore
+.docker
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+*.log
+
+# 排除临时文件和缓存
+*.tar
+*.gz
+*.zip
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# 排除备份文件
+*copy*.json
+*bak*

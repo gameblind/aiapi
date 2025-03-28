@@ -251,12 +251,12 @@ def generate_text2img():
         prompt = data.get('prompt', '')
         if not prompt:
             raise Exception("提示词不能为空")
-        if len(prompt) > 500:
-            raise Exception("提示词不能超过500个字符")
+        if len(prompt) > 2500:
+            raise Exception("提示词不能超过2500个字符")
             
         negative_prompt = data.get('negative_prompt', '')
-        if len(negative_prompt) > 200:
-            raise Exception("负向提示词不能超过200个字符")
+        if len(negative_prompt) > 2500:
+            raise Exception("负向提示词不能超过2500个字符")
             
         # 获取其他参数
         n = int(data.get('n', '1'))
@@ -360,8 +360,8 @@ def generate_img2img():
             
         # 获取其他参数
         prompt = request.form.get('prompt', '')
-        if len(prompt) > 5000:
-            raise Exception("提示词不能超过5000个字符")
+        if len(prompt) > 2500:
+            raise Exception("提示词不能超过2500个字符")
             
         # 图生图模式下不支持负向提示词
         image_fidelity = float(request.form.get('image_fidelity', '0.5'))
