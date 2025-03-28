@@ -1,0 +1,35 @@
+[
+  {
+    "id": "file-8db06462",
+    "object": "file",
+    "bytes": 276261,
+    "created_at": 1743202658,
+    "filename": "7c1752211d43a0ce6698ae7305bc06bc.jpeg",
+    "url": "/static/images/8db06462_1743202658.jpeg",
+    "purpose": "assistants",
+    "cloud_file_id": "",
+    "cloud_url": "https://cdn.gptbest.vip/file/cdn/20250329/BRA51XkYT9TbfWVhbf96kYJhmlEYjP.jpeg"
+  },
+  {
+    "id": "file-e153cdbb",
+    "object": "file",
+    "bytes": 1919404,
+    "created_at": 1743202699,
+    "filename": "女生讲故事.wav",
+    "url": "/static/audio/e153cdbb_1743202699.wav",
+    "purpose": "assistants",
+    "cloud_file_id": "",
+    "cloud_url": "https://cdn.gptbest.vip/file/cdn/20250329/Vh8JcaPus71GXforLh5X7rCrQHjNN4.wav"
+  },
+  {
+    "id": "file-0999106a",
+    "object": "file",
+    "bytes": 7975527,
+    "created_at": 1743202714,
+    "filename": "ChFCYmfmUpcAAAAAAAYXIA-0_raw_video_2.mp4",
+    "url": "/static/videos/0999106a_1743202714.mp4",
+    "purpose": "assistants",
+    "cloud_file_id": "",
+    "cloud_url": "https://cdn.gptbest.vip/file/cdn/20250329/f6G59djvee4ACdKpOtLjBbkqupP3F9.mp4"
+  }
+]

@@ -8,6 +8,9 @@ from dotenv import load_dotenv
 from task_query import query_all_tasks
 from task_backup import backup_tasks, delete_task
 from image_generate import image_bp
+from routes.file_routes import file_bp
+from routes.web_routes import web_bp
+
 
 # 禁用不安全请求警告
 #from urllib3.exceptions import InsecureRequestWarning
@@ -51,6 +54,10 @@ ensure_app_files()
 
 # 注册Blueprint并添加调试日志
 print("[DEBUG] 开始注册Blueprint...")
+# 注册蓝图
+#app.register_blueprint(api_bp)
+app.register_blueprint(web_bp)
+app.register_blueprint(file_bp)  # 添加文件路由
 # 修改为与前端匹配的URL前缀
 app.register_blueprint(image_bp, url_prefix='/generate_image')
 print("[DEBUG] Blueprint注册完成，url_prefix='/generate_image'")
@@ -234,6 +241,12 @@ def download_video(url, filename_prefix, force_download=False):
     except Exception as e:
         print(f"[ERROR] 下载视频失败: {str(e)}")
         return None
+
+# 添加语音墙路由
+@app.route('/voice')
+def voice_wall():
+    return render_template('voice.html')
+
 @app.route('/index.html')
 def index_html():
     return render_template('index.html')  # 或者 redirect('/')
@@ -290,7 +303,6 @@ def images():
 def videos():
     """视频墙页面"""
     return render_template('videos.html')
-
 @app.route('/api/videos')
 def api_videos():
     """获取视频列表API"""
@@ -300,8 +312,9 @@ def api_videos():
     # 创建一个集合来存储已经处理过的视频文件名
     processed_videos = set()
     
-    # 从任务记录中获取视频
+    # 从任务记录中获取所有任务，包括处理中的任务
     for task in tasks:
+        # 对于已完成的任务，添加其视频
         if task.get('status') == 'succeed' and task.get('videos'):
             for video in task.get('videos', []):
                 if video.get('local_url'):
@@ -314,8 +327,21 @@ def api_videos():
                         'video_id': video.get('id'),
                         'url': local_url,
                         'created_at': task.get('created_at'),
-                        'prompt': task.get('prompt')
+                        'prompt': task.get('prompt'),
+                        'status': 'succeed',
+                        'parameters': task.get('parameters', {})
                     })
+        # 对于处理中的任务，也添加到列表中
+        elif task.get('status') in ['submitted', 'processing']:
+            videos_list.append({
+                'task_id': task.get('task_id'),
+                'video_id': None,  # 处理中的任务还没有视频ID
+                'url': None,       # 处理中的任务还没有视频URL
+                'created_at': task.get('created_at'),
+                'prompt': task.get('prompt'),
+                'status': task.get('status'),
+                'parameters': task.get('parameters', {})
+            })
     
     # 检查本地视频文件夹中是否有未在JSON中记录的视频
     if os.path.exists(VIDEOS_DIR):
@@ -330,7 +356,9 @@ def api_videos():
                     'video_id': 'local_' + task_id,
                     'url': f"/static/videos/{filename}",
                     'created_at': None,  # 没有创建时间信息
-                    'prompt': f"本地视频: {filename}"  # 使用文件名作为提示
+                    'prompt': f"本地视频: {filename}",  # 使用文件名作为提示
+                    'status': 'succeed',  # 本地视频默认为成功状态
+                    'parameters': {}      # 本地视频没有参数信息
                 })
     
     # 反转列表顺序，使最新的视频排在前面
@@ -664,27 +692,108 @@ def text2video_status(task_id):
 @app.route('/api/task_status/<task_id>')
 def api_task_status(task_id):
     """获取任务状态API"""
+    print(f"\n[DEBUG] 开始查询任务状态: {task_id}")
     tasks = load_tasks()
     
+    # 查找本地任务记录
+    local_task = None
     for task in tasks:
         if task.get('task_id') == task_id:
+            local_task = task
+            print(f"[DEBUG] 在本地找到任务记录，状态: {task.get('status')}")
+            break
+    
+    # 如果找到本地任务记录
+    if local_task:
+        # 如果任务状态是已完成或失败，直接返回本地记录
+        if local_task.get('status') in ['succeed', 'failed']:
+            print(f"[DEBUG] 任务已完成，直接返回本地记录")
             return jsonify({
                 'success': True,
-                'data': task
+                'data': local_task
+            })
+        
+        # 如果任务状态是提交或处理中，从API查询最新状态
+        print(f"[DEBUG] 任务状态为 {local_task.get('status')}，从API查询最新状态")
+        status_data = check_task_status(task_id)
+        
+        # 如果API查询成功
+        if status_data.get('code') == 0:
+            # 获取API返回的任务数据
+            api_task_data = status_data.get('data', {})
+            api_task_status = api_task_data.get('task_status', 'unknown')
+            
+            print(f"[DEBUG] API返回任务状态: {api_task_status}")
+            
+            # 更新本地任务状态
+            local_task['status'] = api_task_status
+            local_task['status_msg'] = api_task_data.get('task_status_msg', '')
+            
+            # 如果任务成功，处理视频信息
+            if api_task_status == 'succeed':
+                task_result = api_task_data.get('task_result', {})
+                videos = task_result.get('videos', [])
+                
+                # 更新视频信息
+                if videos:
+                    print(f"[DEBUG] 发现 {len(videos)} 个视频")
+                    
+                    # 创建新的视频列表
+                    new_videos = []
+                    
+                    for video in videos:
+                        video_id = video.get('id', '')
+                        video_url = video.get('url', '')
+                        
+                        # 尝试下载视频
+                        local_url = None
+                        if video_url:
+                            local_url = download_video(video_url, f"{task_id}_{video_id}")
+                        
+                        # 添加视频信息
+                        new_videos.append({
+                            'id': video_id,
+                            'url': video_url,
+                            'duration': video.get('duration', '0'),
+                            'downloaded': bool(local_url),
+                            'local_url': local_url
+                        })
+                    
+                    # 更新任务的视频列表
+                    local_task['videos'] = new_videos
+            
+            # 保存更新后的任务记录
+            with open(TASKS_FILE, 'w', encoding='utf-8') as f:
+                json.dump(tasks, f, ensure_ascii=False, indent=2)
+            
+            print(f"[DEBUG] 返回更新后的任务记录")
+            return jsonify({
+                'success': True,
+                'data': local_task
+            })
+        else:
+            # API查询失败，返回本地记录
+            print(f"[WARNING] API查询失败，返回本地记录")
+            return jsonify({
+                'success': True,
+                'data': local_task
             })
     
     # 如果在本地找不到任务，尝试从API查询
+    print(f"[DEBUG] 本地未找到任务记录，尝试从API查询")
     status_data = check_task_status(task_id)
     if status_data.get('code') == 0:
+        print(f"[DEBUG] API查询成功，返回API数据")
         return jsonify({
             'success': True,
             'data': status_data.get('data', {})
         })
     
+    print(f"[DEBUG] 未找到任务")
     return jsonify({
         'success': False,
         'message': '未找到任务'
-    })  # 确保 images.html 在 templates 目录
+    })
 
 # 添加图生视频的API调用路由
 @app.route('/generate', methods=['POST'])
@@ -862,15 +971,16 @@ def save_task_info(task_id, data):
         json.dump(tasks, f, ensure_ascii=False, indent=2)
     
     return task_info
-
 @app.route('/api/extend/<video_uuid>', methods=['POST'])
 def api_extend_video(video_uuid):
     """处理视频延长请求 - 直接使用视频UUID"""
     try:
         print(f"\n[DEBUG] ==================== 开始处理视频延长请求 (UUID直接调用) ====================")
+        
+        # 1. 获取请求数据
+        print(f"\n[DEBUG] 1. 获取请求数据:")
         print(f"[DEBUG] 视频UUID: {video_uuid}")
         
-        # 获取请求数据 - 更灵活地处理不同的内容类型
         if request.is_json:
             data = request.get_json() or {}
             print(f"[DEBUG] 收到JSON数据: {json.dumps(data, ensure_ascii=False)}")
@@ -879,18 +989,35 @@ def api_extend_video(video_uuid):
             data = request.form.to_dict() or request.args.to_dict() or {}
             print(f"[DEBUG] 收到非JSON数据: {data}")
         
+        # 2. 获取并验证参数
+        print(f"\n[DEBUG] 2. 获取并验证参数:")
         prompt = data.get('prompt', '')
+        external_task_id = data.get('external_task_id')  # 可选参数，仅用于日志记录
         
         print(f"[DEBUG] 提示词: {prompt}")
+        if external_task_id:
+            print(f"[DEBUG] 外部任务ID: {external_task_id}")
         
         # 处理提示词长度
         if len(prompt) > 2500:
             print(f"[WARNING] 提示词超长，已截断: {len(prompt)} -> 2500")
             prompt = prompt[:2500]
         
-        # 调用视频延长API
+        # 3. 准备API调用
+        print(f"\n[DEBUG] 3. 准备API调用:")
+        if not API_BASE_URL:
+            raise Exception("API_BASE_URL未配置")
+        if not API_KEY:
+            raise Exception("API_KEY未配置")
+        
+        # 4. 发送API请求
+        print(f"\n[DEBUG] 4. 发送API请求:")
         from video_extend import create_extend_task
         response_data = create_extend_task(video_uuid, prompt)
+        
+        # 5. 处理响应
+        print(f"\n[DEBUG] 5. 处理响应:")
+        print(f"[DEBUG] 响应数据: {json.dumps(response_data, ensure_ascii=False)}")
         
         # 检查响应
         if "error" in response_data:
@@ -900,9 +1027,60 @@ def api_extend_video(video_uuid):
             error_msg = response_data.get('message', '未知错误') if response_data else '无响应数据'
             raise Exception(f"API返回错误: {error_msg}")
         
-        # 获取任务ID并返回
+        # 6. 获取任务ID
         task_id = response_data['data']['task_id']
         print(f"[DEBUG] 任务创建成功，任务ID: {task_id}")
+        
+        # 7. 查找原始视频所属的任务信息
+        print(f"\n[DEBUG] 7. 查找原始视频任务信息:")
+        tasks = load_tasks()
+        original_task = None
+        original_video = None
+        
+        for task in tasks:
+            for video in task.get('videos', []):
+                if video.get('id') == video_uuid:
+                    original_task = task
+                    original_video = video
+                    break
+            if original_task:
+                break
+        
+        if original_task:
+            print(f"[DEBUG] 找到原始任务: {original_task.get('task_id')}")
+        else:
+            print(f"[WARNING] 未找到原始任务信息")
+        
+        # 8. 创建并保存任务记录
+        print(f"\n[DEBUG] 8. 创建并保存任务记录:")
+        if not external_task_id:
+            external_task_id = f"extend_{int(time.time())}"
+            
+        task_record = {
+            'task_id': task_id,
+            'external_task_id': external_task_id,
+            'prompt': prompt,
+            'negative_prompt': original_task.get('negative_prompt', '') if original_task else '',
+            'status': 'submitted',
+            'status_msg': '',
+            'parameters': {
+                'model_name': original_task.get('parameters', {}).get('model_name', 'kling-v1') if original_task else 'kling-v1',
+                'duration': '5',
+                'mode': 'std',
+                'cfg_scale': 0.5,
+                'operation': 'extend',  # 添加标记，表明这是延长任务
+                'original_video_id': video_uuid,  # 记录原始视频ID
+                'original_task_id': original_task.get('task_id') if original_task else None  # 记录原始任务ID
+            },
+            'videos': [],  # 初始化为空视频列表
+            'has_image_url_data': original_task.get('has_image_url_data', True) if original_task else True,
+            'created_at': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+            'expiration_date': (datetime.now() + timedelta(days=30)).strftime('%Y-%m-%d')
+        }
+        
+        # 保存任务记录
+        save_task(task_record)
+        print(f"[DEBUG] 延长任务记录已保存到 video_tasks_history.json")
         
         print(f"\n[DEBUG] ==================== 视频延长请求处理完成 ====================")
         return jsonify({
@@ -917,6 +1095,7 @@ def api_extend_video(video_uuid):
             'success': False,
             'message': str(e)
         }), 500
+
 # 简化版的视频延长路由
 @app.route('/extend_video', methods=['POST'])
 def extend_video():
@@ -972,6 +1151,57 @@ def extend_video():
         task_id = response_data['data']['task_id']
         print(f"[DEBUG] 任务创建成功，任务ID: {task_id}")
         
+         # 查找原始视频所属的任务信息
+        tasks = load_tasks()
+        original_task = None
+        original_video = None
+        
+        for task in tasks:
+            for video in task.get('videos', []):
+                if video.get('id') == video_id:
+                    original_task = task
+                    original_video = video
+                    break
+            if original_task:
+                break
+        
+        # 创建延长任务记录
+        if not external_task_id:
+            external_task_id = f"custom_{int(time.time())}"
+            
+        task_record = {
+            'task_id': task_id,
+            'external_task_id': external_task_id,
+            'prompt': prompt,
+            'negative_prompt': original_task.get('negative_prompt', '') if original_task else '',
+            'status': 'submitted',
+            'status_msg': '',
+            'parameters': {
+                'model_name': original_task.get('parameters', {}).get('model_name', 'kling-v1') if original_task else 'kling-v1',
+                'duration': '5',
+                'mode': 'std',
+                'cfg_scale': 0.5,
+                'operation': 'extend',  # 添加标记，表明这是延长任务
+                'original_video_id': video_id,  # 记录原始视频ID
+                'original_task_id': original_task.get('task_id') if original_task else None  # 记录原始任务ID
+            },
+            'videos': [],  # 初始化为空视频列表
+            'has_image_url_data': original_task.get('has_image_url_data', True) if original_task else True,
+            'created_at': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+            'expiration_date': (datetime.now() + timedelta(days=30)).strftime('%Y-%m-%d')
+        }
+        
+        # 保存任务记录
+        save_task(task_record)
+        print(f"[DEBUG] 延长任务记录已保存到 video_tasks_history.json")
+        
+        print("\n[DEBUG] ==================== 视频延长请求处理完成 ====================")
+        return jsonify({
+            'success': True,
+            'message': '延长任务已提交',
+            'task_id': task_id
+        })
+    
         print("\n[DEBUG] ==================== 视频延长请求处理完成 ====================")
         return jsonify({
             'success': True,

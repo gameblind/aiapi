@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文件上传测试</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            padding: 20px;
+        }
+        .file-card {
+            margin-bottom: 15px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .file-preview {
+            max-width: 100%;
+            max-height: 200px;
+            margin-top: 10px;
+        }
+        .response-container {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mb-4">文件上传测试</h1>
+        
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5>上传文件</h5>
+            </div>
+            <div class="card-body">
+                <form id="uploadForm" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="file" class="form-label">选择文件</label>
+                        <input type="file" class="form-control" id="file" name="file">
+                    </div>
+                    <div class="mb-3">
+                        <label for="purpose" class="form-label">用途</label>
+                        <select class="form-select" id="purpose" name="purpose">
+                            <option value="assistants">助手</option>
+                            <option value="fine-tune">微调</option>
+                            <option value="image">图片</option>
+                            <option value="audio">音频</option>
+                            <option value="video">视频</option>
+                        </select>
+                    </div>
+                    <!-- 在表单中添加云端上传选项 -->
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="uploadToCloud" name="uploadToCloud" checked>
+                        <label class="form-check-label" for="uploadToCloud">同时上传到云端</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">上传</button>
+                </form>
+                
+                <div id="previewContainer" class="mt-3" style="display: none;">
+                    <h6>文件预览</h6>
+                    <div id="preview"></div>
+                </div>
+                
+                <div id="responseContainer" class="response-container mt-3" style="display: none;">
+                    <h6>API响应</h6>
+                    <pre id="response"></pre>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h5>文件列表</h5>
+                <button id="refreshFiles" class="btn btn-sm btn-outline-secondary">刷新</button>
+            </div>
+            <div class="card-body">
+                <div id="filesList"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // 加载文件列表
+            loadFiles();
+            
+            // 刷新按钮点击事件
+            $('#refreshFiles').on('click', function() {
+                loadFiles();
+            });
+            
+            // 文件选择事件
+            $('#file').on('change', function(e) {
+                const file = e.target.files[0];
+                if (!file) {
+                    $('#previewContainer').hide();
+                    return;
+                }
+                
+                // 显示预览
+                $('#previewContainer').show();
+                const preview = $('#preview');
+                preview.empty();
+                
+                if (file.type.startsWith('image/')) {
+                    // 图片预览
+                    const img = $('<img>').addClass('file-preview');
+                    img.attr('src', URL.createObjectURL(file));
+                    preview.append(img);
+                } else if (file.type.startsWith('video/')) {
+                    // 视频预览
+                    const video = $('<video>').addClass('file-preview').attr('controls', true);
+                    video.attr('src', URL.createObjectURL(file));
+                    preview.append(video);
+                } else if (file.type.startsWith('audio/')) {
+                    // 音频预览
+                    const audio = $('<audio>').addClass('w-100').attr('controls', true);
+                    audio.attr('src', URL.createObjectURL(file));
+                    preview.append(audio);
+                } else {
+                    // 其他文件类型
+                    preview.text(`文件名: ${file.name}, 大小: ${formatFileSize(file.size)}, 类型: ${file.type}`);
+                }
+            });
+            
+            // 表单提交事件
+            $('#uploadForm').on('submit', function(e) {
+                e.preventDefault();
+                
+                const fileInput = $('#file')[0];
+                if (!fileInput.files.length) {
+                    alert('请选择文件');
+                    return;
+                }
+                
+                const file = fileInput.files[0];
+                const purpose = $('#purpose').val();
+                
+                // 创建FormData对象
+                const formData = new FormData();
+                formData.append('file', file);
+                
+                // 显示加载状态
+                $('#response').text('上传中...');
+                $('#responseContainer').show();
+                
+                // 发送请求
+                $.ajax({
+                    url: `/v1/files?purpose=${purpose}`,
+                    type: 'POST',
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    headers: {
+                        'Authorization': 'Bearer ' + getApiKey()
+                    },
+                    success: function(response) {
+                        // 显示响应
+                        $('#response').text(JSON.stringify(response, null, 2));
+                        
+                        // 刷新文件列表
+                        loadFiles();
+                    },
+                    error: function(xhr) {
+                        let errorText = '上传失败';
+                        try {
+                            errorText = JSON.stringify(xhr.responseJSON, null, 2);
+                        } catch (e) {
+                            errorText = xhr.responseText || errorText;
+                        }
+                        $('#response').text(errorText);
+                    }
+                });
+            });
+        });
+        
+        // 加载文件列表
+        function loadFiles() {
+            $.ajax({
+                url: '/v1/files',
+                type: 'GET',
+                headers: {
+                    'Authorization': 'Bearer ' + getApiKey()
+                },
+                success: function(response) {
+                    const filesList = $('#filesList');
+                    filesList.empty();
+                    
+                    if (!response.data || response.data.length === 0) {
+                        filesList.append('<p>没有文件</p>');
+                        return;
+                    }
+                    
+                    // 显示文件列表
+                    response.data.forEach(file => {
+                        const fileCard = createFileCard(file);
+                        filesList.append(fileCard);
+                    });
+                    
+                    // 绑定删除事件
+                    $('.delete-file').on('click', function() {
+                        const fileId = $(this).data('file-id');
+                        deleteFile(fileId);
+                    });
+                },
+                error: function(xhr) {
+                    $('#filesList').html('<p class="text-danger">加载文件列表失败</p>');
+                    console.error('加载文件列表失败', xhr);
+                }
+            });
+        }
+        
+        // 创建文件卡片
+        function createFileCard(file) {
+            let preview = '';
+            
+            // 根据文件类型创建预览
+            if (file.filename.match(/\.(jpg|jpeg|png|gif)$/i)) {
+                preview = `<img src="${file.url}" class="file-preview">`;
+            } else if (file.filename.match(/\.(mp4|webm|ogg)$/i)) {
+                preview = `<video src="${file.url}" class="file-preview" controls></video>`;
+            } else if (file.filename.match(/\.(mp3|wav|ogg)$/i)) {
+                preview = `<audio src="${file.url}" class="w-100" controls></audio>`;
+            }
+            
+            return `
+                <div class="file-card">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <div>
+                            <h6>${file.filename}</h6>
+                            <p class="mb-1">ID: ${file.id}</p>
+                            <p class="mb-1">大小: ${formatFileSize(file.bytes)}</p>
+                            <p class="mb-1">用途: ${file.purpose}</p>
+                            <p class="mb-1">创建时间: ${formatDate(file.created_at)}</p>
+                        </div>
+                        <button class="btn btn-sm btn-danger delete-file" data-file-id="${file.id}">删除</button>
+                    </div>
+                    ${preview}
+                    <div class="mt-2">
+                        <a href="${file.url}" class="btn btn-sm btn-primary" target="_blank">查看文件</a>
+                    </div>
+                </div>
+            `;
+        }
+        
+        // 删除文件
+        function deleteFile(fileId) {
+            if (confirm('确定要删除这个文件吗？')) {
+                $.ajax({
+                    url: `/v1/files/${fileId}`,
+                    type: 'DELETE',
+                    headers: {
+                        'Authorization': 'Bearer ' + getApiKey()
+                    },
+                    success: function(response) {
+                        alert('文件删除成功');
+                        loadFiles();
+                    },
+                    error: function(xhr) {
+                        alert('删除文件失败');
+                        console.error('删除文件失败', xhr);
+                    }
+                });
+            }
+        }
+        
+        // 格式化文件大小
+        function formatFileSize(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            const k = 1024;
+            const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+        }
+        
+        // 格式化日期
+        function formatDate(timestamp) {
+            const date = new Date(timestamp * 1000);
+            return date.toLocaleString();
+        }
+        
+        // 获取API密钥
+        function getApiKey() {
+            // 这里可以从本地存储或配置中获取API密钥
+            // 为了测试，这里使用一个默认值
+            return localStorage.getItem('api_key') || 'sk-default-api-key';
+        }
+    </script>
+</body>
+</html>

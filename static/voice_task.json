@@ -1,0 +1,24 @@
+{
+  "tasks": [
+    {
+      "task_id": "unique-task-id-1",
+      "type": "tts", 
+      "text": "这是一段示例文本，将被转换为语音。",
+      "voice_id": "xiaoxiao",
+      "model": "neural",
+      "speed": 1.0,
+      "status": "succeed",
+      "audio_url": "/static/audio/voice_123456.mp3",
+      "created_at": "2023-05-20T10:30:00Z"
+    },
+    {
+      "task_id": "unique-task-id-2",
+      "type": "asr",
+      "text": "这是从音频中识别出的文本。",
+      "model": "whisper",
+      "audio_url": "/static/audio/recording_123456.wav",
+      "status": "succeed",
+      "created_at": "2023-05-20T11:15:00Z"
+    }
+  ]
+}

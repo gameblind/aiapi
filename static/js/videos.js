@@ -78,11 +78,11 @@ $(document).ready(function() {
         $('#prompt').val(prompt);
     }
 
-    // 初始化主题
-    //initTheme();
+    // 初始化主题 - 默认使用黑色主题
+    initDarkTheme();
     
     // 初始化回到顶部按钮
-    //initBackToTop();
+    initBackToTop();
     
     // 加载视频列表
     loadVideos();
@@ -412,12 +412,17 @@ function createLoadingCard(taskId) {
 
 // 检查任务状态
 function checkTaskStatus(taskId) {
+    console.log(`[DEBUG] 开始检查任务状态: ${taskId}`);
+    
     $.ajax({
         url: `/api/task_status/${taskId}`,
         type: 'GET',
         success: function(response) {
+            console.log(`[DEBUG] 任务状态响应:`, response);
+            
             if (response.success) {
                 const task = response.data;
+                console.log(`[DEBUG] 任务状态: ${task.status}, 视频数量: ${task.videos ? task.videos.length : 0}`);
                 
                 // 检查是否已存在加载中的卡片
                 const loadingCard = $(`.video-card[data-task-id="${taskId}"]`);
@@ -434,16 +439,17 @@ function checkTaskStatus(taskId) {
                     }
                 }
                 
-                if (task.status === 'succeed') {
-                    // 查找对应的加载中占位卡片（再次查询以确保存在）
+                // 如果任务成功且有视频
+                if (task.status === 'succeed' && task.videos && task.videos.length > 0) {
+                    // 查找对应的加载中占位卡片
                     const currentCard = $(`.video-card[data-task-id="${taskId}"]`);
                     
-                    if (currentCard.length > 0 && task.videos && task.videos.length > 0) {
+                    if (currentCard.length > 0) {
                         // 检查是否是延长视频任务
                         const isExtendTask = task.parameters && task.parameters.operation === 'extend';
                         
                         // 如果是延长视频任务，确保视频已下载到本地
-                        if (isExtendTask && task.videos[0].url && !task.videos[0].local_url) {
+                        if (isExtendTask && task.videos[0].url && !task.videos[0].downloaded) {
                             console.log(`[INFO] 检测到延长视频任务完成，但视频未下载，正在触发下载: ${taskId}`);
                             // 触发视频下载
                             $.ajax({
@@ -466,17 +472,17 @@ function checkTaskStatus(taskId) {
                         }
                         
                         // 更新视频卡片
-                        updateVideoCard();
-                        
                         function updateVideoCard() {
-                            // 任务完成，替换加载中的卡片
+                            console.log(`[DEBUG] 更新视频卡片: ${taskId}`);
                             const videoCard = createVideoCard({
                                 task_id: task.task_id,
                                 video_id: task.videos[0].id,
                                 url: task.videos[0].local_url || task.videos[0].url,
                                 prompt: task.prompt,
-                                created_at: task.created_at // 添加创建时间用于排序
+                                created_at: task.created_at
                             });
+                            
+                            console.log(`[DEBUG] 替换加载中卡片为视频卡片`);
                             currentCard.replaceWith(videoCard);
                             
                             // 对新添加的视频应用懒加载
@@ -503,12 +509,15 @@ function checkTaskStatus(taskId) {
                             // 显示成功消息
                             Swal.fire({
                                 title: '视频生成成功',
-                                text: isExtendTask ? '视频已成功延长' : '视频已成功生成',
+                                text: '视频已成功生成',
                                 icon: 'success',
                                 timer: 2000,
                                 showConfirmButton: false
                             });
                         }
+                        
+                        // 执行更新视频卡片
+                        updateVideoCard();
                     }
                 } else if (task.status === 'failed') {
                     // 任务失败，显示错误信息
@@ -519,18 +528,29 @@ function checkTaskStatus(taskId) {
                         icon: 'error',
                         confirmButtonText: '确定'
                     });
-                } else {
+                } else if (task.status === 'submitted' || task.status === 'processing') {
                     // 任务仍在处理中，继续检查
+                    console.log(`[DEBUG] 任务仍在处理中，30秒后再次检查`);
                     setTimeout(function() {
                         checkTaskStatus(taskId);
-                    }, 30000); // 将轮询间隔从5秒改为30秒
+                    }, 30000);
                 }
             } else {
-                console.error('检查任务状态失败:', response.message);
+                console.error('[ERROR] 检查任务状态失败:', response.message);
+                
+                // 尝试再次检查
+                setTimeout(function() {
+                    checkTaskStatus(taskId);
+                }, 10000);
             }
         },
         error: function(xhr, status, error) {
-            console.error('请求失败:', xhr.responseText);
+            console.error('[ERROR] 请求失败:', xhr.responseText);
+            
+            // 尝试再次检查
+            setTimeout(function() {
+                checkTaskStatus(taskId);
+            }, 10000);
         }
     });
 }
@@ -750,60 +770,88 @@ function deleteTask(taskId) {
 }
 
 // 延长视频
+// 延长视频函数
 function extendVideo(videoId) {
-    // 显示加载状态
-    $('.loading-overlay').show();
-    
-    $.ajax({
-        url: `/api/extend/${videoId}`,
-        type: 'POST',
-        contentType: 'application/json',  // 添加正确的Content-Type
-        data: JSON.stringify({            // 添加请求体数据
-            prompt: '继续延长视频'        // 默认提示词
-        }),
-        success: function(response) {
-            if (response.success) {
-                // 关闭模态框
-                const videoModal = bootstrap.Modal.getInstance(document.getElementById('videoPreviewModal'));
-                if (videoModal) videoModal.hide();
-                
-                // 显示成功消息
-                Swal.fire({
-                    title: '请求已提交',
-                    text: '视频延长任务已提交，请稍后查看结果',
-                    icon: 'success',
-                    timer: 2000,
-                    showConfirmButton: false
-                });
-                
-                // 创建加载中的卡片
-                const loadingCard = createLoadingCard(response.task_id);
-                
-                // 确保创建按钮在最前面
-                const createBtn = $('#createNewVideo');
-                if (createBtn.length > 0) {
-                    createBtn.detach();
-                    $('#videoGrid').prepend(createBtn);
-                }
-                
-                // 将加载中的卡片添加到视频墙的开头（紧跟在创建按钮后面）
-                createBtn.after(loadingCard);
-                
-                // 定时检查任务状态
-                setTimeout(function() {
-                    checkTaskStatus(response.task_id);
-                }, 5000);
-            } else {
-                alert('延长视频失败：' + response.message);
+    // 弹出提示词输入对话框
+    Swal.fire({
+        title: '延长视频',
+        html: `
+            <div class="form-group">
+                <label for="extendPrompt">请输入延长视频的提示词</label>
+                <textarea id="extendPrompt" class="form-control" rows="3" placeholder="描述您希望延长的视频内容...">继续延长视频</textarea>
+            </div>
+        `,
+        showCancelButton: true,
+        confirmButtonText: '提交',
+        cancelButtonText: '取消',
+        preConfirm: () => {
+            const prompt = document.getElementById('extendPrompt').value;
+            if (!prompt) {
+                Swal.showValidationMessage('请输入提示词');
+                return false;
             }
-        },
-        error: function(xhr, status, error) {
-            console.error('请求失败:', xhr.responseText);
-            alert('延长视频失败：' + (xhr.responseJSON ? xhr.responseJSON.message : error));
-        },
-        complete: function() {
-            // 隐藏加载状态
-            $('.loading-overlay').hide();
+            return prompt;
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            const prompt = result.value;
+            // 显示加载状态
+            $('.loading-overlay').show();
+            
+            // 发送延长视频请求
+            $.ajax({
+                url: `/api/extend/${videoId}`,
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({
+                    prompt: prompt
+                }),
+                success: function(response) {
+                    // 原有的成功处理逻辑...
+                    if (response.success) {
+                        // 关闭模态框
+                        const videoModal = bootstrap.Modal.getInstance(document.getElementById('videoPreviewModal'));
+                        if (videoModal) videoModal.hide();
+                        
+                        // 显示成功消息
+                        Swal.fire({
+                            title: '请求已提交',
+                            text: '视频延长任务已提交，请稍后查看结果',
+                            icon: 'success',
+                            timer: 2000,
+                            showConfirmButton: false
+                        });
+                        
+                        // 创建加载中的卡片
+                        const loadingCard = createLoadingCard(response.task_id);
+                        
+                        // 确保创建按钮在最前面
+                        const createBtn = $('#createNewVideo');
+                        if (createBtn.length > 0) {
+                            createBtn.detach();
+                            $('#videoGrid').prepend(createBtn);
+                        }
+                        
+                        // 将加载中的卡片添加到视频墙的开头
+                        createBtn.after(loadingCard);
+                        
+                        // 定时检查任务状态
+                        setTimeout(function() {
+                            checkTaskStatus(response.task_id);
+                        }, 5000);
+                    } else {
+                        alert('延长视频失败：' + response.message);
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error('请求失败:', xhr.responseText);
+                    alert('延长视频失败：' + (xhr.responseJSON ? xhr.responseJSON.message : error));
+                },
+                complete: function() {
+                    // 隐藏加载状态
+                    $('.loading-overlay').hide();
+                }
+            });
         }
     });
 }
@@ -820,6 +868,32 @@ function initTheme() {
 }
 
 // 切换主题
+function toggleTheme() {
+    if (document.documentElement.getAttribute('data-theme') === 'dark') {
+        document.documentElement.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'light');
+        $('#themeToggle i').removeClass('fa-sun').addClass('fa-moon');
+        $('#themeToggle span').text('切换暗色');
+    } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        $('#themeToggle i').removeClass('fa-moon').addClass('fa-sun');
+        $('#themeToggle span').text('切换亮色');
+    }
+}
+
+// 初始化黑色主题
+function initDarkTheme() {
+    // 直接设置为黑色主题，无需检查本地存储
+    document.documentElement.setAttribute('data-theme', 'dark');
+    $('#themeToggle i').removeClass('fa-moon').addClass('fa-sun');
+    $('#themeToggle span').text('切换亮色');
+    
+    // 保存到本地存储
+    localStorage.setItem('theme', 'dark');
+}
+
+// 切换主题函数保持不变
 function toggleTheme() {
     if (document.documentElement.getAttribute('data-theme') === 'dark') {
         document.documentElement.removeAttribute('data-theme');

@@ -1782,7 +1782,7 @@
       {
         "index": 0,
         "url": "",
-        "local_url": "/static/images/ComfyUI_00000_6197.jpeg",
+        "local_url": "/static/images/ComfyUI_00000_7210.jpeg",
         "downloaded": true
       },
       {
@@ -1836,7 +1836,7 @@
       {
         "index": 0,
         "url": "",
-        "local_url": "/static/images/universal_upscale_0_37f2e871-cedd-459b-8e7d-77e002b0e62f_0_upscale_ultra.jpeg",
+        "local_url": "/static/images/universal_upscale_0_de11b40f-ba0c-4a10-895d-48bcbdc3112f_0.jpeg",
         "downloaded": true
       }
     ]
@@ -4386,6 +4386,87 @@
         "index": 0,
         "url": "https://cdn.klingai.com/bs2/upload-kling-api/9294081583/image/CjNQlmflOt0AAAAAAA62sA-0_raw_image_0.png",
         "local_url": "/static/images/CjNQlmflOt0AAAAAAA62sA_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "Cji7mmfmUMkAAAAAACgTcg",
+    "external_task_id": "custom_1743202359",
+    "prompt": "改成全身图",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.5,
+      "n": 1
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/9294081583/image/Cji7mmfmUMkAAAAAACgTcg-0_raw_image_0.png",
+        "local_url": "/static/images/Cji7mmfmUMkAAAAAACgTcg_0.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "ChFkkmfmUMQAAAAAACgpaQ",
+    "external_task_id": "custom_1743202469",
+    "prompt": "改成全身图，三点式比基尼，健身教练，腹肌\r\n",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "kling-v1",
+      "image_fidelity": 0.5,
+      "n": 4
+    },
+    "images": [
+      {
+        "index": 0,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/9294081583/image/ChFkkmfmUMQAAAAAACgpaQ-0_raw_image_0.png",
+        "local_url": "/static/images/ChFkkmfmUMQAAAAAACgpaQ_0.png",
+        "downloaded": true
+      },
+      {
+        "index": 1,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/9294081583/image/ChFkkmfmUMQAAAAAACgpaQ-1_raw_image_0.png",
+        "local_url": "/static/images/ChFkkmfmUMQAAAAAACgpaQ_1.png",
+        "downloaded": true
+      },
+      {
+        "index": 2,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/9294081583/image/ChFkkmfmUMQAAAAAACgpaQ-2_raw_image_0.png",
+        "local_url": "/static/images/ChFkkmfmUMQAAAAAACgpaQ_2.png",
+        "downloaded": true
+      },
+      {
+        "index": 3,
+        "url": "https://cdn.klingai.com/bs2/upload-kling-api/9294081583/image/ChFkkmfmUMQAAAAAACgpaQ-3_raw_image_0.png",
+        "local_url": "/static/images/ChFkkmfmUMQAAAAAACgpaQ_3.png",
+        "downloaded": true
+      }
+    ]
+  },
+  {
+    "task_id": "8db06462",
+    "external_task_id": "local_1743202677",
+    "prompt": "本地导入图片",
+    "negative_prompt": "",
+    "status": "succeed",
+    "status_msg": "",
+    "parameters": {
+      "model_name": "unknown",
+      "n": 1,
+      "aspect_ratio": "unknown"
+    },
+    "images": [
+      {
+        "index": 1743202658,
+        "url": "",
+        "local_url": "/static/images/8db06462_1743202658.jpeg",
         "downloaded": true
       }
     ]
